@@ -18,7 +18,10 @@ import {
 import { useCart } from "@/app/context/CartContext";
 import { useAuth } from "@/app/context/AuthContext";
 
-import { useState, useRef, useEffect } from "react";
+import { useState, useRef, useEffect, useMemo } from "react";
+
+// CHANGE THIS PATH ACCORDING TO YOUR PROJECT
+import products from "@/data/products";
 
 const shopItems = [
   {
@@ -47,40 +50,87 @@ const shopItems = [
   },
 ];
 
-const searchData = [
-  {
-    name: "Door Visor",
-    slug: "/shop/door-visor",
-    image: "/products/door-visor.png",
-    price: 999,
-    category: "Exterior",
-    keywords: ["visor", "rain visor"],
-  },
-  {
-    name: "Door Guard",
-    slug: "/shop/door-edge-guard",
-    image: "/products/door-guard.png",
-    price: 499,
-    category: "Protection",
-    keywords: ["guard", "edge", "scratch"],
-  },
-  {
-    name: "Parcel Tray",
-    slug: "/shop/parcel-tray",
-    image: "/products/parcel-tray.png",
-    price: 1299,
-    category: "Interior",
-    keywords: ["tray", "boot"],
-  },
-  {
-    name: "Steering Knob",
-    slug: "/shop/steering-knob",
-    image: "/products/steering-knob.png",
-    price: 299,
-    category: "Driving",
-    keywords: ["knob", "steering"],
-  },
-];
+const toArray = (value) => {
+  if (Array.isArray(value)) return value;
+  if (value) return [value];
+  return [];
+};
+
+const getProductHref = (product) => {
+  const text = [
+    product.name,
+    product.category,
+    product.series,
+    product.brand,
+    ...toArray(product.tags),
+  ]
+    .filter(Boolean)
+    .join(" ")
+    .toLowerCase();
+
+  if (text.includes("door visor")) {
+    return `/shop/door-visor/${product.slug}`;
+  }
+
+  if (text.includes("door edge guard") || text.includes("door guard")) {
+    return `/shop/door-edge-guard/${product.slug}`;
+  }
+
+  if (text.includes("parcel tray")) {
+    return `/shop/parcel-tray/${product.slug}`;
+  }
+
+  if (text.includes("steering knob")) {
+    return `/shop/steering-knob/${product.slug}`;
+  }
+
+  return `/shop/${product.slug}`;
+};
+
+function SearchResultsDropdown({ results, onClose }) {
+  return (
+    <div className="absolute left-0 top-14 z-50 max-h-105 w-full overflow-y-auto overflow-x-hidden rounded-3xl border border-[#2F2FE4]/15 bg-white text-[#111827] shadow-[0_25px_80px_rgba(47,47,228,0.16)] backdrop-blur-2xl animate-fadeIn">
+      {results.length > 0 ? (
+        results.map((item) => (
+          <Link
+            key={item.id}
+            href={item.slug}
+            onClick={onClose}
+            className="group flex items-center gap-4 border-b border-gray-100 px-4 py-3 transition last:border-none hover:bg-[#2F2FE4]/5"
+          >
+            <div className="relative h-14 w-14 shrink-0 overflow-hidden rounded-xl bg-[#F5F6FF]">
+              <Image
+                src={item.image}
+                fill
+                sizes="56px"
+                alt={item.name}
+                className="object-contain p-2 transition duration-300 group-hover:scale-110"
+              />
+            </div>
+
+            <div className="min-w-0 flex-1">
+              <h4 className="truncate text-sm font-black uppercase tracking-wide text-[#111827] group-hover:text-[#2F2FE4]">
+                {item.name}
+              </h4>
+
+              <p className="mt-1 truncate text-xs font-medium text-gray-500">
+                {item.category}
+              </p>
+            </div>
+
+            <div className="shrink-0 text-sm font-black text-[#2F2FE4]">
+              ₹{item.price}
+            </div>
+          </Link>
+        ))
+      ) : (
+        <div className="px-4 py-5 text-sm font-medium text-gray-500">
+          No products found
+        </div>
+      )}
+    </div>
+  );
+}
 
 export default function Navbar() {
   const { cartItems } = useCart();
@@ -96,7 +146,47 @@ export default function Navbar() {
 
   const dropdownRef = useRef(null);
   const profileRef = useRef(null);
-  const searchRef = useRef(null);
+  const desktopSearchRef = useRef(null);
+  const mobileSearchRef = useRef(null);
+
+  const searchData = useMemo(() => {
+    return products.map((product) => {
+      const carBrands = toArray(product.carBrand);
+      const carModels = toArray(product.carModel);
+      const tags = toArray(product.tags);
+      const features = toArray(product.features);
+
+      const categoryLabel =
+        product.series || product.category?.replaceAll("-", " ") || "Product";
+
+      const searchText = [
+        product.name,
+        product.slug,
+        product.sku,
+        product.brand,
+        product.series,
+        product.category,
+        product.description,
+        ...carBrands,
+        ...carModels,
+        ...tags,
+        ...features,
+      ]
+        .filter(Boolean)
+        .join(" ")
+        .toLowerCase();
+
+      return {
+        id: product.id || product.slug,
+        name: product.name,
+        slug: getProductHref(product),
+        image: product.images?.[0] || "/products/placeholder.png",
+        price: product.price || product.variants?.[0]?.price || 0,
+        category: categoryLabel,
+        searchText,
+      };
+    });
+  }, []);
 
   useEffect(() => {
     const handleClickOutside = (e) => {
@@ -104,7 +194,14 @@ export default function Navbar() {
         setOpen(false);
       }
 
-      if (searchRef.current && !searchRef.current.contains(e.target)) {
+      const clickedInsideDesktopSearch =
+        desktopSearchRef.current &&
+        desktopSearchRef.current.contains(e.target);
+
+      const clickedInsideMobileSearch =
+        mobileSearchRef.current && mobileSearchRef.current.contains(e.target);
+
+      if (!clickedInsideDesktopSearch && !clickedInsideMobileSearch) {
         setShowDropdown(false);
       }
 
@@ -125,26 +222,27 @@ export default function Navbar() {
       return;
     }
 
-    const searchText = query.toLowerCase();
+    const words = query.toLowerCase().trim().split(/\s+/);
 
-    const filtered = searchData.filter(
-      (item) =>
-        item.name.toLowerCase().includes(searchText) ||
-        item.category.toLowerCase().includes(searchText) ||
-        item.keywords.some((k) => k.toLowerCase().includes(searchText))
-    );
+    const filtered = searchData
+      .filter((item) => words.every((word) => item.searchText.includes(word)))
+      .slice(0, 8);
 
     setResults(filtered);
     setShowDropdown(true);
-  }, [query]);
+  }, [query, searchData]);
 
   const totalCartItems = cartItems?.length || 0;
 
+  const closeSearch = () => {
+    setQuery("");
+    setResults([]);
+    setShowDropdown(false);
+  };
+
   return (
     <nav className="sticky top-0 z-50 bg-white/80 px-3 py-3 text-[#111827] backdrop-blur-2xl">
-      {/* Outer Premium Navbar */}
       <div className="relative mx-auto max-w-7xl overflow-visible rounded-[1.7rem] border border-[#2F2FE4]/10 bg-white/95 shadow-[0_14px_45px_rgba(47,47,228,0.10)]">
-        {/* Top Blue Shine */}
         <div className="absolute left-1/2 top-0 h-px w-[88%] -translate-x-1/2 bg-linear-to-r from-transparent via-[#2F2FE4]/55 to-transparent" />
 
         <div className="flex h-18 items-center justify-between px-4 sm:px-5 lg:px-6">
@@ -180,7 +278,6 @@ export default function Navbar() {
               Home
             </Link>
 
-            {/* SHOP MEGA MENU */}
             <div className="relative" ref={dropdownRef}>
               <button
                 onClick={() => setOpen(!open)}
@@ -196,7 +293,6 @@ export default function Navbar() {
 
               {open && (
                 <div className="absolute left-1/2 top-14 z-50 w-155 -translate-x-1/2 overflow-hidden rounded-4xl border border-[#2F2FE4]/15 bg-white p-4 shadow-[0_30px_90px_rgba(47,47,228,0.18)] backdrop-blur-2xl animate-fadeIn">
-                  {/* Background Glow */}
                   <div className="absolute -right-20 -top-20 h-60 w-60 rounded-full bg-[#2F2FE4]/10 blur-3xl" />
                   <div className="absolute inset-x-8 top-0 h-px bg-linear-to-r from-transparent via-[#2F2FE4]/45 to-transparent" />
 
@@ -284,8 +380,8 @@ export default function Navbar() {
 
           {/* RIGHT SIDE */}
           <div className="flex items-center gap-2 sm:gap-3">
-            {/* SEARCH */}
-            <div className="relative hidden xl:block" ref={searchRef}>
+            {/* DESKTOP SEARCH */}
+            <div className="relative hidden xl:block" ref={desktopSearchRef}>
               <div className="flex h-12 w-82.5 items-center rounded-full border border-[#2F2FE4]/12 bg-[#F7F8FF] px-4 shadow-sm transition-all duration-300 focus-within:border-[#2F2FE4]/55 focus-within:bg-white focus-within:shadow-[0_16px_38px_rgba(47,47,228,0.14)]">
                 <Search size={18} className="text-[#2F2FE4]" />
 
@@ -295,51 +391,19 @@ export default function Navbar() {
                   placeholder="Search accessories..."
                   className="flex-1 bg-transparent px-3 text-sm font-semibold text-[#111827] outline-none placeholder:text-gray-400"
                 />
+
+                {query && (
+                  <button
+                    onClick={closeSearch}
+                    className="text-gray-400 transition hover:text-[#2F2FE4]"
+                  >
+                    <X size={16} />
+                  </button>
+                )}
               </div>
 
               {showDropdown && (
-                <div className="absolute left-0 top-14 z-50 w-full overflow-hidden rounded-3xl border border-[#2F2FE4]/15 bg-white text-[#111827] shadow-[0_25px_80px_rgba(47,47,228,0.16)] backdrop-blur-2xl animate-fadeIn">
-                  {results.length > 0 ? (
-                    results.map((item) => (
-                      <Link
-                        key={item.name}
-                        href={item.slug}
-                        onClick={() => {
-                          setQuery("");
-                          setShowDropdown(false);
-                        }}
-                        className="group flex items-center gap-4 border-b border-gray-100 px-4 py-3 transition last:border-none hover:bg-[#2F2FE4]/5"
-                      >
-                        <div className="relative h-14 w-14 shrink-0 overflow-hidden rounded-xl bg-[#F5F6FF]">
-                          <Image
-                            src={item.image}
-                            fill
-                            sizes="56px"
-                            alt={item.name}
-                            className="object-contain p-2 transition duration-300 group-hover:scale-110"
-                          />
-                        </div>
-
-                        <div className="flex-1">
-                          <h4 className="text-sm font-black uppercase tracking-wide text-[#111827] group-hover:text-[#2F2FE4]">
-                            {item.name}
-                          </h4>
-                          <p className="mt-1 text-xs font-medium text-gray-500">
-                            {item.category}
-                          </p>
-                        </div>
-
-                        <div className="text-sm font-black text-[#2F2FE4]">
-                          ₹{item.price}
-                        </div>
-                      </Link>
-                    ))
-                  ) : (
-                    <div className="px-4 py-5 text-sm font-medium text-gray-500">
-                      No products found
-                    </div>
-                  )}
-                </div>
+                <SearchResultsDropdown results={results} onClose={closeSearch} />
               )}
             </div>
 
@@ -440,6 +504,39 @@ export default function Navbar() {
         {/* MOBILE MENU */}
         {mobileOpen && (
           <div className="border-t border-gray-100 px-4 pb-4 lg:hidden animate-fadeIn">
+            {/* MOBILE SEARCH */}
+            <div className="relative mt-4" ref={mobileSearchRef}>
+              <div className="flex h-12 items-center rounded-full border border-[#2F2FE4]/12 bg-[#F7F8FF] px-4 shadow-sm transition-all duration-300 focus-within:border-[#2F2FE4]/55 focus-within:bg-white">
+                <Search size={18} className="text-[#2F2FE4]" />
+
+                <input
+                  value={query}
+                  onChange={(e) => setQuery(e.target.value)}
+                  placeholder="Search accessories..."
+                  className="flex-1 bg-transparent px-3 text-sm font-semibold text-[#111827] outline-none placeholder:text-gray-400"
+                />
+
+                {query && (
+                  <button
+                    onClick={closeSearch}
+                    className="text-gray-400 transition hover:text-[#2F2FE4]"
+                  >
+                    <X size={16} />
+                  </button>
+                )}
+              </div>
+
+              {showDropdown && (
+                <SearchResultsDropdown
+                  results={results}
+                  onClose={() => {
+                    closeSearch();
+                    setMobileOpen(false);
+                  }}
+                />
+              )}
+            </div>
+
             <div className="mt-4 rounded-3xl bg-[#F7F8FF] p-3">
               <Link
                 href="/"
@@ -455,6 +552,38 @@ export default function Navbar() {
                 className="block rounded-2xl px-4 py-3 text-sm font-black uppercase tracking-wide text-[#111827] hover:bg-white hover:text-[#2F2FE4]"
               >
                 Shop
+              </Link>
+
+              <Link
+                href="/shop/door-visor"
+                onClick={() => setMobileOpen(false)}
+                className="block rounded-2xl px-4 py-3 text-sm font-black uppercase tracking-wide text-[#111827] hover:bg-white hover:text-[#2F2FE4]"
+              >
+                Door Visor
+              </Link>
+
+              <Link
+                href="/shop/door-edge-guard"
+                onClick={() => setMobileOpen(false)}
+                className="block rounded-2xl px-4 py-3 text-sm font-black uppercase tracking-wide text-[#111827] hover:bg-white hover:text-[#2F2FE4]"
+              >
+                Door Guard
+              </Link>
+
+              <Link
+                href="/shop/parcel-tray"
+                onClick={() => setMobileOpen(false)}
+                className="block rounded-2xl px-4 py-3 text-sm font-black uppercase tracking-wide text-[#111827] hover:bg-white hover:text-[#2F2FE4]"
+              >
+                Parcel Tray
+              </Link>
+
+              <Link
+                href="/shop/steering-knob"
+                onClick={() => setMobileOpen(false)}
+                className="block rounded-2xl px-4 py-3 text-sm font-black uppercase tracking-wide text-[#111827] hover:bg-white hover:text-[#2F2FE4]"
+              >
+                Steering Knob
               </Link>
 
               <Link
@@ -476,23 +605,6 @@ export default function Navbar() {
           </div>
         )}
       </div>
-
-      <style jsx global>{`
-        .animate-fadeIn {
-          animation: fadeIn 0.22s ease forwards;
-        }
-
-        @keyframes fadeIn {
-          from {
-            opacity: 0;
-            transform: translateY(8px) scale(0.98);
-          }
-          to {
-            opacity: 1;
-            transform: translateY(0) scale(1);
-          }
-        }
-      `}</style>
     </nav>
   );
 }

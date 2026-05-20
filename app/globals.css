@@ -34,10 +34,16 @@ body {
   }
 
   100% {
-    transform: translateX(-50%);
+    transform: translateX(-33.333%);
   }
 }
 
 .animate-marquee {
-  animation: marquee 10s linear infinite;
+  animation: marquee 18s linear infinite;
+}
+
+@media (max-width: 640px) {
+  .animate-marquee {
+    animation-duration: 12s;
+  }
 }

@@ -7,14 +7,14 @@ export default function ContactPage() {
     {
       icon: Phone,
       title: "Phone",
-      value: "+91 98765 43210",
-      href: "tel:+919876543210",
+      value: "+91 87962 50447",
+      href: "tel:+918796250447",
     },
     {
       icon: Mail,
       title: "Email",
-      value: "support@winslow.com",
-      href: "mailto:support@winslow.com",
+      value: "supportwinslow@gmail.com",
+      href: "mailto:supportwinslow@gmail.com",
     },
     {
       icon: MapPin,
