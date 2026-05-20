@@ -1,6 +1,8 @@
 import Razorpay from "razorpay";
 import { NextResponse } from "next/server";
 
+export const dynamic = "force-dynamic";
+
 export async function POST(req) {
   try {
     const { amount } = await req.json();
@@ -11,7 +13,7 @@ export async function POST(req) {
     });
 
     const order = await razorpay.orders.create({
-      amount: amount * 100, // rupees to paise
+      amount: amount * 100,
       currency: "INR",
       receipt: `receipt_${Date.now()}`,
       notes: {
