@@ -1,6 +1,7 @@
 "use client";
 
-import { useState } from "react";
+import { useCallback, useEffect, useState } from "react";
+import { fbqEvent } from "@/app/lib/metaPixel";
 import { useRouter } from "next/navigation";
 
 import { useCart } from "@/app/context/CartContext";
@@ -47,6 +48,39 @@ export default function CheckoutPage() {
 
   const finalTotal = subtotal - discount;
 
+  const getMetaCartData = useCallback(() => {
+    return {
+      content_ids: cartItems.map((item) => item.id || item.slug || item.name),
+      content_type: "product",
+      contents: cartItems.map((item) => ({
+        id: item.id || item.slug || item.name,
+        quantity: Number(item.quantity || 1),
+        item_price: Number(item.price),
+      })),
+      num_items: cartItems.reduce(
+        (total, item) => total + Number(item.quantity || 1),
+        0
+      ),
+      value: Number(finalTotal),
+      currency: "INR",
+    };
+  }, [cartItems, finalTotal]);
+
+  useEffect(() => {
+    if (!cartItems || cartItems.length === 0 || finalTotal <= 0) return;
+    if (typeof window === "undefined") return;
+
+    const checkoutKey = `initiate_checkout_${cartItems
+      .map((item) => item.id || item.slug || item.name)
+      .join("_")}_${finalTotal}`;
+
+    if (sessionStorage.getItem(checkoutKey)) return;
+
+    fbqEvent("InitiateCheckout", getMetaCartData());
+
+    sessionStorage.setItem(checkoutKey, "true");
+  }, [cartItems, finalTotal, getMetaCartData]);
+
   const handleChange = (e) => {
     setCheckoutDetails({
       ...checkoutDetails,
@@ -85,6 +119,11 @@ export default function CheckoutPage() {
       alert("Please fill all checkout details");
       return;
     }
+
+    fbqEvent("AddPaymentInfo", {
+      ...getMetaCartData(),
+      payment_method: "Razorpay",
+    });
 
     try {
       setLoading(true);
@@ -171,6 +210,19 @@ export default function CheckoutPage() {
             if (!orderId) {
               alert("Order save failed");
               return;
+            }
+
+            const purchaseKey = `purchase_${orderId}`;
+
+            if (typeof window !== "undefined" && !localStorage.getItem(purchaseKey)) {
+              fbqEvent("Purchase", {
+                ...getMetaCartData(),
+                order_id: orderId,
+                razorpay_order_id: response.razorpay_order_id,
+                razorpay_payment_id: response.razorpay_payment_id,
+              });
+
+              localStorage.setItem(purchaseKey, "true");
             }
 
             clearCart();

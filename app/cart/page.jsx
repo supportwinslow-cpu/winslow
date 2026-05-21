@@ -4,6 +4,8 @@ import Link from "next/link";
 import Image from "next/image";
 import { useEffect, useState } from "react";
 import { useCart } from "@/app/context/CartContext";
+import { fbqEvent, fbqCustom } from "../lib/metaPixel";
+
 import {
   ShoppingCart,
   Trash2,
@@ -72,6 +74,26 @@ export default function CartPage() {
     setCouponInput("SAVE15");
     setCouponMessage("");
     setCouponApplied(false);
+  };
+
+  const handleProceedToCheckout = () => {
+    if (!cartItems || cartItems.length === 0) return;
+
+    fbqEvent("InitiateCheckout", {
+      content_ids: cartItems.map((item) => item.id || item.slug),
+      content_type: "product",
+      contents: cartItems.map((item) => ({
+        id: item.id || item.slug,
+        quantity: Number(item.quantity || 1),
+        item_price: Number(item.price),
+      })),
+      num_items: cartItems.reduce(
+        (total, item) => total + Number(item.quantity || 1),
+        0
+      ),
+      value: Number(finalTotal),
+      currency: "INR",
+    });
   };
 
   return (
@@ -398,6 +420,7 @@ export default function CartPage() {
                   {/* Checkout */}
                   <Link
                     href="/checkout"
+                    onClick={handleProceedToCheckout}
                     className="group mt-6 flex w-full items-center justify-center rounded-full bg-[#2F2FE4] px-7 py-4 text-sm font-black uppercase tracking-wide text-white shadow-[0_18px_45px_rgba(47,47,228,0.28)] transition-all duration-300 hover:-translate-y-1 hover:bg-[#2424c9] hover:shadow-[0_24px_60px_rgba(47,47,228,0.38)]"
                   >
                     Proceed to Checkout
