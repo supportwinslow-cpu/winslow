@@ -46,7 +46,7 @@ const products = [
       packaging: "1 Pc. | Cartoon Packing: Pack of 6",
     },
 
-    images: ["/products/parcel-tray/WIN-001.png"],
+    images: ["/products/parcel-tray/creta-2020.png"],
 
     variants: [
       { name: "Black", sku: "WIN-001-BLK", price: 2470, stock: 50 },
@@ -57,8 +57,8 @@ const products = [
 
   {
     id: "WIN-002",
-    name: "Parcel Tray for Maruti Baleno 2022",
-    slug: "parcel-tray-maruti-baleno-2022",
+    name: "Parcel Tray for Maruti Baleno",
+    slug: "parcel-tray-maruti-baleno",
     sku: "WIN-002",
 
     category: "interior",
@@ -66,7 +66,7 @@ const products = [
     series: "Premium Parcel Tray",
 
     carBrand: ["Maruti"],
-    carModel: ["Baleno 2022"],
+    carModel: ["Baleno"],
 
     price: 2470,
     originalPrice: 3800,
@@ -76,14 +76,14 @@ const products = [
     tags: ["parcel tray", "boot cover", "baleno", "maruti", "custom fit"],
 
     description:
-      "Winslow Premium Parcel Tray custom-designed for Maruti Baleno 2022. Enhances interior aesthetics, protects luggage & rear cabin privacy. Easy installation — no expert required.",
+      "Winslow Premium Parcel Tray custom-designed for Maruti Baleno. Enhances interior aesthetics, protects luggage & rear cabin privacy. Easy installation — no expert required.",
 
     features: [
       "Enhances Car Interior Aesthetics",
       "Protects Luggage & Rear Cabin Privacy",
       "Easy Installation — No Expert Required",
       "Long-lasting & Easy to Clean",
-      "Custom Designed for Maruti Baleno 2022",
+      "Custom Designed for Maruti Baleno",
       "Durable, Helps Protect Items, Flexible",
     ],
 
@@ -91,11 +91,11 @@ const products = [
       material: "High-density injection-moulded ABS",
       finish: "Premium fabric / textured matte",
       durability: "Heat & wear resistant",
-      fitment: "Custom fit — Maruti Baleno 2022",
+      fitment: "Custom fit — Maruti Baleno",
       packaging: "1 Pc. | Cartoon Packing: Pack of 12",
     },
 
-    images: ["/products/parcel-tray/WIN-002.png"],
+    images: ["/products/parcel-tray/baleno.png"],
 
     variants: [
       { name: "Black", sku: "WIN-002-BLK", price: 2470, stock: 50 },
@@ -144,7 +144,7 @@ const products = [
       packaging: "1 Pc. | Cartoon Packing: Pack of 12",
     },
 
-    images: ["/products/parcel-tray/WIN-003.png"],
+    images: ["/products/parcel-tray/brezza-2022.png"],
 
     variants: [
       { name: "Black", sku: "WIN-003-BLK", price: 2470, stock: 50 },
@@ -155,8 +155,8 @@ const products = [
 
   {
     id: "WIN-004",
-    name: "Parcel Tray for Hyundai Venue 2022",
-    slug: "parcel-tray-hyundai-venue-2022",
+    name: "Parcel Tray for Hyundai Venue 2022 to 2024",
+    slug: "parcel-tray-hyundai-venue-2022-2024",
     sku: "WIN-004",
 
     category: "interior",
@@ -164,7 +164,7 @@ const products = [
     series: "Premium Parcel Tray",
 
     carBrand: ["Hyundai"],
-    carModel: ["Venue 2022"],
+    carModel: ["Venue 2022 to 2024"],
 
     price: 2470,
     originalPrice: 3800,
@@ -174,14 +174,14 @@ const products = [
     tags: ["parcel tray", "boot cover", "venue", "hyundai", "custom fit"],
 
     description:
-      "Winslow Premium Parcel Tray custom-designed for Hyundai Venue 2022. Enhances interior aesthetics, protects luggage & rear cabin privacy. Easy installation — no expert required.",
+      "Winslow Premium Parcel Tray custom-designed for Hyundai Venue 2022 to 2024. Enhances interior aesthetics, protects luggage & rear cabin privacy. Easy installation — no expert required.",
 
     features: [
       "Enhances Car Interior Aesthetics",
       "Protects Luggage & Rear Cabin Privacy",
       "Easy Installation — No Expert Required",
       "Long-lasting & Easy to Clean",
-      "Custom Designed for Hyundai Venue 2022",
+      "Custom Designed for Hyundai Venue 2022 to 2024",
       "Durable, Helps Protect Items, Flexible",
     ],
 
@@ -189,11 +189,11 @@ const products = [
       material: "High-density injection-moulded ABS",
       finish: "Premium fabric / textured matte",
       durability: "Heat & wear resistant",
-      fitment: "Custom fit — Hyundai Venue 2022",
+      fitment: "Custom fit — Hyundai Venue 2022 to 2024",
       packaging: "1 Pc. | Cartoon Packing: Pack of 12",
     },
 
-    images: ["/products/parcel-tray/WIN-004.png"],
+    images: ["/products/parcel-tray/venue-2022-24.png"],
 
     variants: [
       { name: "Black", sku: "WIN-004-BLK", price: 2470, stock: 50 },
@@ -242,7 +242,7 @@ const products = [
       packaging: "1 Pc. | Cartoon Packing: Pack of 12",
     },
 
-    images: ["/products/parcel-tray/WIN-005.png"],
+    images: ["/products/parcel-tray/xuv-300.png"],
 
     variants: [
       { name: "Black", sku: "WIN-005-BLK", price: 2470, stock: 50 },
@@ -291,7 +291,7 @@ const products = [
       packaging: "1 Pc. | Cartoon Packing: Pack of 6",
     },
 
-    images: ["/products/parcel-tray/WIN-006.png"],
+    images: ["/products/parcel-tray/grand-vitara.png"],
 
     variants: [
       { name: "Black", sku: "WIN-006-BLK", price: 2470, stock: 50 },
@@ -340,7 +340,7 @@ const products = [
       packaging: "1 Pc. | Cartoon Packing: Pack of 6",
     },
 
-    images: ["/products/parcel-tray/WIN-007.png"],
+    images: ["/products/parcel-tray/nexon.png"],
 
     variants: [
       { name: "Black", sku: "WIN-007-BLK", price: 2470, stock: 50 },
@@ -389,7 +389,7 @@ const products = [
       packaging: "1 Pc. | Cartoon Packing: Pack of 12",
     },
 
-    images: ["/products/parcel-tray/WIN-008.png"],
+    images: ["/products/parcel-tray/punch.png"],
 
     variants: [
       { name: "Black", sku: "WIN-008-BLK", price: 2470, stock: 50 },
@@ -438,7 +438,7 @@ const products = [
       packaging: "1 Pc. | Cartoon Packing: Pack of 12",
     },
 
-    images: ["/products/parcel-tray/WIN-009.png"],
+    images: ["/products/parcel-tray/tiago.png"],
 
     variants: [
       { name: "Black", sku: "WIN-009-BLK", price: 2470, stock: 50 },
@@ -487,7 +487,7 @@ const products = [
       packaging: "1 Pc. | Cartoon Packing: Pack of 12",
     },
 
-    images: ["/products/parcel-tray/WIN-010.png"],
+    images: ["/products/parcel-tray/fronx.png"],
 
     variants: [
       { name: "Black", sku: "WIN-010-BLK", price: 2470, stock: 50 },
@@ -536,7 +536,7 @@ const products = [
       packaging: "1 Pc. | Cartoon Packing: Pack of 6",
     },
 
-    images: ["/products/parcel-tray/WIN-011.png"],
+    images: ["/products/parcel-tray/sonet.png"],
 
     variants: [
       { name: "Black", sku: "WIN-011-BLK", price: 2470, stock: 50 },
@@ -585,7 +585,7 @@ const products = [
       packaging: "1 Pc. | Cartoon Packing: Pack of 12",
     },
 
-    images: ["/products/parcel-tray/WIN-012.png"],
+    images: ["/products/parcel-tray/magnite.png"],
 
     variants: [
       { name: "Black", sku: "WIN-012-BLK", price: 2470, stock: 50 },
@@ -634,7 +634,7 @@ const products = [
       packaging: "1 Pc. | Cartoon Packing: Pack of 6",
     },
 
-    images: ["/products/parcel-tray/WIN-013.png"],
+    images: ["/products/parcel-tray/nexon-2023.png"],
 
     variants: [
       { name: "Black", sku: "WIN-013-BLK", price: 2470, stock: 50 },
@@ -683,7 +683,7 @@ const products = [
       packaging: "1 Pc. | Cartoon Packing: Pack of 6",
     },
 
-    images: ["/products/parcel-tray/WIN-014.png"],
+    images: ["/products/parcel-tray/exter.png"],
 
     variants: [
       { name: "Black", sku: "WIN-014-BLK", price: 2470, stock: 50 },
@@ -732,7 +732,7 @@ const products = [
       packaging: "1 Pc. | Cartoon Packing: Pack of 12",
     },
 
-    images: ["/products/parcel-tray/WIN-015.png"],
+    images: ["/products/parcel-tray/altroz.png"],
 
     variants: [
       { name: "Black", sku: "WIN-015-BLK", price: 2470, stock: 50 },
@@ -781,7 +781,7 @@ const products = [
       packaging: "1 Pc. | Cartoon Packing: Pack of 12",
     },
 
-    images: ["/products/parcel-tray/WIN-016.png"],
+    images: ["/products/parcel-tray/wagonr-2019.png"],
 
     variants: [
       { name: "Black", sku: "WIN-016-BLK", price: 2470, stock: 50 },
@@ -830,7 +830,7 @@ const products = [
       packaging: "1 Pc. | Cartoon Packing: Pack of 12",
     },
 
-    images: ["/products/parcel-tray/WIN-017.png"],
+    images: ["/products/parcel-tray/swift-2018.png"],
 
     variants: [
       { name: "Black", sku: "WIN-017-BLK", price: 2470, stock: 50 },
@@ -879,7 +879,7 @@ const products = [
       packaging: "1 Pc. | Cartoon Packing: Pack of 6",
     },
 
-    images: ["/products/parcel-tray/WIN-018.png"],
+    images: ["/products/parcel-tray/creta-2024.png"],
 
     variants: [
       { name: "Black", sku: "WIN-018-BLK", price: 2470, stock: 50 },
@@ -928,7 +928,7 @@ const products = [
       packaging: "1 Pc. | Cartoon Packing: Pack of 6",
     },
 
-    images: ["/products/parcel-tray/WIN-019.png"],
+    images: ["/products/parcel-tray/seltos-2023.png"],
 
     variants: [
       { name: "Black", sku: "WIN-019-BLK", price: 2470, stock: 50 },
@@ -939,8 +939,8 @@ const products = [
 
   {
     id: "WIN-019B",
-    name: "Parcel Tray for Kia Seltos 2023 (with Bracket)",
-    slug: "parcel-tray-kia-seltos-2023-bracket",
+    name: "Parcel Tray for Kia Seltos 2019 to 2022",
+    slug: "parcel-tray-kia-seltos-2019-2022",
     sku: "WIN-019B",
 
     category: "interior",
@@ -948,24 +948,24 @@ const products = [
     series: "Premium Parcel Tray",
 
     carBrand: ["Kia"],
-    carModel: ["Seltos 2023"],
+    carModel: ["Seltos 2019 to 2022"],
 
-    price: 3120,
-    originalPrice: 4800,
+    price: 2470,
+    originalPrice: 3800,
     discountPercentage: 35,
     rating: 4.6,
 
-    tags: ["parcel tray", "boot cover", "seltos 2023", "kia", "custom fit", "with bracket"],
+    tags: ["parcel tray", "boot cover", "seltos 2019-2022", "kia", "custom fit", "with bracket"],
 
     description:
-      "Winslow Premium Parcel Tray with Bracket custom-designed for Kia Seltos 2023. The bracket variant provides a more secure, flush-fit installation. Enhances interior aesthetics, protects luggage & rear cabin privacy.",
+      "Winslow Premium Parcel Tray with Bracket custom-designed for Kia Seltos 2019 to 2022. The bracket variant provides a more secure, flush-fit installation. Enhances interior aesthetics, protects luggage & rear cabin privacy.",
 
     features: [
       "Enhances Car Interior Aesthetics",
       "Protects Luggage & Rear Cabin Privacy",
       "Easy Installation — No Expert Required",
       "Long-lasting & Easy to Clean",
-      "Custom Designed for Kia Seltos 2023",
+      "Custom Designed for Kia Seltos 2019 to 2022",
       "Includes Mounting Bracket for Secure Fit",
       "Durable, Helps Protect Items, Flexible",
     ],
@@ -974,15 +974,15 @@ const products = [
       material: "High-density injection-moulded ABS",
       finish: "Premium fabric / textured matte",
       durability: "Heat & wear resistant",
-      fitment: "Custom fit — Kia Seltos 2023",
+      fitment: "Custom fit — Kia Seltos 2019 to 2022",
       includes: "Parcel Tray + Bracket",
       packaging: "1 Pc. | Cartoon Packing: Pack of 6",
     },
 
-    images: ["/products/parcel-tray/WIN-019B.png"],
+    images: ["/products/parcel-tray/seltos-2019-22.png"],
 
     variants: [
-      { name: "Black with Bracket", sku: "WIN-019B-BLK", price: 3120, stock: 30 },
+      { name: "Black with Bracket", sku: "WIN-019B-BLK", price: 2470, stock: 30 },
     ],
 
     isFeatured: false,
@@ -1028,7 +1028,7 @@ const products = [
       packaging: "1 Pc. | Cartoon Packing: Pack of 12",
     },
 
-    images: ["/products/parcel-tray/WIN-021.png"],
+    images: ["/products/parcel-tray/k-10-2022.png"],
 
     variants: [
       { name: "Black", sku: "WIN-021-BLK", price: 2470, stock: 50 },
@@ -1077,7 +1077,7 @@ const products = [
       packaging: "1 Pc. | Cartoon Packing: Pack of 12",
     },
 
-    images: ["/products/parcel-tray/WIN-022.png"],
+    images: ["/products/parcel-tray/swift-2024.png"],
 
     variants: [
       { name: "Black", sku: "WIN-022-BLK", price: 2470, stock: 50 },
@@ -1088,8 +1088,8 @@ const products = [
 
   {
     id: "WIN-023",
-    name: "Parcel Tray for Hyundai i20 2020",
-    slug: "parcel-tray-hyundai-i20-2020",
+    name: "Parcel Tray for Hyundai i20 2020 and 2026",
+    slug: "parcel-tray-hyundai-i20-2020-2026",
     sku: "WIN-023",
 
     category: "interior",
@@ -1097,7 +1097,7 @@ const products = [
     series: "Premium Parcel Tray",
 
     carBrand: ["Hyundai"],
-    carModel: ["i20 2020"],
+    carModel: ["i20 2020 to i20 2026"],
 
     price: 2470,
     originalPrice: 3800,
@@ -1107,14 +1107,14 @@ const products = [
     tags: ["parcel tray", "boot cover", "i20", "hyundai", "custom fit"],
 
     description:
-      "Winslow Premium Parcel Tray custom-designed for Hyundai i20 2020. Enhances interior aesthetics, protects luggage & rear cabin privacy. Easy installation — no expert required.",
+      "Winslow Premium Parcel Tray custom-designed for Hyundai i20 2020 to 2026. Enhances interior aesthetics, protects luggage & rear cabin privacy. Easy installation — no expert required.",
 
     features: [
       "Enhances Car Interior Aesthetics",
       "Protects Luggage & Rear Cabin Privacy",
       "Easy Installation — No Expert Required",
       "Long-lasting & Easy to Clean",
-      "Custom Designed for Hyundai i20 2020",
+      "Custom Designed for Hyundai i20 2020 to 2026",
       "Durable, Helps Protect Items, Flexible",
     ],
 
@@ -1122,11 +1122,11 @@ const products = [
       material: "High-density injection-moulded ABS",
       finish: "Premium fabric / textured matte",
       durability: "Heat & wear resistant",
-      fitment: "Custom fit — Hyundai i20 2020",
+      fitment: "Custom fit — Hyundai i20 2020 to 2026",
       packaging: "1 Pc. | Cartoon Packing: Pack of 12",
     },
 
-    images: ["/products/parcel-tray/WIN-023.png"],
+    images: ["/products/parcel-tray/i20-2020-26.png"],
 
     variants: [
       { name: "Black", sku: "WIN-023-BLK", price: 2470, stock: 50 },
@@ -1175,7 +1175,7 @@ const products = [
       packaging: "1 Pc. | Cartoon Packing: Pack of 12",
     },
 
-    images: ["/products/parcel-tray/WIN-024.png"],
+    images: ["/products/parcel-tray/nios.png"],
 
     variants: [
       { name: "Black", sku: "WIN-024-BLK", price: 2470, stock: 50 },
@@ -1186,8 +1186,8 @@ const products = [
 
   {
     id: "WIN-025",
-    name: "Parcel Tray for Hyundai i20 Elite",
-    slug: "parcel-tray-hyundai-i20-elite",
+    name: "Parcel Tray for Hyundai i20 Elite 2015 to 2019",
+    slug: "parcel-tray-hyundai-i20-elite-2015-2019",
     sku: "WIN-025",
 
     category: "interior",
@@ -1195,7 +1195,7 @@ const products = [
     series: "Premium Parcel Tray",
 
     carBrand: ["Hyundai"],
-    carModel: ["i20 Elite"],
+    carModel: ["i20 Elite 2015 to 2019"],
 
     price: 2470,
     originalPrice: 3800,
@@ -1205,14 +1205,14 @@ const products = [
     tags: ["parcel tray", "boot cover", "i20 elite", "hyundai", "custom fit"],
 
     description:
-      "Winslow Premium Parcel Tray custom-designed for Hyundai i20 Elite. Enhances interior aesthetics, protects luggage & rear cabin privacy. Easy installation — no expert required.",
+      "Winslow Premium Parcel Tray custom-designed for Hyundai i20 Elite 2015 to 2019. Enhances interior aesthetics, protects luggage & rear cabin privacy. Easy installation — no expert required.",
 
     features: [
       "Enhances Car Interior Aesthetics",
       "Protects Luggage & Rear Cabin Privacy",
       "Easy Installation — No Expert Required",
       "Long-lasting & Easy to Clean",
-      "Custom Designed for Hyundai i20 Elite",
+      "Custom Designed for Hyundai i20 Elite 2015 to 2019",
       "Durable, Helps Protect Items, Flexible",
     ],
 
@@ -1220,11 +1220,11 @@ const products = [
       material: "High-density injection-moulded ABS",
       finish: "Premium fabric / textured matte",
       durability: "Heat & wear resistant",
-      fitment: "Custom fit — Hyundai i20 Elite",
+      fitment: "Custom fit — Hyundai i20 Elite 2015 to 2019",
       packaging: "1 Pc. | Cartoon Packing: Pack of 12",
     },
 
-    images: ["/products/parcel-tray/WIN-025.png"],
+    images: ["/products/parcel-tray/i20-elite-2015-19.png"],
 
     variants: [
       { name: "Black", sku: "WIN-025-BLK", price: 2470, stock: 50 },
@@ -1273,7 +1273,7 @@ const products = [
       packaging: "1 Pc. | Cartoon Packing: Pack of 6",
     },
 
-    images: ["/products/parcel-tray/WIN-026.png"],
+    images: ["/products/parcel-tray/3xo.png"],
 
     variants: [
       { name: "Black", sku: "WIN-026-BLK", price: 2470, stock: 50 },
@@ -1324,7 +1324,7 @@ const products = [
       packaging: "1 Pc. | Cartoon Packing: Pack of 10",
     },
 
-    images: ["/products/parcel-tray/WIN-027.png"],
+    images: ["/products/parcel-tray/nios-barcket.png"],
 
     variants: [
       { name: "Black with Bracket", sku: "WIN-027-BLK", price: 3120, stock: 30 },
@@ -1335,8 +1335,8 @@ const products = [
 
   {
     id: "WIN-028",
-    name: "Parcel Tray for Maruti Baleno (Old Model)",
-    slug: "parcel-tray-maruti-baleno-old",
+    name: "Parcel Tray for Maruti Baleno 2015 to 2021",
+    slug: "parcel-tray-maruti-baleno-2015-2021",
     sku: "WIN-028",
 
     category: "interior",
@@ -1344,7 +1344,7 @@ const products = [
     series: "Premium Parcel Tray",
 
     carBrand: ["Maruti"],
-    carModel: ["Baleno Old"],
+    carModel: ["Baleno Old 2015 to 2021"],
 
     price: 2470,
     originalPrice: 3800,
@@ -1354,14 +1354,14 @@ const products = [
     tags: ["parcel tray", "boot cover", "baleno old", "maruti", "custom fit"],
 
     description:
-      "Winslow Premium Parcel Tray custom-designed for Maruti Baleno old model. Enhances interior aesthetics, protects luggage & rear cabin privacy. Easy installation — no expert required.",
+      "Winslow Premium Parcel Tray custom-designed for Maruti Baleno 2015 to 2021. Enhances interior aesthetics, protects luggage & rear cabin privacy. Easy installation — no expert required.",
 
     features: [
       "Enhances Car Interior Aesthetics",
       "Protects Luggage & Rear Cabin Privacy",
       "Easy Installation — No Expert Required",
       "Long-lasting & Easy to Clean",
-      "Custom Designed for Maruti Baleno (Old Model)",
+      "Custom Designed for Maruti Baleno 2015 to 2021",
       "Durable, Helps Protect Items, Flexible",
     ],
 
@@ -1369,11 +1369,11 @@ const products = [
       material: "High-density injection-moulded ABS",
       finish: "Premium fabric / textured matte",
       durability: "Heat & wear resistant",
-      fitment: "Custom fit — Maruti Baleno Old Model",
+      fitment: "Custom fit — Maruti Baleno 2015 to 2021",
       packaging: "1 Pc. | Cartoon Packing: Pack of 6",
     },
 
-    images: ["/products/parcel-tray/WIN-028.png"],
+    images: ["/products/parcel-tray/baleno-2015-21.png"],
 
     variants: [
       { name: "Black", sku: "WIN-028-BLK", price: 2470, stock: 50 },
@@ -1384,8 +1384,8 @@ const products = [
 
   {
     id: "WIN-029",
-    name: "Parcel Tray for Maruti Brezza (Old Model)",
-    slug: "parcel-tray-maruti-brezza-old",
+    name: "Parcel Tray for Maruti Brezza 2015 to 2021",
+    slug: "parcel-tray-maruti-brezza-2015-2021",
     sku: "WIN-029",
 
     category: "interior",
@@ -1393,7 +1393,7 @@ const products = [
     series: "Premium Parcel Tray",
 
     carBrand: ["Maruti"],
-    carModel: ["Brezza Old"],
+    carModel: ["Brezza Old 2015 to 2021"],
 
     price: 2470,
     originalPrice: 3800,
@@ -1403,14 +1403,14 @@ const products = [
     tags: ["parcel tray", "boot cover", "brezza old", "maruti", "custom fit"],
 
     description:
-      "Winslow Premium Parcel Tray custom-designed for Maruti Brezza old model. Enhances interior aesthetics, protects luggage & rear cabin privacy. Easy installation — no expert required.",
+      "Winslow Premium Parcel Tray custom-designed for Maruti Brezza 2015 to 2021. Enhances interior aesthetics, protects luggage & rear cabin privacy. Easy installation — no expert required.",
 
     features: [
       "Enhances Car Interior Aesthetics",
       "Protects Luggage & Rear Cabin Privacy",
       "Easy Installation — No Expert Required",
       "Long-lasting & Easy to Clean",
-      "Custom Designed for Maruti Brezza (Old Model)",
+      "Custom Designed for Maruti Brezza 2015 to 2021",
       "Durable, Helps Protect Items, Flexible",
     ],
 
@@ -1418,11 +1418,11 @@ const products = [
       material: "High-density injection-moulded ABS",
       finish: "Premium fabric / textured matte",
       durability: "Heat & wear resistant",
-      fitment: "Custom fit — Maruti Brezza Old Model",
+      fitment: "Custom fit — Maruti Brezza 2015 to 2021",
       packaging: "1 Pc. | Cartoon Packing: Pack of 12",
     },
 
-    images: ["/products/parcel-tray/WIN-029.png"],
+    images: ["/products/parcel-tray/brezza-2015-21.png"],
 
     variants: [
       { name: "Black", sku: "WIN-029-BLK", price: 2470, stock: 50 },
@@ -1471,7 +1471,7 @@ const products = [
       packaging: "1 Pc. | Cartoon Packing: Pack of 6",
     },
 
-    images: ["/products/parcel-tray/WIN-030.png"],
+    images: ["/products/parcel-tray/curvv.png"],
 
     variants: [
       { name: "Black", sku: "WIN-030-BLK", price: 2470, stock: 40 },
@@ -1520,7 +1520,7 @@ const products = [
       packaging: "1 Pc. | Cartoon Packing: Pack of 12",
     },
 
-    images: ["/products/parcel-tray/WIN-031.png"],
+    images: ["/products/parcel-tray/kylaq.png"],
 
     variants: [
       { name: "Black", sku: "WIN-031-BLK", price: 2470, stock: 40 },
@@ -1571,7 +1571,7 @@ const products = [
       packaging: "1 Pc. | Cartoon Packing: Pack of 10",
     },
 
-    images: ["/products/parcel-tray/WIN-032.png"],
+    images: ["/products/parcel-tray/windsor.png"],
 
     variants: [
       { name: "Black with Bracket", sku: "WIN-032-BLK", price: 3120, stock: 30 },
@@ -1582,8 +1582,8 @@ const products = [
 
   {
     id: "WIN-033",
-    name: "Parcel Tray for Hyundai Creta Old (with Bracket)",
-    slug: "parcel-tray-hyundai-creta-old-bracket",
+    name: "Parcel Tray for Hyundai Creta 2015 to 2019 with Bracket",
+    slug: "parcel-tray-hyundai-creta-2015-2019-bracket",
     sku: "WIN-033",
 
     category: "interior",
@@ -1591,7 +1591,7 @@ const products = [
     series: "Premium Parcel Tray",
 
     carBrand: ["Hyundai"],
-    carModel: ["Creta Old"],
+    carModel: ["Creta Old 2015 to 2019"],
 
     price: 3120,
     originalPrice: 4800,
@@ -1601,14 +1601,14 @@ const products = [
     tags: ["parcel tray", "boot cover", "creta old", "hyundai", "custom fit", "with bracket"],
 
     description:
-      "Winslow Premium Parcel Tray with Bracket custom-designed for Hyundai Creta old model. Bracket ensures a more secure, factory-finish fit. Enhances interior aesthetics and protects luggage.",
+      "Winslow Premium Parcel Tray with Bracket custom-designed for Hyundai Creta 2015 to 2019. Bracket ensures a more secure, factory-finish fit. Enhances interior aesthetics and protects luggage.",
 
     features: [
       "Enhances Car Interior Aesthetics",
       "Protects Luggage & Rear Cabin Privacy",
       "Easy Installation — No Expert Required",
       "Long-lasting & Easy to Clean",
-      "Custom Designed for Hyundai Creta Old Model",
+      "Custom Designed for Hyundai Creta 2015 to 2019",
       "Includes Mounting Bracket for Secure Fit",
       "Durable, Helps Protect Items, Flexible",
     ],
@@ -1617,12 +1617,12 @@ const products = [
       material: "High-density injection-moulded ABS",
       finish: "Premium fabric / textured matte",
       durability: "Heat & wear resistant",
-      fitment: "Custom fit — Hyundai Creta Old",
+      fitment: "Custom fit — Hyundai Creta 2015 to 2019",
       includes: "Parcel Tray + Bracket",
       packaging: "1 Pc. | Cartoon Packing: Pack of 6",
     },
 
-    images: ["/products/parcel-tray/WIN-033.png"],
+    images: ["/products/parcel-tray/creta-2015-19.png"],
 
     variants: [
       { name: "Black with Bracket", sku: "WIN-033-BLK", price: 3120, stock: 30 },
@@ -1672,7 +1672,7 @@ const products = [
       packaging: "1 Pc. | Cartoon Packing: Pack of 12",
     },
 
-    images: ["/products/parcel-tray/WIN-034.png"],
+    images: ["/products/parcel-tray/venue-2025.png"],
 
     variants: [
       { name: "Black", sku: "WIN-034-BLK", price: 2470, stock: 40 },
@@ -1721,7 +1721,7 @@ const products = [
       packaging: "1 Pc. | Cartoon Packing: Pack of 6",
     },
 
-    images: ["/products/parcel-tray/WIN-035.png"],
+    images: ["/products/parcel-tray/victoris.png"],
 
     variants: [
       { name: "Black", sku: "WIN-035-BLK", price: 2470, stock: 40 },
