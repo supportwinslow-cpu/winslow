@@ -1,15 +1,15 @@
 "use client";
 
-import { useState } from "react";
+import { useCallback, useEffect, useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import {
   SlidersHorizontal,
-  Sparkles,
   ArrowRight,
-  ShoppingBag,
   IndianRupee,
 } from "lucide-react";
+
+import { fbqEvent, fbqCustom } from "@/app/lib/metaPixel";
 
 const categories = [
   {
@@ -55,6 +55,45 @@ export default function ShopPage() {
 
   const filtered = categories.filter((item) => item.price <= maxPrice);
 
+  // Meta Event: Shop page view
+  useEffect(() => {
+    fbqEvent("ViewContent", {
+      content_name: "Shop Page",
+      content_category: "Car Accessories",
+      content_type: "product_group",
+      content_ids: categories.map((item) => item.slug),
+      contents: categories.map((item) => ({
+        id: item.slug,
+        quantity: 1,
+        item_price: Number(item.price),
+      })),
+      currency: "INR",
+    });
+  }, []);
+
+  // Meta Custom Event: Explore category click
+  const handleExploreClick = useCallback((item) => {
+    fbqCustom("ExploreProductCategory", {
+      content_name: item.name,
+      content_category: item.tag,
+      content_ids: [item.slug],
+      value: Number(item.price),
+      currency: "INR",
+    });
+  }, []);
+
+  // Meta Custom Event: Price filter use
+  const handlePriceChange = useCallback((e) => {
+    const value = Number(e.target.value);
+    setMaxPrice(value);
+
+    fbqCustom("PriceFilterUsed", {
+      filter_name: "Max Price",
+      filter_value: value,
+      currency: "INR",
+    });
+  }, []);
+
   return (
     <main className="relative min-h-screen overflow-hidden bg-white text-[#111827]">
       {/* Premium Background */}
@@ -69,8 +108,7 @@ export default function ShopPage() {
       <div className="absolute -left-32 top-72 h-80 w-80 rounded-full bg-[#2F2FE4]/8 blur-[130px]" />
       <div className="absolute -right-32 bottom-20 h-80 w-80 rounded-full bg-[#2F2FE4]/8 blur-[130px]" />
 
-      <div className="relative mx-auto max-w-7xl px-5 py-10 sm:px-6 sm:py10 lg:px-8 lg:py-10">
-
+      <div className="relative mx-auto max-w-7xl px-5 py-10 sm:px-6 sm:py-10 lg:px-8 lg:py-10">
         <div className="grid gap-8 lg:grid-cols-[300px_1fr]">
           {/* Filter Sidebar */}
           <aside className="h-fit rounded-[2.2rem] border border-[#2F2FE4]/15 bg-white p-3 shadow-[0_24px_75px_rgba(47,47,228,0.12)] lg:sticky lg:top-28">
@@ -110,7 +148,7 @@ export default function ShopPage() {
                   min="100"
                   max="3000"
                   value={maxPrice}
-                  onChange={(e) => setMaxPrice(Number(e.target.value))}
+                  onChange={handlePriceChange}
                   className="w-full cursor-pointer accent-[#2F2FE4]"
                 />
 
@@ -126,7 +164,12 @@ export default function ShopPage() {
           <section>
             <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 xl:grid-cols-3">
               {filtered.map((item, index) => (
-                <Link key={item.slug} href={`/shop/${item.slug}`} className="group">
+                <Link
+                  key={item.slug}
+                  href={`/shop/${item.slug}`}
+                  className="group"
+                  onClick={() => handleExploreClick(item)}
+                >
                   <div className="relative h-full overflow-hidden rounded-[2.3rem] border border-[#2F2FE4]/10 bg-white p-3 shadow-[0_24px_75px_rgba(47,47,228,0.10)] transition-all duration-500 hover:-translate-y-3 hover:border-[#2F2FE4]/45 hover:shadow-[0_35px_100px_rgba(47,47,228,0.22)]">
                     {/* Hover Shine */}
                     <div className="absolute -left-full top-0 z-20 h-full w-1/2 skew-x-[-20deg] bg-linear-to-r from-transparent via-white/70 to-transparent transition-all duration-700 group-hover:left-[130%]" />
