@@ -1,12 +1,12 @@
 "use client";
 
 import Script from "next/script";
+import { Suspense, useEffect } from "react";
 import { usePathname, useSearchParams } from "next/navigation";
-import { useEffect } from "react";
 
 const META_PIXEL_ID = "992699016482921";
 
-export default function MetaPixel() {
+function MetaPixelContent() {
     const pathname = usePathname();
     const searchParams = useSearchParams();
 
@@ -28,6 +28,7 @@ export default function MetaPixel() {
           t.src=v;s=b.getElementsByTagName(e)[0];
           s.parentNode.insertBefore(t,s)}(window, document,'script',
           'https://connect.facebook.net/en_US/fbevents.js');
+
           fbq('init', '${META_PIXEL_ID}');
           fbq('track', 'PageView');
         `}
@@ -43,5 +44,13 @@ export default function MetaPixel() {
                 />
             </noscript>
         </>
+    );
+}
+
+export default function MetaPixel() {
+    return (
+        <Suspense fallback={null}>
+            <MetaPixelContent />
+        </Suspense>
     );
 }
