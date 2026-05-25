@@ -11,9 +11,6 @@ export default function HomePage() {
 
   return (
     <>
-    <h1 className='py-32 font-3xl text-red-500'>
-    Hello winslow
-    </h1>
       <Hero />
       <Categories />
       <BrandCompatibility />
