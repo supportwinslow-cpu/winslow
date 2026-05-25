@@ -46,7 +46,7 @@ const products = [
       packaging: "1 Pc. | Cartoon Packing: Pack of 6",
     },
 
-    images: ["/products/parcel-tray/WIN-001.png"],
+    images: ["/products/parcel-tray/creta-2020.png"],
 
     variants: [
       { name: "Black", sku: "WIN-001-BLK", price: 2470, stock: 50 },
