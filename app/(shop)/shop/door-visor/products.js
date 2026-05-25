@@ -40,7 +40,7 @@ const products = [
       pieces: "Set of 4",
     },
 
-    images: ["/products/door-visor/alto-old.png"],
+    images: ["/products/door-visor/alto-old.jpg"],
 
     variants: [
       { name: "Chromeline", sku: "DV-001-CRM", price: 1625, originalPrice: 2500, discountPercentage: 35, stock: 100 },
@@ -49,50 +49,50 @@ const products = [
     isFeatured: false,
   },
 
-  {
-    id: "DV-002",
-    name: "Door Visor for Maruti Alto 800 / New K-10",
-    slug: "door-visor-maruti-alto-800",
-    sku: "DV-002",
+  // {
+  //   id: "DV-002",
+  //   name: "Door Visor for Maruti Alto 800 / New K-10",
+  //   slug: "door-visor-maruti-alto-800",
+  //   sku: "DV-002",
 
-    category: "door-visor",
-    brand: "Chromeline",
-    series: "Door Visor",
+  //   category: "door-visor",
+  //   brand: "Chromeline",
+  //   series: "Door Visor",
 
-    carBrand: ["Maruti"],
-    carModel: ["Alto 800", "Alto New K-10"],
+  //   carBrand: ["Maruti"],
+  //   carModel: ["Alto 800", "Alto New K-10"],
 
-    price: 1625,
-    originalPrice: 2500,
-    discountPercentage: 35,
-    rating: 4.4,
+  //   price: 1625,
+  //   originalPrice: 2500,
+  //   discountPercentage: 35,
+  //   rating: 4.4,
 
-    tags: ["door visor", "alto 800", "maruti", "rain visor"],
+  //   tags: ["door visor", "alto 800", "maruti", "rain visor"],
 
-    description:
-      "Premium Door Visor for Maruti Alto 800 / New K-10. Available in Chromeline finish. Set of 4 pieces.",
+  //   description:
+  //     "Premium Door Visor for Maruti Alto 800 / New K-10. Available in Chromeline finish. Set of 4 pieces.",
 
-    features: [
-      "Protects from Rain & Wind",
-      "Allows Ventilation While Windows Are Cracked",
-      "Reduces Heat Build-up Inside Car",
-      "Easy Clip-on Installation",
-      "UV Resistant & Durable",
-    ],
+  //   features: [
+  //     "Protects from Rain & Wind",
+  //     "Allows Ventilation While Windows Are Cracked",
+  //     "Reduces Heat Build-up Inside Car",
+  //     "Easy Clip-on Installation",
+  //     "UV Resistant & Durable",
+  //   ],
 
-    specifications: {
-      fitment: "Custom fit — Maruti Alto 800 / New K-10",
-      pieces: "Set of 4",
-    },
+  //   specifications: {
+  //     fitment: "Custom fit — Maruti Alto 800 / New K-10",
+  //     pieces: "Set of 4",
+  //   },
 
-    images: ["/products/door-visor/alto-800.png"],
+  //   images: ["/products/door-visor/alto-800.jpg"],
 
-    variants: [
-      { name: "Chromeline", sku: "DV-002-CRM", price: 1625, originalPrice: 2500, discountPercentage: 35, stock: 100 },
-    ],
+  //   variants: [
+  //     { name: "Chromeline", sku: "DV-002-CRM", price: 1625, originalPrice: 2500, discountPercentage: 35, stock: 100 },
+  //   ],
 
-    isFeatured: false,
-  },
+  //   isFeatured: false,
+  // },
 
   {
     id: "DV-003",
@@ -130,7 +130,7 @@ const products = [
       pieces: "Set of 4",
     },
 
-    images: ["/products/door-visor/celerio-old.png"],
+    images: ["/products/door-visor/celerio-old.jpg"],
 
     variants: [
       { name: "Chromeline", sku: "DV-003-CRM", price: 1625, originalPrice: 2500, discountPercentage: 35, stock: 100 },
@@ -175,7 +175,7 @@ const products = [
       pieces: "Set of 4",
     },
 
-    images: ["/products/door-visor/maruti-800.png"],
+    images: ["/products/door-visor/maruti-800.jpg"],
 
     variants: [
       { name: "Chromeline", sku: "DV-004-CRM", price: 1625, originalPrice: 2500, discountPercentage: 35, stock: 100 },
@@ -220,7 +220,7 @@ const products = [
       pieces: "Set of 4",
     },
 
-    images: ["/products/door-visor/s-presso.png"],
+    images: ["/products/door-visor/s-presso.jpg"],
 
     variants: [
       { name: "Chromeline", sku: "DV-005-CRM", price: 1625, originalPrice: 2500, discountPercentage: 35, stock: 100 },
@@ -265,7 +265,7 @@ const products = [
       pieces: "Set of 4",
     },
 
-    images: ["/products/door-visor/wagonr-old.png"],
+    images: ["/products/door-visor/wagon-r-old.jpg"],
 
     variants: [
       { name: "Chromeline", sku: "DV-006-CRM", price: 1625, originalPrice: 2500, discountPercentage: 35, stock: 100 },
@@ -310,7 +310,7 @@ const products = [
       pieces: "Set of 4",
     },
 
-    images: ["/products/door-visor/wagonr-new-kseries.png"],
+    images: ["/products/door-visor/wagon-r-new.jpg"],
 
     variants: [
       { name: "Chromeline", sku: "DV-007-CRM", price: 1625, originalPrice: 2500, discountPercentage: 35, stock: 100 },
@@ -355,7 +355,7 @@ const products = [
       pieces: "Set of 4",
     },
 
-    images: ["/products/door-visor/wagonr-2019.png"],
+    images: ["/products/door-visor/wagon-r-2019.jpg"],
 
     variants: [
       { name: "Chromeline", sku: "DV-008-CRM", price: 1625, originalPrice: 2500, discountPercentage: 35, stock: 100 },
@@ -400,7 +400,7 @@ const products = [
       pieces: "Set of 4",
     },
 
-    images: ["/products/door-visor/baleno-old-glanza.png"],
+    images: ["/products/door-visor/baleno.jpg"],
 
     variants: [
       { name: "Chromeline", sku: "DV-009-CRM", price: 1625, originalPrice: 2500, discountPercentage: 35, stock: 100 },
@@ -445,7 +445,7 @@ const products = [
       pieces: "Set of 4",
     },
 
-    images: ["/products/door-visor/brezza-old-urban-cruiser.png"],
+    images: ["/products/door-visor/brezza-old.jpg"],
 
     variants: [
       { name: "Chromeline", sku: "DV-010-CRM", price: 1625, originalPrice: 2500, discountPercentage: 35, stock: 100 },
@@ -490,7 +490,7 @@ const products = [
       pieces: "Set of 4",
     },
 
-    images: ["/products/door-visor/baleno-2022.png"],
+    images: ["/products/door-visor/baleno-2022.jpg"],
 
     variants: [
       { name: "Chromeline", sku: "DV-011-CRM", price: 1625, originalPrice: 2500, discountPercentage: 35, stock: 100 },
@@ -535,7 +535,7 @@ const products = [
       pieces: "Set of 4",
     },
 
-    images: ["/products/door-visor/brezza-2022.png"],
+    images: ["/products/door-visor/brezza-2022.jpg"],
 
     variants: [
       { name: "Chromeline", sku: "DV-012-CRM", price: 1625, originalPrice: 2500, discountPercentage: 35, stock: 100 },
@@ -580,7 +580,7 @@ const products = [
       pieces: "Set of 4",
     },
 
-    images: ["/products/door-visor/swift-dzire-old.png"],
+    images: ["/products/door-visor/swift-2008-11.jpg"],
 
     variants: [
       { name: "Chromeline", sku: "DV-013-CRM", price: 1625, originalPrice: 2500, discountPercentage: 35, stock: 100 },
@@ -625,7 +625,7 @@ const products = [
       pieces: "Set of 4",
     },
 
-    images: ["/products/door-visor/swift-dzire-new.png"],
+    images: ["/products/door-visor/dzire-2012-16.jpg"],
 
     variants: [
       { name: "Chromeline", sku: "DV-014-CRM", price: 1625, originalPrice: 2500, discountPercentage: 35, stock: 100 },
@@ -670,7 +670,7 @@ const products = [
       pieces: "Set of 4",
     },
 
-    images: ["/products/door-visor/swift-dzire-2017-2023.png"],
+    images: ["/products/door-visor/dzire-2017-23.jpg"],
 
     variants: [
       { name: "Chromeline", sku: "DV-015-CRM", price: 1625, originalPrice: 2500, discountPercentage: 35, stock: 100 },
@@ -715,7 +715,7 @@ const products = [
       pieces: "Set of 4",
     },
 
-    images: ["/products/door-visor/swift-old.png"],
+    images: ["/products/door-visor/swift-2008-11.jpg"],
 
     variants: [
       { name: "Chromeline", sku: "DV-016-CRM", price: 1625, originalPrice: 2500, discountPercentage: 35, stock: 100 },
@@ -760,7 +760,7 @@ const products = [
       pieces: "Set of 4",
     },
 
-    images: ["/products/door-visor/swift-new.png"],
+    images: ["/products/door-visor/swift-2012-17.jpg"],
 
     variants: [
       { name: "Chromeline", sku: "DV-017-CRM", price: 1625, originalPrice: 2500, discountPercentage: 35, stock: 100 },
@@ -805,7 +805,7 @@ const products = [
       pieces: "Set of 4",
     },
 
-    images: ["/products/door-visor/swift-2018-2023.png"],
+    images: ["/products/door-visor/swift-2018-23.jpg"],
 
     variants: [
       { name: "Chromeline", sku: "DV-018-CRM", price: 1625, originalPrice: 2500, discountPercentage: 35, stock: 100 },
@@ -850,7 +850,7 @@ const products = [
       pieces: "Set of 4",
     },
 
-    images: ["/products/door-visor/ritz.png"],
+    images: ["/products/door-visor/ritz.jpg"],
 
     variants: [
       { name: "Chromeline", sku: "DV-019-CRM", price: 1625, originalPrice: 2500, discountPercentage: 35, stock: 100 },
@@ -895,7 +895,7 @@ const products = [
       pieces: "Set of 4",
     },
 
-    images: ["/products/door-visor/alto-k10-2022.png"],
+    images: ["/products/door-visor/alto-old.jpg"],
 
     variants: [
       { name: "Chromeline", sku: "DV-020-CRM", price: 1625, originalPrice: 2500, discountPercentage: 35, stock: 100 },
@@ -940,7 +940,7 @@ const products = [
       pieces: "Set of 4",
     },
 
-    images: ["/products/door-visor/celerio-2021.png"],
+    images: ["/products/door-visor/celerio-2021.jpg"],
 
     variants: [
       { name: "Chromeline", sku: "DV-021-CRM", price: 1625, originalPrice: 2500, discountPercentage: 35, stock: 100 },
@@ -985,7 +985,7 @@ const products = [
       pieces: "Set of 4",
     },
 
-    images: ["/products/door-visor/fronx.png"],
+    images: ["/products/door-visor/fronx.jpg"],
 
     variants: [
       { name: "Chromeline", sku: "DV-022-CRM", price: 1625, originalPrice: 2500, discountPercentage: 35, stock: 100 },
@@ -1030,7 +1030,7 @@ const products = [
       pieces: "Set of 4",
     },
 
-    images: ["/products/door-visor/ignis.png"],
+    images: ["/products/door-visor/ignis.jpg"],
 
     variants: [
       { name: "Chromeline", sku: "DV-023-CRM", price: 1625, originalPrice: 2500, discountPercentage: 35, stock: 100 },
@@ -1075,7 +1075,7 @@ const products = [
       pieces: "Set of 4",
     },
 
-    images: ["/products/door-visor/ciaz.png"],
+    images: ["/products/door-visor/ciaz.jpg"],
 
     variants: [
       { name: "Chromeline", sku: "DV-024-CRM", price: 1625, originalPrice: 2500, discountPercentage: 35, stock: 100 },
@@ -1120,7 +1120,7 @@ const products = [
       pieces: "Set of 4",
     },
 
-    images: ["/products/door-visor/grand-vitara.png"],
+    images: ["/products/door-visor/grand-vitara.jpg"],
 
     variants: [
       { name: "Chromeline", sku: "DV-025-CRM", price: 1625, originalPrice: 2500, discountPercentage: 35, stock: 100 },
@@ -1165,7 +1165,7 @@ const products = [
       pieces: "Set of 4",
     },
 
-    images: ["/products/door-visor/invicto.png"],
+    images: ["/products/door-visor/invicto.jpg"],
 
     variants: [
       { name: "Chromeline", sku: "DV-026-CRM", price: 1625, originalPrice: 2500, discountPercentage: 35, stock: 100 },
@@ -1210,7 +1210,7 @@ const products = [
       pieces: "Set of 4",
     },
 
-    images: ["/products/door-visor/s-cross.png"],
+    images: ["/products/door-visor/s-cross.jpg"],
 
     variants: [
       { name: "Chromeline", sku: "DV-027-CRM", price: 1625, originalPrice: 2500, discountPercentage: 35, stock: 100 },
@@ -1255,7 +1255,7 @@ const products = [
       pieces: "Set of 4",
     },
 
-    images: ["/products/door-visor/swift-dzire-2024.png"],
+    images: ["/products/door-visor/dzire-2024.jpg"],
 
     variants: [
       { name: "Chromeline", sku: "DV-028-CRM", price: 1625, originalPrice: 2500, discountPercentage: 35, stock: 100 },
@@ -1300,7 +1300,7 @@ const products = [
       pieces: "Set of 4",
     },
 
-    images: ["/products/door-visor/swift-2024.png"],
+    images: ["/products/door-visor/swift-2024.jpg"],
 
     variants: [
       { name: "Chromeline", sku: "DV-029-CRM", price: 1625, originalPrice: 2500, discountPercentage: 35, stock: 100 },
@@ -1345,7 +1345,7 @@ const products = [
       pieces: "Set of 6",
     },
 
-    images: ["/products/door-visor/eeco.png"],
+    images: ["/products/door-visor/eeco.jpg"],
 
     variants: [
       { name: "Chromeline", sku: "DV-030-CRM", price: 1950, originalPrice: 3000, discountPercentage: 35, stock: 100 },
@@ -1390,7 +1390,7 @@ const products = [
       pieces: "Set of 6",
     },
 
-    images: ["/products/door-visor/omni.png"],
+    images: ["/products/door-visor/omni.jpg"],
 
     variants: [
       { name: "Chromeline", sku: "DV-031-CRM", price: 1950, originalPrice: 3000, discountPercentage: 35, stock: 100 },
@@ -1435,7 +1435,7 @@ const products = [
       pieces: "Set of 6",
     },
 
-    images: ["/products/door-visor/vitara.png"],
+    images: ["/products/door-visor/vitara.jpg"],
 
     variants: [
       { name: "Chromeline", sku: "DV-032-CRM", price: 1950, originalPrice: 3000, discountPercentage: 35, stock: 100 },
@@ -1480,7 +1480,7 @@ const products = [
       pieces: "Set of 6",
     },
 
-    images: ["/products/door-visor/ertiga-2025.png"],
+    images: ["/products/door-visor/ertiga-2025.jpg"],
 
     variants: [
       { name: "Chromeline", sku: "DV-033-CRM", price: 1950, originalPrice: 3000, discountPercentage: 35, stock: 100 },
@@ -1525,7 +1525,7 @@ const products = [
       pieces: "Set of 6",
     },
 
-    images: ["/products/door-visor/ertiga-2019.png"],
+    images: ["/products/door-visor/ertiga-2019.jpg"],
 
     variants: [
       { name: "Chromeline", sku: "DV-034-CRM", price: 1950, originalPrice: 3000, discountPercentage: 35, stock: 100 },
@@ -1570,7 +1570,7 @@ const products = [
       pieces: "Set of 6",
     },
 
-    images: ["/products/door-visor/ertiga-old.png"],
+    images: ["/products/door-visor/ertiga-old.jpg"],
 
     variants: [
       { name: "Chromeline", sku: "DV-035-CRM", price: 1950, originalPrice: 3000, discountPercentage: 35, stock: 100 },
@@ -1615,7 +1615,7 @@ const products = [
       pieces: "Set of 6",
     },
 
-    images: ["/products/door-visor/xl-6.png"],
+    images: ["/products/door-visor/xl-6.jpg"],
 
     variants: [
       { name: "Chromeline", sku: "DV-036-CRM", price: 1950, originalPrice: 3000, discountPercentage: 35, stock: 100 },
@@ -1660,7 +1660,7 @@ const products = [
       pieces: "Set of 6",
     },
 
-    images: ["/products/door-visor/jimny.png"],
+    images: ["/products/door-visor/jimny.jpg"],
 
     variants: [
       { name: "Chromeline", sku: "DV-037-CRM", price: 1950, originalPrice: 3000, discountPercentage: 35, stock: 100 },
@@ -1705,7 +1705,7 @@ const products = [
       pieces: "Set of 4",
     },
 
-    images: ["/products/door-visor/victoris.png"],
+    images: ["/products/door-visor/victoris.jpg"],
 
     variants: [
       { name: "Chromeline", sku: "DV-038-CRM", price: 1625, originalPrice: 2500, discountPercentage: 35, stock: 100 },
@@ -1754,7 +1754,7 @@ const products = [
       pieces: "Set of 4",
     },
 
-    images: ["/products/door-visor/grand-i10.png"],
+    images: ["/products/door-visor/grand-i10.jpg"],
 
     variants: [
       { name: "Chromeline", sku: "DV-039-CRM", price: 1625, originalPrice: 2500, discountPercentage: 35, stock: 100 },
@@ -1799,7 +1799,7 @@ const products = [
       pieces: "Set of 4",
     },
 
-    images: ["/products/door-visor/aura.png"],
+    images: ["/products/door-visor/aura.jpg"],
 
     variants: [
       { name: "Chromeline", sku: "DV-040-CRM", price: 1625, originalPrice: 2500, discountPercentage: 35, stock: 100 },
@@ -1844,7 +1844,7 @@ const products = [
       pieces: "Set of 4",
     },
 
-    images: ["/products/door-visor/nios.png"],
+    images: ["/products/door-visor/nios.jpg"],
 
     variants: [
       { name: "Chromeline", sku: "DV-041-CRM", price: 1625, originalPrice: 2500, discountPercentage: 35, stock: 100 },
@@ -1889,7 +1889,7 @@ const products = [
       pieces: "Set of 4",
     },
 
-    images: ["/products/door-visor/xcent.png"],
+    images: ["/products/door-visor/xcent.jpg"],
 
     variants: [
       { name: "Chromeline", sku: "DV-042-CRM", price: 1625, originalPrice: 2500, discountPercentage: 35, stock: 100 },
@@ -1934,7 +1934,7 @@ const products = [
       pieces: "Set of 4",
     },
 
-    images: ["/products/door-visor/venue.png"],
+    images: ["/products/door-visor/venue-2022.jpg"],
 
     variants: [
       { name: "Chromeline", sku: "DV-043-CRM", price: 1625, originalPrice: 2500, discountPercentage: 35, stock: 100 },
@@ -1979,7 +1979,7 @@ const products = [
       pieces: "Set of 4",
     },
 
-    images: ["/products/door-visor/creta-old.png"],
+    images: ["/products/door-visor/creta-old.jpg"],
 
     variants: [
       { name: "Chromeline", sku: "DV-044-CRM", price: 1625, originalPrice: 2500, discountPercentage: 35, stock: 100 },
@@ -2024,7 +2024,7 @@ const products = [
       pieces: "Set of 4",
     },
 
-    images: ["/products/door-visor/creta-2020.png"],
+    images: ["/products/door-visor/creta-2020.jpg"],
 
     variants: [
       { name: "Chromeline", sku: "DV-045-CRM", price: 1625, originalPrice: 2500, discountPercentage: 35, stock: 100 },
@@ -2069,7 +2069,7 @@ const products = [
       pieces: "Set of 4",
     },
 
-    images: ["/products/door-visor/eon.png"],
+    images: ["/products/door-visor/eon.jpg"],
 
     variants: [
       { name: "Chromeline", sku: "DV-046-CRM", price: 1625, originalPrice: 2500, discountPercentage: 35, stock: 100 },
@@ -2114,7 +2114,7 @@ const products = [
       pieces: "Set of 4",
     },
 
-    images: ["/products/door-visor/santro-2018.png"],
+    images: ["/products/door-visor/santro-2018.jpg"],
 
     variants: [
       { name: "Chromeline", sku: "DV-047-CRM", price: 1625, originalPrice: 2500, discountPercentage: 35, stock: 100 },
@@ -2159,7 +2159,7 @@ const products = [
       pieces: "Set of 4",
     },
 
-    images: ["/products/door-visor/santro-xing.png"],
+    images: ["/products/door-visor/santro.jpg"],
 
     variants: [
       { name: "Chromeline", sku: "DV-048-CRM", price: 1625, originalPrice: 2500, discountPercentage: 35, stock: 100 },
@@ -2204,7 +2204,7 @@ const products = [
       pieces: "Set of 4",
     },
 
-    images: ["/products/door-visor/etios.png"],
+    images: ["/products/door-visor/etios.jpg"],
 
     variants: [
       { name: "Chromeline", sku: "DV-049-CRM", price: 1625, originalPrice: 2500, discountPercentage: 35, stock: 100 },
@@ -2249,7 +2249,7 @@ const products = [
       pieces: "Set of 4",
     },
 
-    images: ["/products/door-visor/etios-liva.png"],
+    images: ["/products/door-visor/liva.jpg"],
 
     variants: [
       { name: "Chromeline", sku: "DV-050-CRM", price: 1625, originalPrice: 2500, discountPercentage: 35, stock: 100 },
@@ -2294,7 +2294,7 @@ const products = [
       pieces: "Set of 4",
     },
 
-    images: ["/products/door-visor/i20-elite.png"],
+    images: ["/products/door-visor/i20elite-2015-19.jpg"],
 
     variants: [
       { name: "Chromeline", sku: "DV-051-CRM", price: 1625, originalPrice: 2500, discountPercentage: 35, stock: 100 },
@@ -2339,7 +2339,7 @@ const products = [
       pieces: "Set of 4",
     },
 
-    images: ["/products/door-visor/i20-2020.png"],
+    images: ["/products/door-visor/i20-2020.jpg"],
 
     variants: [
       { name: "Chromeline", sku: "DV-052-CRM", price: 1625, originalPrice: 2500, discountPercentage: 35, stock: 100 },
@@ -2384,7 +2384,7 @@ const products = [
       pieces: "Set of 4",
     },
 
-    images: ["/products/door-visor/verna-fluidic.png"],
+    images: ["/products/door-visor/fluidic.jpg"],
 
     variants: [
       { name: "Chromeline", sku: "DV-053-CRM", price: 1625, originalPrice: 2500, discountPercentage: 35, stock: 100 },
@@ -2393,50 +2393,50 @@ const products = [
     isFeatured: false,
   },
 
-  {
-    id: "DV-054",
-    name: "Door Visor for Hyundai Alcazar",
-    slug: "door-visor-hyundai-alcazar",
-    sku: "DV-054",
+  // {
+  //   id: "DV-054",
+  //   name: "Door Visor for Hyundai Alcazar",
+  //   slug: "door-visor-hyundai-alcazar",
+  //   sku: "DV-054",
 
-    category: "door-visor",
-    brand: "Chromeline",
-    series: "Door Visor",
+  //   category: "door-visor",
+  //   brand: "Chromeline",
+  //   series: "Door Visor",
 
-    carBrand: ["Hyundai"],
-    carModel: ["Alcazar"],
+  //   carBrand: ["Hyundai"],
+  //   carModel: ["Alcazar"],
 
-    price: 1625,
-    originalPrice: 2500,
-    discountPercentage: 35,
-    rating: 4.5,
+  //   price: 1625,
+  //   originalPrice: 2500,
+  //   discountPercentage: 35,
+  //   rating: 4.5,
 
-    tags: ["door visor", "alcazar", "hyundai", "rain visor"],
+  //   tags: ["door visor", "alcazar", "hyundai", "rain visor"],
 
-    description:
-      "Premium Door Visor for Hyundai Alcazar. Available in Chromeline finish. Set of 4 pieces.",
+  //   description:
+  //     "Premium Door Visor for Hyundai Alcazar. Available in Chromeline finish. Set of 4 pieces.",
 
-    features: [
-      "Protects from Rain & Wind",
-      "Allows Ventilation While Windows Are Cracked",
-      "Reduces Heat Build-up Inside Car",
-      "Easy Clip-on Installation",
-      "UV Resistant & Durable",
-    ],
+  //   features: [
+  //     "Protects from Rain & Wind",
+  //     "Allows Ventilation While Windows Are Cracked",
+  //     "Reduces Heat Build-up Inside Car",
+  //     "Easy Clip-on Installation",
+  //     "UV Resistant & Durable",
+  //   ],
 
-    specifications: {
-      fitment: "Custom fit — Hyundai Alcazar",
-      pieces: "Set of 4",
-    },
+  //   specifications: {
+  //     fitment: "Custom fit — Hyundai Alcazar",
+  //     pieces: "Set of 4",
+  //   },
 
-    images: ["/products/door-visor/alcazar.png"],
+  //   images: ["/products/door-visor/alcazar.jpg"],
 
-    variants: [
-      { name: "Chromeline", sku: "DV-054-CRM", price: 1625, originalPrice: 2500, discountPercentage: 35, stock: 100 },
-    ],
+  //   variants: [
+  //     { name: "Chromeline", sku: "DV-054-CRM", price: 1625, originalPrice: 2500, discountPercentage: 35, stock: 100 },
+  //   ],
 
-    isFeatured: false,
-  },
+  //   isFeatured: false,
+  // },
 
   {
     id: "DV-055",
@@ -2474,7 +2474,7 @@ const products = [
       pieces: "Set of 4",
     },
 
-    images: ["/products/door-visor/i10-old.png"],
+    images: ["/products/door-visor/old-i10.jpg"],
 
     variants: [
       { name: "Chromeline", sku: "DV-055-CRM", price: 1625, originalPrice: 2500, discountPercentage: 35, stock: 100 },
@@ -2519,7 +2519,7 @@ const products = [
       pieces: "Set of 4",
     },
 
-    images: ["/products/door-visor/i20-old.png"],
+    images: ["/products/door-visor/old-i20.jpg"],
 
     variants: [
       { name: "Chromeline", sku: "DV-056-CRM", price: 1625, originalPrice: 2500, discountPercentage: 35, stock: 100 },
@@ -2564,7 +2564,7 @@ const products = [
       pieces: "Set of 4",
     },
 
-    images: ["/products/door-visor/verna-2023.png"],
+    images: ["/products/door-visor/verna-2023.jpg"],
 
     variants: [
       { name: "Chromeline", sku: "DV-057-CRM", price: 1625, originalPrice: 2500, discountPercentage: 35, stock: 100 },
@@ -2609,7 +2609,7 @@ const products = [
       pieces: "Set of 4",
     },
 
-    images: ["/products/door-visor/verna-2017.png"],
+    images: ["/products/door-visor/verna-2017.jpg"],
 
     variants: [
       { name: "Chromeline", sku: "DV-058-CRM", price: 1625, originalPrice: 2500, discountPercentage: 35, stock: 100 },
@@ -2654,7 +2654,7 @@ const products = [
       pieces: "Set of 4",
     },
 
-    images: ["/products/door-visor/verna-2020.png"],
+    images: ["/products/door-visor/verna-2020.jpg"],
 
     variants: [
       { name: "Chromeline", sku: "DV-059-CRM", price: 1625, originalPrice: 2500, discountPercentage: 35, stock: 100 },
@@ -2700,7 +2700,7 @@ const products = [
       pieces: "Set of 4",
     },
 
-    images: ["/products/door-visor/venue-2025.png"],
+    images: ["/products/door-visor/venue-2025.jpg"],
 
     variants: [
       { name: "Chromeline", sku: "DV-061-CRM", price: 1625, originalPrice: 2500, discountPercentage: 35, stock: 100 },
@@ -2713,47 +2713,47 @@ const products = [
   // TATA — DOOR VISOR
   // ─────────────────────────────────────────────
 
-  {
-    id: "DV-062",
-    name: "Door Visor for Tata Ace",
-    slug: "door-visor-tata-ace",
-    sku: "DV-062",
+  // {
+  //   id: "DV-062",
+  //   name: "Door Visor for Tata Ace",
+  //   slug: "door-visor-tata-ace",
+  //   sku: "DV-062",
 
-    category: "door-visor",
-    brand: "Chromeline",
-    series: "Door Visor",
+  //   category: "door-visor",
+  //   brand: "Chromeline",
+  //   series: "Door Visor",
 
-    carBrand: ["Tata"],
-    carModel: ["Ace"],
+  //   carBrand: ["Tata"],
+  //   carModel: ["Ace"],
 
-    price: 800,
-    rating: 4.2,
+  //   price: 800,
+  //   rating: 4.2,
 
-    tags: ["door visor", "tata ace", "tata", "rain visor", "2 pcs"],
+  //   tags: ["door visor", "tata ace", "tata", "rain visor", "2 pcs"],
 
-    description:
-      "Premium Door Visor for Tata Ace. Available in Chromeline finish. Set of 2 pieces.",
+  //   description:
+  //     "Premium Door Visor for Tata Ace. Available in Chromeline finish. Set of 2 pieces.",
 
-    features: [
-      "Protects from Rain & Wind",
-      "Allows Ventilation While Windows Are Cracked",
-      "Easy Clip-on Installation",
-      "UV Resistant & Durable",
-    ],
+  //   features: [
+  //     "Protects from Rain & Wind",
+  //     "Allows Ventilation While Windows Are Cracked",
+  //     "Easy Clip-on Installation",
+  //     "UV Resistant & Durable",
+  //   ],
 
-    specifications: {
-      fitment: "Custom fit — Tata Ace",
-      pieces: "Set of 2",
-    },
+  //   specifications: {
+  //     fitment: "Custom fit — Tata Ace",
+  //     pieces: "Set of 2",
+  //   },
 
-    images: ["/products/door-visor/ace.png"],
+  //   images: ["/products/door-visor/ace.jpg"],
 
-    variants: [
-      { name: "Chromeline", sku: "DV-062-CRM", price: 800, stock: 100 },
-    ],
+  //   variants: [
+  //     { name: "Chromeline", sku: "DV-062-CRM", price: 800, stock: 100 },
+  //   ],
 
-    isFeatured: false,
-  },
+  //   isFeatured: false,
+  // },
 
   {
     id: "DV-063",
@@ -2791,7 +2791,7 @@ const products = [
       pieces: "Set of 4",
     },
 
-    images: ["/products/door-visor/indica.png"],
+    images: ["/products/door-visor/indica.jpg"],
 
     variants: [
       { name: "Chromeline", sku: "DV-063-CRM", price: 1625, originalPrice: 2500, discountPercentage: 35, stock: 100 },
@@ -2836,7 +2836,7 @@ const products = [
       pieces: "Set of 4",
     },
 
-    images: ["/products/door-visor/indigo.png"],
+    images: ["/products/door-visor/indigo.jpg"],
 
     variants: [
       { name: "Chromeline", sku: "DV-064-CRM", price: 1625, originalPrice: 2500, discountPercentage: 35, stock: 100 },
@@ -2881,7 +2881,7 @@ const products = [
       pieces: "Set of 4",
     },
 
-    images: ["/products/door-visor/indigo-cs.png"],
+    images: ["/products/door-visor/indigo-cs.jpg"],
 
     variants: [
       { name: "Chromeline", sku: "DV-065-CRM", price: 1625, originalPrice: 2500, discountPercentage: 35, stock: 100 },
@@ -2926,7 +2926,7 @@ const products = [
       pieces: "Set of 4",
     },
 
-    images: ["/products/door-visor/vista-2023.png"],
+    images: ["/products/door-visor/vista.jpg"],
 
     variants: [
       { name: "Chromeline", sku: "DV-066-CRM", price: 1625, originalPrice: 2500, discountPercentage: 35, stock: 100 },
@@ -2971,7 +2971,7 @@ const products = [
       pieces: "Set of 4",
     },
 
-    images: ["/products/door-visor/manza.png"],
+    images: ["/products/door-visor/manza.jpg"],
 
     variants: [
       { name: "Chromeline", sku: "DV-067-CRM", price: 1625, originalPrice: 2500, discountPercentage: 35, stock: 100 },
@@ -3016,7 +3016,7 @@ const products = [
       pieces: "Set of 4",
     },
 
-    images: ["/products/door-visor/nexon.png"],
+    images: ["/products/door-visor/nexon.jpg"],
 
     variants: [
       { name: "Chromeline", sku: "DV-068-CRM", price: 1625, originalPrice: 2500, discountPercentage: 35, stock: 100 },
@@ -3061,7 +3061,7 @@ const products = [
       pieces: "Set of 4",
     },
 
-    images: ["/products/door-visor/nexon-2023.png"],
+    images: ["/products/door-visor/nexon-2023.jpg"],
 
     variants: [
       { name: "Chromeline", sku: "DV-069-CRM", price: 1625, originalPrice: 2500, discountPercentage: 35, stock: 100 },
@@ -3106,7 +3106,7 @@ const products = [
       pieces: "Set of 4",
     },
 
-    images: ["/products/door-visor/tiago.png"],
+    images: ["/products/door-visor/tiago.jpg"],
 
     variants: [
       { name: "Chromeline", sku: "DV-070-CRM", price: 1625, originalPrice: 2500, discountPercentage: 35, stock: 100 },
@@ -3151,7 +3151,7 @@ const products = [
       pieces: "Set of 4",
     },
 
-    images: ["/products/door-visor/tigor.png"],
+    images: ["/products/door-visor/tigor.jpg"],
 
     variants: [
       { name: "Chromeline", sku: "DV-071-CRM", price: 1625, originalPrice: 2500, discountPercentage: 35, stock: 100 },
@@ -3196,7 +3196,7 @@ const products = [
       pieces: "Set of 4",
     },
 
-    images: ["/products/door-visor/zest.png"],
+    images: ["/products/door-visor/zest.jpg"],
 
     variants: [
       { name: "Chromeline", sku: "DV-072-CRM", price: 1625, originalPrice: 2500, discountPercentage: 35, stock: 100 },
@@ -3241,7 +3241,7 @@ const products = [
       pieces: "Set of 4",
     },
 
-    images: ["/products/door-visor/bolt.png"],
+    images: ["/products/door-visor/bolt.jpg"],
 
     variants: [
       { name: "Chromeline", sku: "DV-073-CRM", price: 1625, originalPrice: 2500, discountPercentage: 35, stock: 100 },
@@ -3286,7 +3286,7 @@ const products = [
       pieces: "Set of 4",
     },
 
-    images: ["/products/door-visor/altroz.png"],
+    images: ["/products/door-visor/altroz.jpg"],
 
     variants: [
       { name: "Chromeline", sku: "DV-074-CRM", price: 1625, originalPrice: 2500, discountPercentage: 35, stock: 100 },
@@ -3331,7 +3331,7 @@ const products = [
       pieces: "Set of 4",
     },
 
-    images: ["/products/door-visor/punch.png"],
+    images: ["/products/door-visor/punch.jpg"],
 
     variants: [
       { name: "Chromeline", sku: "DV-075-CRM", price: 1625, originalPrice: 2500, discountPercentage: 35, stock: 100 },
@@ -3376,7 +3376,7 @@ const products = [
       pieces: "Set of 4",
     },
 
-    images: ["/products/door-visor/curvv.png"],
+    images: ["/products/door-visor/curvv.jpg"],
 
     variants: [
       { name: "Chromeline", sku: "DV-076-CRM", price: 1625, originalPrice: 2500, discountPercentage: 35, stock: 100 },
@@ -3421,7 +3421,7 @@ const products = [
       pieces: "Set of 4",
     },
 
-    images: ["/products/door-visor/harrier.png"],
+    images: ["/products/door-visor/harrier.jpg"],
 
     variants: [
       { name: "Chromeline", sku: "DV-077-CRM", price: 1625, originalPrice: 2500, discountPercentage: 35, stock: 100 },
@@ -3466,7 +3466,7 @@ const products = [
       pieces: "Set of 4",
     },
 
-    images: ["/products/door-visor/safari-2021.png"],
+    images: ["/products/door-visor/safari-2021.jpg"],
 
     variants: [
       { name: "Chromeline", sku: "DV-078-CRM", price: 1625, originalPrice: 2500, discountPercentage: 35, stock: 100 },
@@ -3512,7 +3512,7 @@ const products = [
       pieces: "Set of 2",
     },
 
-    images: ["/products/door-visor/pick-up.png"],
+    images: ["/products/door-visor/pick-up.jpg"],
 
     variants: [
       { name: "Chromeline", sku: "DV-079-CRM", price: 800, stock: 100 },
@@ -3554,7 +3554,7 @@ const products = [
       pieces: "Set of 2",
     },
 
-    images: ["/products/door-visor/thar-new.png"],
+    images: ["/products/door-visor/thar.jpg"],
 
     variants: [
       { name: "Chromeline", sku: "DV-080-CRM", price: 800, stock: 100 },
@@ -3599,7 +3599,7 @@ const products = [
       pieces: "Set of 4",
     },
 
-    images: ["/products/door-visor/kuv100.png"],
+    images: ["/products/door-visor/kuv-100.jpg"],
 
     variants: [
       { name: "Chromeline", sku: "DV-081-CRM", price: 1625, originalPrice: 2500, discountPercentage: 35, stock: 100 },
@@ -3644,7 +3644,7 @@ const products = [
       pieces: "Set of 4",
     },
 
-    images: ["/products/door-visor/bolero-camper.png"],
+    images: ["/products/door-visor/balero-camper.jpg"],
 
     variants: [
       { name: "Chromeline", sku: "DV-082-CRM", price: 1625, originalPrice: 2500, discountPercentage: 35, stock: 100 },
@@ -3689,7 +3689,7 @@ const products = [
       pieces: "Set of 4",
     },
 
-    images: ["/products/door-visor/verito.png"],
+    images: ["/products/door-visor/verito.jpg"],
 
     variants: [
       { name: "Chromeline", sku: "DV-083-CRM", price: 1625, originalPrice: 2500, discountPercentage: 35, stock: 100 },
@@ -3734,7 +3734,7 @@ const products = [
       pieces: "Set of 4",
     },
 
-    images: ["/products/door-visor/logan.png"],
+    images: ["/products/door-visor/logan.jpg"],
 
     variants: [
       { name: "Chromeline", sku: "DV-084-CRM", price: 1625, originalPrice: 2500, discountPercentage: 35, stock: 100 },
@@ -3743,50 +3743,50 @@ const products = [
     isFeatured: false,
   },
 
-  {
-    id: "DV-085",
-    name: "Door Visor for Mahindra 3XO",
-    slug: "door-visor-mahindra-3xo",
-    sku: "DV-085",
+  // {
+  //   id: "DV-085",
+  //   name: "Door Visor for Mahindra 3XO",
+  //   slug: "door-visor-mahindra-3xo",
+  //   sku: "DV-085",
 
-    category: "door-visor",
-    brand: "Chromeline",
-    series: "Door Visor",
+  //   category: "door-visor",
+  //   brand: "Chromeline",
+  //   series: "Door Visor",
 
-    carBrand: ["Mahindra"],
-    carModel: ["3XO"],
+  //   carBrand: ["Mahindra"],
+  //   carModel: ["3XO"],
 
-    price: 1625,
-    originalPrice: 2500,
-    discountPercentage: 35,
-    rating: 4.5,
+  //   price: 1625,
+  //   originalPrice: 2500,
+  //   discountPercentage: 35,
+  //   rating: 4.5,
 
-    tags: ["door visor", "3xo", "mahindra", "rain visor"],
+  //   tags: ["door visor", "3xo", "mahindra", "rain visor"],
 
-    description:
-      "Premium Door Visor for Mahindra 3XO. Available in Chromeline finish. Set of 4 pieces.",
+  //   description:
+  //     "Premium Door Visor for Mahindra 3XO. Available in Chromeline finish. Set of 4 pieces.",
 
-    features: [
-      "Protects from Rain & Wind",
-      "Allows Ventilation While Windows Are Cracked",
-      "Reduces Heat Build-up Inside Car",
-      "Easy Clip-on Installation",
-      "UV Resistant & Durable",
-    ],
+  //   features: [
+  //     "Protects from Rain & Wind",
+  //     "Allows Ventilation While Windows Are Cracked",
+  //     "Reduces Heat Build-up Inside Car",
+  //     "Easy Clip-on Installation",
+  //     "UV Resistant & Durable",
+  //   ],
 
-    specifications: {
-      fitment: "Custom fit — Mahindra 3XO",
-      pieces: "Set of 4",
-    },
+  //   specifications: {
+  //     fitment: "Custom fit — Mahindra 3XO",
+  //     pieces: "Set of 4",
+  //   },
 
-    images: ["/products/door-visor/3xo.png"],
+  //   images: ["/products/door-visor/3xo.jpg"],
 
-    variants: [
-      { name: "Chromeline", sku: "DV-085-CRM", price: 1625, originalPrice: 2500, discountPercentage: 35, stock: 100 },
-    ],
+  //   variants: [
+  //     { name: "Chromeline", sku: "DV-085-CRM", price: 1625, originalPrice: 2500, discountPercentage: 35, stock: 100 },
+  //   ],
 
-    isFeatured: false,
-  },
+  //   isFeatured: false,
+  // },
 
   {
     id: "DV-086",
@@ -3824,7 +3824,7 @@ const products = [
       pieces: "Set of 4",
     },
 
-    images: ["/products/door-visor/xuv300.png"],
+    images: ["/products/door-visor/xuv-300.jpg"],
 
     variants: [
       { name: "Chromeline", sku: "DV-086-CRM", price: 1625, originalPrice: 2500, discountPercentage: 35, stock: 100 },
@@ -3869,7 +3869,7 @@ const products = [
       pieces: "Set of 4",
     },
 
-    images: ["/products/door-visor/nuvosport.png"],
+    images: ["/products/door-visor/nuvosport.jpg"],
 
     variants: [
       { name: "Chromeline", sku: "DV-087-CRM", price: 1625, originalPrice: 2500, discountPercentage: 35, stock: 100 },
@@ -3914,7 +3914,7 @@ const products = [
       pieces: "Set of 4",
     },
 
-    images: ["/products/door-visor/quanto.png"],
+    images: ["/products/door-visor/quanto.jpg"],
 
     variants: [
       { name: "Chromeline", sku: "DV-088-CRM", price: 1625, originalPrice: 2500, discountPercentage: 35, stock: 100 },
@@ -3959,7 +3959,7 @@ const products = [
       pieces: "Set of 4",
     },
 
-    images: ["/products/door-visor/xylo-4door.png"],
+    images: ["/products/door-visor/xylo-4.jpg"],
 
     variants: [
       { name: "Chromeline", sku: "DV-089-CRM", price: 1625, originalPrice: 2500, discountPercentage: 35, stock: 100 },
@@ -4004,7 +4004,7 @@ const products = [
       pieces: "Set of 4",
     },
 
-    images: ["/products/door-visor/scorpio-2022.png"],
+    images: ["/products/door-visor/scorpio-2022.jpg"],
 
     variants: [
       { name: "Chromeline", sku: "DV-090-CRM", price: 1625, originalPrice: 2500, discountPercentage: 35, stock: 100 },
@@ -4049,7 +4049,7 @@ const products = [
       pieces: "Set of 4",
     },
 
-    images: ["/products/door-visor/thar-roxx.png"],
+    images: ["/products/door-visor/thar-roxx.jpg"],
 
     variants: [
       { name: "Chromeline", sku: "DV-091-CRM", price: 1625, originalPrice: 2500, discountPercentage: 35, stock: 100 },
@@ -4094,7 +4094,7 @@ const products = [
       pieces: "Set of 6",
     },
 
-    images: ["/products/door-visor/bolero.png"],
+    images: ["/products/door-visor/balero.jpg"],
 
     variants: [
       { name: "Chromeline", sku: "DV-092-CRM", price: 1950, originalPrice: 3000, discountPercentage: 35, stock: 100 },
@@ -4139,7 +4139,7 @@ const products = [
       pieces: "Set of 6",
     },
 
-    images: ["/products/door-visor/bolero.png"],
+    images: ["/products/door-visor/balero.jpg"],
 
     variants: [
       { name: "Chromeline", sku: "DV-093-CRM", price: 1950, originalPrice: 3000, discountPercentage: 35, stock: 100 },
@@ -4184,7 +4184,7 @@ const products = [
       pieces: "Set of 6",
     },
 
-    images: ["/products/door-visor/bolero.png"],
+    images: ["/products/door-visor/balero.jpg"],
 
     variants: [
       { name: "Chromeline", sku: "DV-094-CRM", price: 1950, originalPrice: 3000, discountPercentage: 35, stock: 100 },
@@ -4229,7 +4229,7 @@ const products = [
       pieces: "Set of 6",
     },
 
-    images: ["/products/door-visor/xylo.png"],
+    images: ["/products/door-visor/xylo.jpg"],
 
     variants: [
       { name: "Chromeline", sku: "DV-095-CRM", price: 1950, originalPrice: 3000, discountPercentage: 35, stock: 100 },
@@ -4274,7 +4274,7 @@ const products = [
       pieces: "Set of 6",
     },
 
-    images: ["/products/door-visor/scorpio.png"],
+    images: ["/products/door-visor/scorpio.jpg"],
 
     variants: [
       { name: "Chromeline", sku: "DV-096-CRM", price: 1950, originalPrice: 3000, discountPercentage: 35, stock: 100 },
@@ -4319,7 +4319,7 @@ const products = [
       pieces: "Set of 6",
     },
 
-    images: ["/products/door-visor/tuv300.png"],
+    images: ["/products/door-visor/tuv-300.jpg"],
 
     variants: [
       { name: "Chromeline", sku: "DV-097-CRM", price: 1950, originalPrice: 3000, discountPercentage: 35, stock: 100 },
@@ -4364,7 +4364,7 @@ const products = [
       pieces: "Set of 6",
     },
 
-    images: ["/products/door-visor/bolero-neo.png"],
+    images: ["/products/door-visor/balero-neo.jpg"],
 
     variants: [
       { name: "Chromeline", sku: "DV-098-CRM", price: 1950, originalPrice: 3000, discountPercentage: 35, stock: 100 },
@@ -4409,7 +4409,7 @@ const products = [
       pieces: "Set of 4",
     },
 
-    images: ["/products/door-visor/be6.png"],
+    images: ["/products/door-visor/be-6.jpg"],
 
     variants: [
       { name: "Chromeline", sku: "DV-099-CRM", price: 1625, originalPrice: 2500, discountPercentage: 35, stock: 100 },
@@ -4454,7 +4454,7 @@ const products = [
       pieces: "Set of 6",
     },
 
-    images: ["/products/door-visor/xev9e.png"],
+    images: ["/products/door-visor/xev9e.jpg"],
 
     variants: [
       { name: "Chromeline", sku: "DV-100-CRM", price: 1950, originalPrice: 3000, discountPercentage: 35, stock: 100 },
@@ -4499,7 +4499,7 @@ const products = [
       pieces: "Set of 6",
     },
 
-    images: ["/products/door-visor/xuv700.png"],
+    images: ["/products/door-visor/xuv-700.jpg"],
 
     variants: [
       { name: "Chromeline", sku: "DV-101-CRM", price: 1950, originalPrice: 3000, discountPercentage: 35, stock: 100 },
@@ -4544,7 +4544,7 @@ const products = [
       pieces: "Set of 6",
     },
 
-    images: ["/products/door-visor/xuv500.png"],
+    images: ["/products/door-visor/xuv-500.jpg"],
 
     variants: [
       { name: "Chromeline", sku: "DV-102-CRM", price: 1950, originalPrice: 3000, discountPercentage: 35, stock: 100 },
@@ -4593,7 +4593,7 @@ const products = [
       pieces: "Set of 4",
     },
 
-    images: ["/products/door-visor/amaze-old.png"],
+    images: ["/products/door-visor/amaze-old.jpg"],
 
     variants: [
       { name: "Chromeline", sku: "DV-103-CRM", price: 1625, originalPrice: 2500, discountPercentage: 35, stock: 100 },
@@ -4638,7 +4638,7 @@ const products = [
       pieces: "Set of 4",
     },
 
-    images: ["/products/door-visor/amaze-2018.png"],
+    images: ["/products/door-visor/amaze-2018.jpg"],
 
     variants: [
       { name: "Chromeline", sku: "DV-104-CRM", price: 1625, originalPrice: 2500, discountPercentage: 35, stock: 100 },
@@ -4683,7 +4683,7 @@ const products = [
       pieces: "Set of 4",
     },
 
-    images: ["/products/door-visor/elevate.png"],
+    images: ["/products/door-visor/elevate.jpg"],
 
     variants: [
       { name: "Chromeline", sku: "DV-105-CRM", price: 1625, originalPrice: 2500, discountPercentage: 35, stock: 100 },
@@ -4728,7 +4728,7 @@ const products = [
       pieces: "Set of 4",
     },
 
-    images: ["/products/door-visor/city-2020.png"],
+    images: ["/products/door-visor/city-2020.jpg"],
 
     variants: [
       { name: "Chromeline", sku: "DV-106-CRM", price: 1625, originalPrice: 2500, discountPercentage: 35, stock: 100 },
@@ -4773,7 +4773,7 @@ const products = [
       pieces: "Set of 4",
     },
 
-    images: ["/products/door-visor/city-ivtec-2009-13.png"],
+    images: ["/products/door-visor/city-2009-13.jpg"],
 
     variants: [
       { name: "Chromeline", sku: "DV-107-CRM", price: 1625, originalPrice: 2500, discountPercentage: 35, stock: 100 },
@@ -4818,7 +4818,7 @@ const products = [
       pieces: "Set of 4",
     },
 
-    images: ["/products/door-visor/city-idtec-2014-19.png"],
+    images: ["/products/door-visor/city-2014-19.jpg"],
 
     variants: [
       { name: "Chromeline", sku: "DV-108-CRM", price: 1625, originalPrice: 2500, discountPercentage: 35, stock: 100 },
@@ -4863,7 +4863,7 @@ const products = [
       pieces: "Set of 4",
     },
 
-    images: ["/products/door-visor/wrv.png"],
+    images: ["/products/door-visor/wr-v.jpg"],
 
     variants: [
       { name: "Chromeline", sku: "DV-109-CRM", price: 1625, originalPrice: 2500, discountPercentage: 35, stock: 100 },
@@ -4908,7 +4908,7 @@ const products = [
       pieces: "Set of 4",
     },
 
-    images: ["/products/door-visor/jazz.png"],
+    images: ["/products/door-visor/jazz.jpg"],
 
     variants: [
       { name: "Chromeline", sku: "DV-110-CRM", price: 1625, originalPrice: 2500, discountPercentage: 35, stock: 100 },
@@ -4957,7 +4957,7 @@ const products = [
       pieces: "Set of 4",
     },
 
-    images: ["/products/door-visor/seltos.png"],
+    images: ["/products/door-visor/seltos.jpg"],
 
     variants: [
       { name: "Chromeline", sku: "DV-111-CRM", price: 1625, originalPrice: 2500, discountPercentage: 35, stock: 100 },
@@ -5002,7 +5002,7 @@ const products = [
       pieces: "Set of 4",
     },
 
-    images: ["/products/door-visor/sonet.png"],
+    images: ["/products/door-visor/sonet.jpg"],
 
     variants: [
       { name: "Chromeline", sku: "DV-112-CRM", price: 1625, originalPrice: 2500, discountPercentage: 35, stock: 100 },
@@ -5047,7 +5047,7 @@ const products = [
       pieces: "Set of 6",
     },
 
-    images: ["/products/door-visor/syros.png"],
+    images: ["/products/door-visor/syros.jpg"],
 
     variants: [
       { name: "Chromeline", sku: "DV-113-CRM", price: 1950, originalPrice: 3000, discountPercentage: 35, stock: 100 },
@@ -5092,7 +5092,7 @@ const products = [
       pieces: "Set of 6",
     },
 
-    images: ["/products/door-visor/clavis.png"],
+    images: ["/products/door-visor/clavis.jpg"],
 
     variants: [
       { name: "Chromeline", sku: "DV-114-CRM", price: 1950, originalPrice: 3000, discountPercentage: 35, stock: 100 },
@@ -5137,7 +5137,7 @@ const products = [
       pieces: "Set of 6",
     },
 
-    images: ["/products/door-visor/carens.png"],
+    images: ["/products/door-visor/carens.jpg"],
 
     variants: [
       { name: "Chromeline", sku: "DV-115-CRM", price: 1950, originalPrice: 3000, discountPercentage: 35, stock: 100 },
@@ -5186,7 +5186,7 @@ const products = [
       pieces: "Set of 4",
     },
 
-    images: ["/products/door-visor/taisor.png"],
+    images: ["/products/door-visor/taisor.jpg"],
 
     variants: [
       { name: "Chromeline", sku: "DV-116-CRM", price: 1625, originalPrice: 2500, discountPercentage: 35, stock: 100 },
@@ -5231,7 +5231,7 @@ const products = [
       pieces: "Set of 4",
     },
 
-    images: ["/products/door-visor/hyryder.png"],
+    images: ["/products/door-visor/hyryder.jpg"],
 
     variants: [
       { name: "Chromeline", sku: "DV-117-CRM", price: 1625, originalPrice: 2500, discountPercentage: 35, stock: 100 },
@@ -5276,7 +5276,7 @@ const products = [
       pieces: "Set of 4",
     },
 
-    images: ["/products/door-visor/hycross.png"],
+    images: ["/products/door-visor/hycross.jpg"],
 
     variants: [
       { name: "Chromeline", sku: "DV-118-CRM", price: 1625, originalPrice: 2500, discountPercentage: 35, stock: 100 },
@@ -5321,7 +5321,7 @@ const products = [
       pieces: "Set of 4",
     },
 
-    images: ["/products/door-visor/fortuner-old.png"],
+    images: ["/products/door-visor/old-fortuner.jpg"],
 
     variants: [
       { name: "Chromeline", sku: "DV-119-CRM", price: 1625, originalPrice: 2500, discountPercentage: 35, stock: 100 },
@@ -5366,7 +5366,7 @@ const products = [
       pieces: "Set of 4",
     },
 
-    images: ["/products/door-visor/fortuner-new.png"],
+    images: ["/products/door-visor/fortuner.jpg"],
 
     variants: [
       { name: "Chromeline", sku: "DV-120-CRM", price: 1625, originalPrice: 2500, discountPercentage: 35, stock: 100 },
@@ -5411,7 +5411,7 @@ const products = [
       pieces: "Set of 6",
     },
 
-    images: ["/products/door-visor/rumion.png"],
+    images: ["/products/door-visor/rumion.jpg"],
 
     variants: [
       { name: "Chromeline", sku: "DV-121-CRM", price: 1950, originalPrice: 3000, discountPercentage: 35, stock: 100 },
@@ -5456,7 +5456,7 @@ const products = [
       pieces: "Set of 6",
     },
 
-    images: ["/products/door-visor/innova-old.png"],
+    images: ["/products/door-visor/innova.jpg"],
 
     variants: [
       { name: "Chromeline", sku: "DV-122-CRM", price: 1950, originalPrice: 3000, discountPercentage: 35, stock: 100 },
@@ -5465,50 +5465,50 @@ const products = [
     isFeatured: false,
   },
 
-  {
-    id: "DV-123",
-    name: "Door Visor for Toyota Innova Crysta",
-    slug: "door-visor-toyota-innova-crysta",
-    sku: "DV-123",
+  // {
+  //   id: "DV-123",
+  //   name: "Door Visor for Toyota Innova Crysta",
+  //   slug: "door-visor-toyota-innova-crysta",
+  //   sku: "DV-123",
 
-    category: "door-visor",
-    brand: "Chromeline",
-    series: "Door Visor",
+  //   category: "door-visor",
+  //   brand: "Chromeline",
+  //   series: "Door Visor",
 
-    carBrand: ["Toyota"],
-    carModel: ["Innova Crysta"],
+  //   carBrand: ["Toyota"],
+  //   carModel: ["Innova Crysta"],
 
-    price: 1950,
-    originalPrice: 3000,
-    discountPercentage: 35,
-    rating: 4.5,
+  //   price: 1950,
+  //   originalPrice: 3000,
+  //   discountPercentage: 35,
+  //   rating: 4.5,
 
-    tags: ["door visor", "innova crysta", "toyota", "rain visor", "6 pcs"],
+  //   tags: ["door visor", "innova crysta", "toyota", "rain visor", "6 pcs"],
 
-    description:
-      "Premium Door Visor for Toyota Innova Crysta. Available in Chromeline finish. Set of 6 pieces.",
+  //   description:
+  //     "Premium Door Visor for Toyota Innova Crysta. Available in Chromeline finish. Set of 6 pieces.",
 
-    features: [
-      "Protects from Rain & Wind",
-      "Allows Ventilation While Windows Are Cracked",
-      "Reduces Heat Build-up Inside Car",
-      "Easy Clip-on Installation",
-      "UV Resistant & Durable",
-    ],
+  //   features: [
+  //     "Protects from Rain & Wind",
+  //     "Allows Ventilation While Windows Are Cracked",
+  //     "Reduces Heat Build-up Inside Car",
+  //     "Easy Clip-on Installation",
+  //     "UV Resistant & Durable",
+  //   ],
 
-    specifications: {
-      fitment: "Custom fit — Toyota Innova Crysta",
-      pieces: "Set of 6",
-    },
+  //   specifications: {
+  //     fitment: "Custom fit — Toyota Innova Crysta",
+  //     pieces: "Set of 6",
+  //   },
 
-    images: ["/products/door-visor/innova-crysta.png"],
+  //   images: ["/products/door-visor/innova-crysta.jpg"],
 
-    variants: [
-      { name: "Chromeline", sku: "DV-123-CRM", price: 1950, originalPrice: 3000, discountPercentage: 35, stock: 100 },
-    ],
+  //   variants: [
+  //     { name: "Chromeline", sku: "DV-123-CRM", price: 1950, originalPrice: 3000, discountPercentage: 35, stock: 100 },
+  //   ],
 
-    isFeatured: false,
-  },
+  //   isFeatured: false,
+  // },
 
   // ─────────────────────────────────────────────
   // VOLKSWAGEN — DOOR VISOR
@@ -5550,7 +5550,7 @@ const products = [
       pieces: "Set of 4",
     },
 
-    images: ["/products/door-visor/ameo.png"],
+    images: ["/products/door-visor/ameo.jpg"],
 
     variants: [
       { name: "Chromeline", sku: "DV-124-CRM", price: 1625, originalPrice: 2500, discountPercentage: 35, stock: 100 },
@@ -5595,7 +5595,7 @@ const products = [
       pieces: "Set of 4",
     },
 
-    images: ["/products/door-visor/polo.png"],
+    images: ["/products/door-visor/polo.jpg"],
 
     variants: [
       { name: "Chromeline", sku: "DV-125-CRM", price: 1625, originalPrice: 2500, discountPercentage: 35, stock: 100 },
@@ -5640,7 +5640,7 @@ const products = [
       pieces: "Set of 4",
     },
 
-    images: ["/products/door-visor/taigun.png"],
+    images: ["/products/door-visor/taigun.jpg"],
 
     variants: [
       { name: "Chromeline", sku: "DV-126-CRM", price: 1625, originalPrice: 2500, discountPercentage: 35, stock: 100 },
@@ -5685,7 +5685,7 @@ const products = [
       pieces: "Set of 4",
     },
 
-    images: ["/products/door-visor/vento.png"],
+    images: ["/products/door-visor/vento.jpg"],
 
     variants: [
       { name: "Chromeline", sku: "DV-127-CRM", price: 1625, originalPrice: 2500, discountPercentage: 35, stock: 100 },
@@ -5730,7 +5730,7 @@ const products = [
       pieces: "Set of 4",
     },
 
-    images: ["/products/door-visor/virtus.png"],
+    images: ["/products/door-visor/virtus.jpg"],
 
     variants: [
       { name: "Chromeline", sku: "DV-128-CRM", price: 1625, originalPrice: 2500, discountPercentage: 35, stock: 100 },
@@ -5779,7 +5779,7 @@ const products = [
       pieces: "Set of 4",
     },
 
-    images: ["/products/door-visor/kushaq.png"],
+    images: ["/products/door-visor/kushaq.jpg"],
 
     variants: [
       { name: "Chromeline", sku: "DV-129-CRM", price: 1625, originalPrice: 2500, discountPercentage: 35, stock: 100 },
@@ -5824,7 +5824,7 @@ const products = [
       pieces: "Set of 4",
     },
 
-    images: ["/products/door-visor/rapid.png"],
+    images: ["/products/door-visor/rapid.jpg"],
 
     variants: [
       { name: "Chromeline", sku: "DV-130-CRM", price: 1625, originalPrice: 2500, discountPercentage: 35, stock: 100 },
@@ -5869,7 +5869,7 @@ const products = [
       pieces: "Set of 4",
     },
 
-    images: ["/products/door-visor/kylaq.png"],
+    images: ["/products/door-visor/kylaq.jpg"],
 
     variants: [
       { name: "Chromeline", sku: "DV-131-CRM", price: 1625, originalPrice: 2500, discountPercentage: 35, stock: 100 },
@@ -5914,7 +5914,7 @@ const products = [
       pieces: "Set of 4",
     },
 
-    images: ["/products/door-visor/slavia.png"],
+    images: ["/products/door-visor/slavia.jpg"],
 
     variants: [
       { name: "Chromeline", sku: "DV-132-CRM", price: 1625, originalPrice: 2500, discountPercentage: 35, stock: 100 },
@@ -5963,7 +5963,7 @@ const products = [
       pieces: "Set of 4",
     },
 
-    images: ["/products/door-visor/astor.png"],
+    images: ["/products/door-visor/astor.jpg"],
 
     variants: [
       { name: "Chromeline", sku: "DV-133-CRM", price: 1625, originalPrice: 2500, discountPercentage: 35, stock: 100 },
@@ -6008,7 +6008,7 @@ const products = [
       pieces: "Set of 4",
     },
 
-    images: ["/products/door-visor/zs-ev.png"],
+    images: ["/products/door-visor/zs-ev.jpg"],
 
     variants: [
       { name: "Chromeline", sku: "DV-134-CRM", price: 1625, originalPrice: 2500, discountPercentage: 35, stock: 100 },
@@ -6053,7 +6053,7 @@ const products = [
       pieces: "Set of 4",
     },
 
-    images: ["/products/door-visor/hector.png"],
+    images: ["/products/door-visor/hector.jpg"],
 
     variants: [
       { name: "Chromeline", sku: "DV-135-CRM", price: 1625, originalPrice: 2500, discountPercentage: 35, stock: 100 },
@@ -6098,7 +6098,7 @@ const products = [
       pieces: "Set of 4",
     },
 
-    images: ["/products/door-visor/windsor.png"],
+    images: ["/products/door-visor/windsor.jpg"],
 
     variants: [
       { name: "Chromeline", sku: "DV-136-CRM", price: 1625, originalPrice: 2500, discountPercentage: 35, stock: 100 },
@@ -6147,7 +6147,7 @@ const products = [
       pieces: "Set of 4",
     },
 
-    images: ["/products/door-visor/kiger.png"],
+    images: ["/products/door-visor/kiger.jpg"],
 
     variants: [
       { name: "Chromeline", sku: "DV-137-CRM", price: 1625, originalPrice: 2500, discountPercentage: 35, stock: 100 },
@@ -6192,7 +6192,7 @@ const products = [
       pieces: "Set of 4",
     },
 
-    images: ["/products/door-visor/triber-4door.png"],
+    images: ["/products/door-visor/triber-4.jpg"],
 
     variants: [
       { name: "Chromeline", sku: "DV-138-CRM", price: 1625, originalPrice: 2500, discountPercentage: 35, stock: 100 },
@@ -6237,7 +6237,7 @@ const products = [
       pieces: "Set of 6",
     },
 
-    images: ["/products/door-visor/triber-6door.png"],
+    images: ["/products/door-visor/triber-6.jpg"],
 
     variants: [
       { name: "Chromeline", sku: "DV-139-CRM", price: 1950, originalPrice: 3000, discountPercentage: 35, stock: 100 },
@@ -6282,7 +6282,7 @@ const products = [
       pieces: "Set of 6",
     },
 
-    images: ["/products/door-visor/duster.png"],
+    images: ["/products/door-visor/duster.jpg"],
 
     variants: [
       { name: "Chromeline", sku: "DV-140-CRM", price: 1950, originalPrice: 3000, discountPercentage: 35, stock: 100 },
@@ -6331,7 +6331,7 @@ const products = [
       pieces: "Set of 4",
     },
 
-    images: ["/products/door-visor/magnite.png"],
+    images: ["/products/door-visor/magnite.jpg"],
 
     variants: [
       { name: "Chromeline", sku: "DV-141-CRM", price: 1625, originalPrice: 2500, discountPercentage: 35, stock: 100 },
@@ -6376,7 +6376,7 @@ const products = [
       pieces: "Set of 6",
     },
 
-    images: ["/products/door-visor/terrano.png"],
+    images: ["/products/door-visor/terrano.jpg"],
 
     variants: [
       { name: "Chromeline", sku: "DV-142-CRM", price: 1950, originalPrice: 3000, discountPercentage: 35, stock: 100 },
@@ -6425,7 +6425,7 @@ const products = [
       pieces: "Set of 4",
     },
 
-    images: ["/products/door-visor/beat.png"],
+    images: ["/products/door-visor/beat.jpg"],
 
     variants: [
       { name: "Chromeline", sku: "DV-143-CRM", price: 1625, originalPrice: 2500, discountPercentage: 35, stock: 100 },
@@ -6470,7 +6470,7 @@ const products = [
       pieces: "Set of 4",
     },
 
-    images: ["/products/door-visor/tavera.png"],
+    images: ["/products/door-visor/tavera.jpg"],
 
     variants: [
       { name: "Chromeline", sku: "DV-144-CRM", price: 1625, originalPrice: 2500, discountPercentage: 35, stock: 100 },
@@ -6519,7 +6519,7 @@ const products = [
       pieces: "Set of 4",
     },
 
-    images: ["/products/door-visor/ecosport.png"],
+    images: ["/products/door-visor/ecosport.jpg"],
 
     variants: [
       { name: "Chromeline", sku: "DV-145-CRM", price: 1625, originalPrice: 2500, discountPercentage: 35, stock: 100 },
@@ -6565,7 +6565,7 @@ const products = [
       pieces: "Set of 2",
     },
 
-    images: ["/products/door-visor/dost.png"],
+    images: ["/products/door-visor/dost.jpg"],
 
     variants: [
       { name: "Chromeline", sku: "DV-146-CRM", price: 800, stock: 100 },
@@ -6607,7 +6607,7 @@ const products = [
       pieces: "Set of 2",
     },
 
-    images: ["/products/door-visor/bada-dost.png"],
+    images: ["/products/door-visor/bada-dost.jpg"],
 
     variants: [
       { name: "Chromeline", sku: "DV-147-CRM", price: 800, stock: 100 },
