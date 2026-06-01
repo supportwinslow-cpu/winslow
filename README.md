@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
@@ -38,3 +39,6 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/bui
 =======
 # demo-12
 >>>>>>> 564daa5aa712b286fe56cbf432498f9475e397d2
+=======
+# winslow
+>>>>>>> 7608d7301206b886b0ec1b77e86d9680df54a5eb

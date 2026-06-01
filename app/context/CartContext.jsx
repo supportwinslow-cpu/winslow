@@ -121,14 +121,14 @@ export function CartProvider({ children }) {
     const formattedCode = code.trim().toUpperCase();
 
     // 20% OFF
-    if (formattedCode === "SAVE15") {
+    if (formattedCode === "SAVE20") {
 
       const subtotal = cartItems.reduce(
         (sum, item) => sum + item.price * item.quantity,
         0
       );
 
-      const discountAmount = Math.round(subtotal * 0.15);
+      const discountAmount = Math.round(subtotal * 0.2);
 
       setDiscount(discountAmount);
       setCouponCode(formattedCode);

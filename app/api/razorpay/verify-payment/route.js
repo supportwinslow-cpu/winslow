@@ -7,6 +7,7 @@ export async function POST(req) {
             razorpay_order_id,
             razorpay_payment_id,
             razorpay_signature,
+            amount, // frontend se bhejo
         } = await req.json();
 
         const body =
@@ -27,6 +28,35 @@ export async function POST(req) {
                 },
                 { status: 400 }
             );
+        }
+
+        // Meta Conversions API Purchase Event
+        try {
+            await fetch(
+                `https://graph.facebook.com/v23.0/${process.env.META_PIXEL_ID}/events`,
+                {
+                    method: "POST",
+                    headers: {
+                        "Content-Type": "application/json",
+                    },
+                    body: JSON.stringify({
+                        data: [
+                            {
+                                event_name: "Purchase",
+                                event_time: Math.floor(Date.now() / 1000),
+                                action_source: "website",
+                                custom_data: {
+                                    currency: "INR",
+                                    value: amount || 0,
+                                },
+                            },
+                        ],
+                        access_token: process.env.META_ACCESS_TOKEN,
+                    }),
+                }
+            );
+        } catch (metaError) {
+            console.error("Meta CAPI Error:", metaError);
         }
 
         return NextResponse.json({

@@ -30,7 +30,7 @@ export default function CartPage() {
     removeCoupon,
   } = useCart();
 
-  const [couponInput, setCouponInput] = useState("SAVE15");
+  const [couponInput, setCouponInput] = useState("SAVE20");
   const [couponMessage, setCouponMessage] = useState("");
   const [couponApplied, setCouponApplied] = useState(false);
 
@@ -50,28 +50,28 @@ export default function CartPage() {
   useEffect(() => {
     if (cartItems.length === 0 || subtotal <= 0) {
       removeCoupon();
-      setCouponInput("SAVE15");
+      setCouponInput("SAVE20");
       setCouponMessage("");
       setCouponApplied(false);
       return;
     }
 
-    const result = applyCoupon("SAVE15", subtotal);
-    setCouponInput("SAVE15");
-    setCouponMessage(result.message || "SAVE15 coupon applied automatically.");
+    const result = applyCoupon("SAVE20", subtotal);
+    setCouponInput("SAVE20");
+    setCouponMessage(result.message || "SAVE20 coupon applied automatically.");
     setCouponApplied(result.success);
   }, [cartItems.length, subtotal]);
 
   const handleApplyCoupon = () => {
-    const result = applyCoupon(couponInput || "SAVE15", subtotal);
-    setCouponInput(couponInput || "SAVE15");
+    const result = applyCoupon(couponInput || "SAVE20", subtotal);
+    setCouponInput(couponInput || "SAVE20");
     setCouponMessage(result.message);
     setCouponApplied(result.success);
   };
 
   const handleRemoveCoupon = () => {
     removeCoupon();
-    setCouponInput("SAVE15");
+    setCouponInput("SAVE20");
     setCouponMessage("");
     setCouponApplied(false);
   };

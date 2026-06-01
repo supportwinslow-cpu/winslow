@@ -1,4 +1,4 @@
-import { Inter, Bebas_Neue } from "next/font/google";
+import { Inter, Playfair_Display } from "next/font/google";
 import { Toaster } from "react-hot-toast";
 import "./globals.css";
 
@@ -15,9 +15,8 @@ const inter = Inter({
   display: "swap",
 });
 
-const bebas = Bebas_Neue({
+const playfair = Playfair_Display({
   subsets: ["latin"],
-  weight: "400",
   variable: "--font-heading",
   display: "swap",
 });
@@ -27,15 +26,14 @@ export const metadata = {
   description: "Premium Car Accessories",
 };
 
-
 export default function RootLayout({ children }) {
   return (
     <html
       lang="en"
-      className={`${inter.variable} ${bebas.variable} h-full antialiased`}
+      className={`${inter.variable} ${playfair.variable} h-full antialiased`}
     >
-      <body className="min-h-screen flex flex-col bg-black text-white">
-       <MetaPixel />
+      <body className="min-h-screen flex flex-col bg-black text-white font-sans">
+        <MetaPixel />
 
         <AuthProvider>
           <CartProvider>

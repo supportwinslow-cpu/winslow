@@ -3,7 +3,7 @@
 export default function AnnouncementBar() {
   const items = [
     { icon: "🚚", text: "Free Shipping Across India", highlight: false },
-    { icon: "🔥", text: "Use Code SAVE15 for 15% OFF", highlight: true },
+    { icon: "🔥", text: "Use Code SAVE20 for 20% OFF", highlight: true },
     { icon: "⭐", text: "Premium Quality Accessories", highlight: false },
     { icon: "💯", text: "Trusted by 5,000+ Customers", highlight: false },
   ];
@@ -26,7 +26,7 @@ export default function AnnouncementBar() {
             <span
               className={
                 item.highlight
-                  ? "font-black uppercase tracking-wide text-red-500"
+                  ? "font-black uppercase tracking-wide text-red-500 text-2xl"
                   : "text-white/90"
               }
             >

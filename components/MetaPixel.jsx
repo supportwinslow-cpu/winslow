@@ -4,7 +4,7 @@ import Script from "next/script";
 import { Suspense, useEffect } from "react";
 import { usePathname, useSearchParams } from "next/navigation";
 
-const META_PIXEL_ID = "992699016482921";
+const META_PIXEL_ID = "745776991925860";
 
 function MetaPixelContent() {
     const pathname = usePathname();
