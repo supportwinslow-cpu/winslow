@@ -8,6 +8,7 @@ import { CartProvider } from "@/app/context/CartContext";
 import AnnouncementBar from "./(home)/home/AnnouncementBar";
 import { AuthProvider } from "./context/AuthContext";
 import MetaPixel from "@/components/MetaPixel";
+import LiveSalesToast from "@/components/LiveSalesToast";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -42,7 +43,8 @@ export default function RootLayout({ children }) {
 
             <main className="flex-1 w-full">
               {children}
-              <Toaster position="top-right" />
+              <Toaster position="bottom-right" />
+              <LiveSalesToast />
             </main>
 
             <Footer />
