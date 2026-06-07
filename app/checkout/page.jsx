@@ -332,7 +332,7 @@ export default function CheckoutPage() {
                 Order Summary
               </h2>
 
-              <div className="space-y-4 mb-6">
+              <div className="space-y-4 mb-6 text-black">
                 {cartItems.map((item, index) => (
                   <div
                     key={index}
@@ -340,7 +340,7 @@ export default function CheckoutPage() {
                   >
                     <div>
                       <h4 className="font-medium">{item.name}</h4>
-                      <p className="text-sm text-neutral-500">
+                      <p className="text-sm text-black">
                         Qty: {item.quantity}
                       </p>
                     </div>
@@ -359,8 +359,8 @@ export default function CheckoutPage() {
 
               <div className="space-y-3 border-t pt-5 text-sm">
                 <div className="flex justify-between">
-                  <span className="text-neutral-500">Subtotal</span>
-                  <span>₹{subtotal}</span>
+                  <span className="text-black">Subtotal</span>
+                  <span className="text-black">₹{subtotal}</span>
                 </div>
 
                 <div className="flex justify-between text-green-600">
@@ -369,13 +369,13 @@ export default function CheckoutPage() {
                 </div>
 
                 <div className="flex justify-between">
-                  <span className="text-neutral-500">Shipping</span>
-                  <span>Free</span>
+                  <span className="text-black">Shipping</span>
+                  <span className="text-black">Free</span>
                 </div>
 
                 <div className="flex justify-between border-t pt-4 text-lg font-bold">
                   <span>Total</span>
-                  <span>₹{finalTotal}</span>
+                  <span className="text-black" >₹{finalTotal}</span>
                 </div>
               </div>
 
