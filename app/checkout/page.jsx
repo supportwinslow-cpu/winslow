@@ -1,12 +1,10 @@
 "use client";
 
-import { useCallback, useEffect, useState } from "react";
-import { fbqEvent } from "@/app/lib/metaPixel";
+import { useState } from "react";
 import { useRouter } from "next/navigation";
 
 import { useCart } from "@/app/context/CartContext";
 import { useAuth } from "@/app/context/AuthContext";
-
 import { saveOrderToDB } from "@/app/lib/firestore";
 
 import ProtectedRoute from "@/components/ProtectedRoute";
@@ -16,14 +14,8 @@ import {
   Truck,
   BadgeCheck,
   Loader2,
-  Sparkles,
-  User,
-  MapPin,
-  Phone,
-  Mail,
   CreditCard,
-  ShoppingBag,
-  ArrowRight,
+  Banknote,
 } from "lucide-react";
 
 export default function CheckoutPage() {
@@ -40,6 +32,7 @@ export default function CheckoutPage() {
   } = useCart();
 
   const [loading, setLoading] = useState(false);
+  const [paymentMethod, setPaymentMethod] = useState("razorpay");
 
   const subtotal = cartItems.reduce(
     (sum, item) => sum + item.price * item.quantity,
@@ -47,39 +40,6 @@ export default function CheckoutPage() {
   );
 
   const finalTotal = subtotal - discount;
-
-  const getMetaCartData = useCallback(() => {
-    return {
-      content_ids: cartItems.map((item) => item.id || item.slug || item.name),
-      content_type: "product",
-      contents: cartItems.map((item) => ({
-        id: item.id || item.slug || item.name,
-        quantity: Number(item.quantity || 1),
-        item_price: Number(item.price),
-      })),
-      num_items: cartItems.reduce(
-        (total, item) => total + Number(item.quantity || 1),
-        0
-      ),
-      value: Number(finalTotal),
-      currency: "INR",
-    };
-  }, [cartItems, finalTotal]);
-
-  useEffect(() => {
-    if (!cartItems || cartItems.length === 0 || finalTotal <= 0) return;
-    if (typeof window === "undefined") return;
-
-    const checkoutKey = `initiate_checkout_${cartItems
-      .map((item) => item.id || item.slug || item.name)
-      .join("_")}_${finalTotal}`;
-
-    if (sessionStorage.getItem(checkoutKey)) return;
-
-    fbqEvent("InitiateCheckout", getMetaCartData());
-
-    sessionStorage.setItem(checkoutKey, "true");
-  }, [cartItems, finalTotal, getMetaCartData]);
 
   const handleChange = (e) => {
     setCheckoutDetails({
@@ -116,17 +76,32 @@ export default function CheckoutPage() {
       !finalCheckoutDetails.state ||
       !finalCheckoutDetails.pincode
     ) {
-      alert("Please fill all checkout details");
-      return;
+      return alert("Please fill all checkout details");
     }
-
-    fbqEvent("AddPaymentInfo", {
-      ...getMetaCartData(),
-      payment_method: "Razorpay",
-    });
 
     try {
       setLoading(true);
+
+      if (paymentMethod === "cod") {
+        const orderId = await saveOrderToDB({
+          user,
+          cartItems,
+          checkoutDetails: finalCheckoutDetails,
+          total: finalTotal,
+          paymentInfo: null,
+          paymentMethod: "COD",
+          paymentStatus: "Pending",
+        });
+
+        if (!orderId) {
+          alert("Order save failed");
+          return;
+        }
+
+        clearCart();
+        router.push(`/order-success?orderId=${orderId}`);
+        return;
+      }
 
       const scriptLoaded = await loadRazorpayScript();
 
@@ -157,7 +132,7 @@ export default function CheckoutPage() {
         amount: data.order.amount,
         currency: data.order.currency,
         name: "Winslow",
-        description: "Prepaid Order Payment",
+        description: "Order Payment",
         order_id: data.order.id,
 
         prefill: {
@@ -166,71 +141,51 @@ export default function CheckoutPage() {
           contact: finalCheckoutDetails.phone,
         },
 
-        notes: {
-          address: finalCheckoutDetails.address,
-        },
-
         theme: {
           color: "#2F2FE4",
         },
 
         handler: async function (response) {
-          try {
-            const verifyRes = await fetch("/api/razorpay/verify-payment", {
-              method: "POST",
-              headers: {
-                "Content-Type": "application/json",
-              },
-              body: JSON.stringify({
-                razorpay_order_id: response.razorpay_order_id,
-                razorpay_payment_id: response.razorpay_payment_id,
-                razorpay_signature: response.razorpay_signature,
-              }),
-            });
+          const verifyRes = await fetch("/api/razorpay/verify-payment", {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+            },
+            body: JSON.stringify({
+              razorpay_order_id: response.razorpay_order_id,
+              razorpay_payment_id: response.razorpay_payment_id,
+              razorpay_signature: response.razorpay_signature,
+            }),
+          });
 
-            const verifyData = await verifyRes.json();
+          const verifyData = await verifyRes.json();
 
-            if (!verifyData.success) {
-              alert("Payment verification failed");
-              return;
-            }
-
-            const orderId = await saveOrderToDB({
-              user,
-              cartItems,
-              checkoutDetails: finalCheckoutDetails,
-              total: finalTotal,
-              paymentInfo: {
-                razorpayOrderId: response.razorpay_order_id,
-                razorpayPaymentId: response.razorpay_payment_id,
-                razorpaySignature: response.razorpay_signature,
-              },
-            });
-
-            if (!orderId) {
-              alert("Order save failed");
-              return;
-            }
-
-            const purchaseKey = `purchase_${orderId}`;
-
-            if (typeof window !== "undefined" && !localStorage.getItem(purchaseKey)) {
-              fbqEvent("Purchase", {
-                ...getMetaCartData(),
-                order_id: orderId,
-                razorpay_order_id: response.razorpay_order_id,
-                razorpay_payment_id: response.razorpay_payment_id,
-              });
-
-              localStorage.setItem(purchaseKey, "true");
-            }
-
-            clearCart();
-            router.push(`/order-success?orderId=${orderId}`);
-          } catch (error) {
-            console.log(error);
-            alert("Payment verification error");
+          if (!verifyData.success) {
+            alert("Payment verification failed");
+            return;
           }
+
+          const orderId = await saveOrderToDB({
+            user,
+            cartItems,
+            checkoutDetails: finalCheckoutDetails,
+            total: finalTotal,
+            paymentInfo: {
+              razorpayOrderId: response.razorpay_order_id,
+              razorpayPaymentId: response.razorpay_payment_id,
+              razorpaySignature: response.razorpay_signature,
+            },
+            paymentMethod: "Razorpay",
+            paymentStatus: "Paid",
+          });
+
+          if (!orderId) {
+            alert("Order save failed");
+            return;
+          }
+
+          clearCart();
+          router.push(`/order-success?orderId=${orderId}`);
         },
       };
 
@@ -247,331 +202,245 @@ export default function CheckoutPage() {
   if (cartItems.length === 0) {
     return (
       <ProtectedRoute>
-        <main className="relative flex min-h-screen items-center justify-center overflow-hidden bg-white px-5 text-center">
-          <div className="absolute inset-0 bg-[linear-gradient(180deg,#ffffff_0%,#F4F6FF_48%,#ffffff_100%)]" />
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(47,47,228,0.12),transparent_42%)]" />
+        <div className="min-h-screen flex items-center justify-center bg-neutral-50 px-4">
+          <div className="bg-white p-10 rounded-3xl shadow-lg text-center max-w-md w-full">
+            <h1 className="text-3xl font-bold mb-4">Your Cart is Empty</h1>
 
-          <div className="relative overflow-hidden rounded-[2.5rem] border border-[#2F2FE4]/15 bg-white p-3 shadow-[0_28px_90px_rgba(47,47,228,0.14)]">
-            <div className="rounded-4xl bg-[#F7F8FF] p-10">
-              <div className="mx-auto mb-6 flex h-20 w-20 items-center justify-center rounded-3xl bg-[#2F2FE4] text-white shadow-[0_18px_45px_rgba(47,47,228,0.28)]">
-                <ShoppingBag size={34} />
-              </div>
+            <p className="text-black mb-6">
+              Add products before checkout
+            </p>
 
-              <h1 className="text-3xl font-black uppercase text-[#111827]">
-                Your Cart is Empty
-              </h1>
-
-              <p className="mx-auto mt-3 max-w-sm text-sm font-medium leading-7 text-gray-500">
-                Add products before checkout and complete your prepaid order
-                safely.
-              </p>
-
-              <button
-                onClick={() => router.push("/shop")}
-                className="group mt-7 inline-flex items-center justify-center rounded-full bg-[#2F2FE4] px-8 py-4 text-sm font-black uppercase tracking-wide text-white shadow-[0_18px_45px_rgba(47,47,228,0.28)] transition-all duration-300 hover:-translate-y-1 hover:bg-[#2424c9]"
-              >
-                Continue Shopping
-                <ArrowRight
-                  size={18}
-                  className="ml-2 transition-transform duration-300 group-hover:translate-x-1"
-                />
-              </button>
-            </div>
+            <button
+              onClick={() => router.push("/shop")}
+              className="bg-[#2F2FE4] text-white px-6 py-3 rounded-full"
+            >
+              Continue Shopping
+            </button>
           </div>
-        </main>
+        </div>
       </ProtectedRoute>
     );
   }
 
   return (
     <ProtectedRoute>
-      <main className="relative min-h-screen overflow-hidden bg-white text-[#111827]">
-        {/* Premium Background */}
-        <div className="absolute inset-0 bg-[linear-gradient(180deg,#ffffff_0%,#F4F6FF_48%,#ffffff_100%)]" />
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(47,47,228,0.12),transparent_42%)]" />
-
-        {/* Grid Pattern */}
-        <div className="absolute inset-0 opacity-[0.35] bg-[linear-gradient(rgba(47,47,228,0.06)_1px,transparent_1px),linear-gradient(90deg,rgba(47,47,228,0.06)_1px,transparent_1px)] bg-size-[42px_42px]" />
-
-        {/* Blue Glows */}
-        <div className="absolute left-1/2 top-0 h-105 w-105 -translate-x-1/2 rounded-full bg-[#2F2FE4]/12 blur-[150px]" />
-        <div className="absolute -left-32 top-72 h-80 w-80 rounded-full bg-[#2F2FE4]/8 blur-[130px]" />
-        <div className="absolute -right-32 bottom-20 h-80 w-80 rounded-full bg-[#2F2FE4]/8 blur-[130px]" />
-
-        <div className="relative mx-auto max-w-7xl px-5 py-10 sm:px-6 lg:px-8">
-          {/* Heading */}
+      <div className="bg-neutral-50 min-h-screen py-12">
+        <div className="max-w-6xl mx-auto px-6">
           <div className="mb-10">
-            <div className="mb-4 inline-flex items-center gap-3 rounded-full border border-[#2F2FE4]/20 bg-white px-5 py-2.5 shadow-[0_12px_35px_rgba(47,47,228,0.10)]">
-              <span className="flex h-7 w-7 items-center justify-center rounded-full bg-[#2F2FE4]/10 text-[#2F2FE4]">
-                <Sparkles size={15} />
-              </span>
-
-              <span className="text-xs font-black uppercase tracking-[0.24em] text-[#2F2FE4]">
-                Secure Checkout
-              </span>
-            </div>
-
-            <h1 className="text-4xl font-black uppercase tracking-tight text-[#111827] sm:text-5xl">
-              Secure
-              <span className="ml-2 text-[#2F2FE4]">Checkout</span>
+            <h1 className="text-3xl md:text-4xl font-bold text-black">
+              Secure Checkout
             </h1>
 
-            <p className="mt-2 text-sm font-medium text-gray-500">
-              Complete your prepaid order safely with Razorpay protected
-              checkout.
+            <p className="text-neutral-500 mt-2">
+              Complete your order safely
             </p>
           </div>
 
-          <div className="grid gap-8 lg:grid-cols-[1fr_390px]">
-            {/* LEFT */}
-            <div className="space-y-6">
-              {/* Account Info */}
-              <section className="overflow-hidden rounded-[2.3rem] border border-[#2F2FE4]/15 bg-white p-3 shadow-[0_24px_75px_rgba(47,47,228,0.12)]">
-                <div className="relative rounded-[1.9rem] bg-white p-6">
-                  <div className="absolute -right-16 -top-16 h-52 w-52 rounded-full bg-[#2F2FE4]/10 blur-3xl" />
+          <div className="grid lg:grid-cols-3 gap-10">
+            <div className="lg:col-span-2 space-y-6">
+              <div className="bg-white border border-neutral-100 rounded-2xl p-6">
+                <h2 className="text-xl font-bold text-black mb-6">
+                  Account Information
+                </h2>
 
-                  <div className="relative flex items-center gap-4">
-                    <div className="flex h-16 w-16 shrink-0 items-center justify-center rounded-2xl bg-[#2F2FE4] text-2xl font-black uppercase text-white shadow-[0_18px_45px_rgba(47,47,228,0.28)]">
-                      {user?.displayName?.charAt(0) ||
-                        user?.email?.charAt(0) ||
-                        "U"}
-                    </div>
+                <div className="flex items-center gap-4">
+                  <div className="w-14 h-14 rounded-full bg-[#2F2FE4] text-white flex items-center justify-center text-xl font-bold">
+                    {user?.displayName?.charAt(0) || "U"}
+                  </div>
 
-                    <div>
-                      <p className="mb-1 text-xs font-black uppercase tracking-[0.22em] text-[#2F2FE4]">
-                        Account Information
-                      </p>
+                  <div>
+                    <h3 className="font-semibold text-black text-lg">
+                      {user?.displayName || "User"}
+                    </h3>
 
-                      <h2 className="text-2xl font-black uppercase tracking-tight text-[#111827]">
-                        {user?.displayName || "User"}
-                      </h2>
-
-                      <p className="mt-1 break-all text-sm font-medium text-gray-500">
-                        {user?.email}
-                      </p>
-                    </div>
+                    <p className="text-black text-sm">{user?.email}</p>
                   </div>
                 </div>
-              </section>
-
-              {/* Billing Details */}
-              <section className="overflow-hidden rounded-[2.3rem] border border-[#2F2FE4]/15 bg-white p-3 shadow-[0_24px_75px_rgba(47,47,228,0.12)]">
-                <div className="rounded-[1.9rem] bg-white p-6">
-                  <div className="mb-6 flex items-center gap-3">
-                    <span className="flex h-12 w-12 items-center justify-center rounded-2xl bg-[#2F2FE4] text-white shadow-[0_16px_38px_rgba(47,47,228,0.25)]">
-                      <MapPin size={22} />
-                    </span>
-
-                    <div>
-                      <h2 className="text-2xl font-black uppercase tracking-tight text-[#111827]">
-                        Billing Details
-                      </h2>
-                      <p className="text-xs font-semibold text-gray-500">
-                        Fill delivery and contact details
-                      </p>
-                    </div>
-                  </div>
-
-                  <div className="grid gap-4 md:grid-cols-2">
-                    {[
-                      { name: "name", placeholder: "Full Name", icon: User },
-                      { name: "email", placeholder: "Email Address", icon: Mail },
-                      { name: "phone", placeholder: "Phone Number", icon: Phone },
-                      { name: "city", placeholder: "City", icon: MapPin },
-                      { name: "state", placeholder: "State", icon: MapPin },
-                      { name: "pincode", placeholder: "Pincode", icon: MapPin },
-                    ].map((field) => {
-                      const Icon = field.icon;
-
-                      return (
-                        <div key={field.name} className="relative">
-                          <span className="absolute left-4 top-1/2 -translate-y-1/2 text-[#2F2FE4]">
-                            <Icon size={17} />
-                          </span>
-
-                          <input
-                            name={field.name}
-                            value={
-                              checkoutDetails[field.name] ||
-                              (field.name === "name"
-                                ? user?.displayName || ""
-                                : field.name === "email"
-                                  ? user?.email || ""
-                                  : "")
-                            }
-                            onChange={handleChange}
-                            placeholder={field.placeholder}
-                            className="w-full rounded-2xl border border-[#2F2FE4]/15 bg-[#F7F8FF] px-11 py-3.5 text-sm font-semibold text-[#111827] outline-none transition placeholder:text-gray-400 focus:border-[#2F2FE4]/60 focus:bg-white focus:ring-4 focus:ring-[#2F2FE4]/10"
-                          />
-                        </div>
-                      );
-                    })}
-                  </div>
-
-                  <div className="relative mt-4">
-                    <span className="absolute left-4 top-4 text-[#2F2FE4]">
-                      <MapPin size={17} />
-                    </span>
-
-                    <textarea
-                      name="address"
-                      value={checkoutDetails.address || ""}
-                      onChange={handleChange}
-                      placeholder="Full Address"
-                      rows="4"
-                      className="w-full resize-none rounded-2xl border border-[#2F2FE4]/15 bg-[#F7F8FF] px-11 py-3.5 text-sm font-semibold text-[#111827] outline-none transition placeholder:text-gray-400 focus:border-[#2F2FE4]/60 focus:bg-white focus:ring-4 focus:ring-[#2F2FE4]/10"
-                    />
-                  </div>
-                </div>
-              </section>
-
-              {/* Trust Cards */}
-              <div className="grid gap-4 md:grid-cols-3">
-                {[
-                  {
-                    icon: ShieldCheck,
-                    title: "Secure Payment",
-                    desc: "Razorpay protected checkout",
-                  },
-                  {
-                    icon: Truck,
-                    title: "Fast Delivery",
-                    desc: "Quick shipping available",
-                  },
-                  {
-                    icon: BadgeCheck,
-                    title: "Genuine Products",
-                    desc: "Premium quality accessories",
-                  },
-                ].map((item) => {
-                  const Icon = item.icon;
-
-                  return (
-                    <div
-                      key={item.title}
-                      className="group rounded-4xl border border-[#2F2FE4]/10 bg-white p-5 text-center shadow-[0_18px_55px_rgba(47,47,228,0.08)] transition-all duration-300 hover:-translate-y-1 hover:border-[#2F2FE4]/35"
-                    >
-                      <div className="mx-auto mb-4 flex h-14 w-14 items-center justify-center rounded-2xl bg-[#2F2FE4]/8 text-[#2F2FE4] transition group-hover:bg-[#2F2FE4] group-hover:text-white">
-                        <Icon size={26} />
-                      </div>
-
-                      <h3 className="font-black uppercase tracking-tight text-[#111827]">
-                        {item.title}
-                      </h3>
-
-                      <p className="mt-2 text-xs font-medium leading-5 text-gray-500">
-                        {item.desc}
-                      </p>
-                    </div>
-                  );
-                })}
               </div>
-            </div>
 
-            {/* ORDER SUMMARY */}
-            <aside className="h-fit overflow-hidden rounded-[2.5rem] border border-[#2F2FE4]/15 bg-white p-3 shadow-[0_28px_90px_rgba(47,47,228,0.14)] lg:sticky lg:top-28">
-              <div className="relative overflow-hidden rounded-4xl bg-white p-6">
-                <div className="absolute -right-16 -top-16 h-56 w-56 rounded-full bg-[#2F2FE4]/10 blur-3xl" />
+              <div className="bg-white border border-neutral-400 rounded-2xl p-6">
+                <h2 className="text-xl font-bold mb-6 text-black">
+                  Billing Details
+                </h2>
 
-                <div className="relative">
-                  <div className="mb-6 flex items-center gap-3">
-                    <div className="flex h-13 w-13 items-center justify-center rounded-2xl bg-[#2F2FE4] text-white shadow-[0_18px_45px_rgba(47,47,228,0.28)]">
-                      <CreditCard size={25} />
-                    </div>
+                <div className="grid text-black md:grid-cols-2 gap-4">
+                  {[
+                    { name: "name", placeholder: "Full Name" },
+                    { name: "email", placeholder: "Email Address" },
+                    { name: "phone", placeholder: "Phone Number" },
+                    { name: "city", placeholder: "City" },
+                    { name: "state", placeholder: "State" },
+                    { name: "pincode", placeholder: "Pincode" },
+                  ].map((field) => (
+                    <input
+                      key={field.name}
+                      name={field.name}
+                      value={
+                        checkoutDetails[field.name] ||
+                        (field.name === "name"
+                          ? user?.displayName || ""
+                          : field.name === "email"
+                            ? user?.email || ""
+                            : "")
+                      }
+                      onChange={handleChange}
+                      placeholder={field.placeholder}
+                      className="border border-neutral-500 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-[#2F2FE4]"
+                    />
+                  ))}
+                </div>
 
-                    <div>
-                      <h2 className="text-2xl font-black uppercase text-[#111827]">
-                        Order Summary
-                      </h2>
-                      <p className="text-xs font-semibold text-gray-500">
-                        Final review before payment
-                      </p>
-                    </div>
-                  </div>
+                <textarea
+                  name="address"
+                  value={checkoutDetails.address || ""}
+                  onChange={handleChange}
+                  placeholder="Full Address"
+                  rows="4"
+                  className="border border-neutral-200 rounded-xl px-4 py-3 w-full mt-4 text-sm focus:outline-none focus:border-[#2F2FE4]"
+                />
+              </div>
 
-                  {/* Items */}
-                  <div className="mb-5 max-h-70 space-y-3 overflow-y-auto pr-1">
-                    {cartItems.map((item, index) => (
-                      <div
-                        key={index}
-                        className="flex items-start justify-between gap-4 rounded-2xl border border-[#2F2FE4]/10 bg-[#F7F8FF] p-4"
-                      >
-                        <div>
-                          <h4 className="text-sm font-black uppercase tracking-tight text-[#111827]">
-                            {item.name}
-                          </h4>
-                          <p className="mt-1 text-xs font-semibold text-gray-500">
-                            Qty: {item.quantity}
-                          </p>
-                        </div>
+              <div className="grid md:grid-cols-3 gap-4">
+                <div className="bg-white rounded-2xl p-5 border border-neutral-100 flex flex-col items-center text-center">
+                  <ShieldCheck size={30} className="text-[#2F2FE4]" />
+                  <h3 className="font-semibold mt-3">Secure Payment</h3>
+                  <p className="text-sm text-neutral-500 mt-1">
+                    Razorpay protected checkout
+                  </p>
+                </div>
 
-                        <span className="shrink-0 text-sm font-black text-[#2F2FE4]">
-                          ₹{item.price * item.quantity}
-                        </span>
-                      </div>
-                    ))}
-                  </div>
+                <div className="bg-white rounded-2xl p-5 border border-neutral-100 flex flex-col items-center text-center">
+                  <Truck size={30} className="text-[#2F2FE4]" />
+                  <h3 className="font-semibold mt-3">Fast Delivery</h3>
+                  <p className="text-sm text-neutral-500 mt-1">
+                    Quick shipping available
+                  </p>
+                </div>
 
-                  {/* Summary */}
-                  <div className="space-y-3 rounded-3xl border border-[#2F2FE4]/10 bg-[#F7F8FF] p-5">
-                    <div className="flex justify-between text-sm font-bold">
-                      <span className="text-gray-500">Subtotal</span>
-                      <span className="text-[#111827]">₹{subtotal}</span>
-                    </div>
-
-                    <div className="flex justify-between text-sm font-bold">
-                      <span className="text-gray-500">
-                        Discount {couponCode && `(${couponCode})`}
-                      </span>
-                      <span className="text-green-600">- ₹{discount}</span>
-                    </div>
-
-                    <div className="flex justify-between text-sm font-bold">
-                      <span className="text-gray-500">Shipping</span>
-                      <span className="text-green-600">Free</span>
-                    </div>
-                  </div>
-
-                  {/* Total */}
-                  <div className="my-5 flex items-center justify-between rounded-3xl bg-[#2F2FE4] px-5 py-5 text-white shadow-[0_18px_45px_rgba(47,47,228,0.25)]">
-                    <span className="text-sm font-black uppercase tracking-wide">
-                      Total
-                    </span>
-
-                    <span className="text-3xl font-black">₹{finalTotal}</span>
-                  </div>
-
-                  {/* Checkout Button */}
-                  <button
-                    onClick={handlePlaceOrder}
-                    disabled={loading}
-                    className="group flex w-full items-center justify-center rounded-full bg-[#2F2FE4] px-7 py-4 text-sm font-black uppercase tracking-wide text-white shadow-[0_18px_45px_rgba(47,47,228,0.28)] transition-all duration-300 hover:-translate-y-1 hover:bg-[#2424c9] hover:shadow-[0_24px_60px_rgba(47,47,228,0.38)] disabled:cursor-not-allowed disabled:opacity-60"
-                  >
-                    {loading ? (
-                      <>
-                        <Loader2 size={20} className="mr-2 animate-spin" />
-                        Processing...
-                      </>
-                    ) : (
-                      <>
-                        Pay & Place Order
-                        <ArrowRight
-                          size={18}
-                          className="ml-2 transition-transform duration-300 group-hover:translate-x-1"
-                        />
-                      </>
-                    )}
-                  </button>
-
-                  <p className="mt-4 text-center text-xs font-semibold leading-5 text-gray-500">
-                    Secure prepaid checkout powered by Razorpay
+                <div className="bg-white rounded-2xl p-5 border border-neutral-100 flex flex-col items-center text-center">
+                  <BadgeCheck size={30} className="text-[#2F2FE4]" />
+                  <h3 className="font-semibold mt-3">Genuine Products</h3>
+                  <p className="text-sm text-neutral-500 mt-1">
+                    Premium quality accessories
                   </p>
                 </div>
               </div>
-            </aside>
+            </div>
+
+            <div className="bg-white border border-neutral-100 rounded-2xl p-6 h-fit sticky top-28">
+              <h2 className="text-xl font-bold mb-6 text-black">
+                Order Summary
+              </h2>
+
+              <div className="space-y-4 mb-6">
+                {cartItems.map((item, index) => (
+                  <div
+                    key={index}
+                    className="flex justify-between items-start gap-4"
+                  >
+                    <div>
+                      <h4 className="font-medium">{item.name}</h4>
+                      <p className="text-sm text-neutral-500">
+                        Qty: {item.quantity}
+                      </p>
+                    </div>
+
+                    <span
+                      className={`font-semibold ${item.price === 0 ? "text-green-600" : "text-black"
+                        }`}
+                    >
+                      {item.price === 0
+                        ? "FREE"
+                        : `₹${item.price * item.quantity}`}
+                    </span>
+                  </div>
+                ))}
+              </div>
+
+              <div className="space-y-3 border-t pt-5 text-sm">
+                <div className="flex justify-between">
+                  <span className="text-neutral-500">Subtotal</span>
+                  <span>₹{subtotal}</span>
+                </div>
+
+                <div className="flex justify-between text-green-600">
+                  <span>Discount {couponCode && `(${couponCode})`}</span>
+                  <span>- ₹{discount}</span>
+                </div>
+
+                <div className="flex justify-between">
+                  <span className="text-neutral-500">Shipping</span>
+                  <span>Free</span>
+                </div>
+
+                <div className="flex justify-between border-t pt-4 text-lg font-bold">
+                  <span>Total</span>
+                  <span>₹{finalTotal}</span>
+                </div>
+              </div>
+
+              <div className="mt-6 rounded-3xl border border-[#2F2FE4]/15 bg-[#F7F8FF] p-4">
+                <p className="mb-3 text-sm font-black uppercase text-black">
+                  Select Payment Method
+                </p>
+
+                <div className="grid gap-3">
+                  <button
+                    type="button"
+                    onClick={() => setPaymentMethod("razorpay")}
+                    className={`rounded-2xl border px-4 py-3 text-left text-sm font-black transition ${paymentMethod === "razorpay"
+                        ? "border-[#2F2FE4] bg-[#2F2FE4] text-white"
+                        : "border-gray-200 bg-white text-black"
+                      }`}
+                  >
+                    <CreditCard size={18} className="inline mr-2" />
+                    Pay Online
+                    <span className="block text-xs font-semibold opacity-80">
+                      Razorpay Secure Payment
+                    </span>
+                  </button>
+
+                  <button
+                    type="button"
+                    onClick={() => setPaymentMethod("cod")}
+                    className={`rounded-2xl border px-4 py-3 text-left text-sm font-black transition ${paymentMethod === "cod"
+                        ? "border-[#2F2FE4] bg-[#2F2FE4] text-white"
+                        : "border-gray-200 bg-white text-black"
+                      }`}
+                  >
+                    <Banknote size={18} className="inline mr-2" />
+                    Cash on Delivery
+                    <span className="block text-xs font-semibold opacity-80">
+                      Pay when product arrives
+                    </span>
+                  </button>
+                </div>
+              </div>
+
+              <button
+                onClick={handlePlaceOrder}
+                disabled={loading}
+                className="w-full mt-6 bg-[#2F2FE4] text-white py-4 rounded-full hover:bg-[#2424c9] transition font-medium flex items-center justify-center gap-2 disabled:opacity-50"
+              >
+                {loading ? (
+                  <>
+                    <Loader2 size={20} className="animate-spin" />
+                    Processing...
+                  </>
+                ) : paymentMethod === "cod" ? (
+                  "Place COD Order"
+                ) : (
+                  "Pay Securely Now"
+                )}
+              </button>
+
+              <p className="text-xs text-neutral-500 text-center mt-4">
+                Secure checkout • Free delivery available
+              </p>
+            </div>
           </div>
         </div>
-      </main>
+      </div>
     </ProtectedRoute>
   );
 }

@@ -179,7 +179,7 @@ export default function CartPage() {
           </div>
         ) : (
           <>
-            <div className="mb-5 overflow-hidden rounded-3xl bg-gradient-to-r from-[#2F2FE4] via-[#4F46E5] to-[#2F2FE4] p-4 text-white shadow-[0_20px_65px_rgba(47,47,228,0.28)]">
+            <div className="mb-5 overflow-hidden rounded-3xl bg-linear-to-r from-[#2F2FE4] via-[#4F46E5] to-[#2F2FE4] p-4 text-white shadow-[0_20px_65px_rgba(47,47,228,0.28)]">
               <div className="flex items-start gap-3">
                 <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-2xl bg-white/15">
                   <Gift size={22} />
@@ -376,7 +376,7 @@ export default function CartPage() {
                       className="overflow-hidden rounded-3xl border border-[#2F2FE4]/10 bg-white p-3 shadow-[0_16px_45px_rgba(47,47,228,0.10)]"
                     >
                       <div className="grid grid-cols-[110px_1fr] gap-3 sm:grid-cols-[150px_1fr] sm:gap-5">
-                        <div className="relative h-[125px] overflow-hidden rounded-2xl bg-[#EEF0FF] sm:h-[150px]">
+                        <div className="relative h-31.25 overflow-hidden rounded-2xl bg-[#EEF0FF] sm:h-37.5">
                           <Image
                             src={itemImage}
                             alt={item.name}
@@ -402,8 +402,8 @@ export default function CartPage() {
                           <div>
                             <div
                               className={`mb-1 inline-flex rounded-full px-2.5 py-1 text-[9px] font-black uppercase ${isFreeGift
-                                  ? "bg-green-50 text-green-600"
-                                  : "bg-[#2F2FE4]/8 text-[#2F2FE4]"
+                                ? "bg-green-50 text-green-600"
+                                : "bg-[#2F2FE4]/8 text-[#2F2FE4]"
                                 }`}
                             >
                               {isFreeGift ? "Free Gift" : item.brand || "Winslow"}

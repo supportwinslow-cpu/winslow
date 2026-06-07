@@ -33,7 +33,7 @@ function SuccessContent() {
                 </div>
 
                 <div className="flex flex-col md:flex-row gap-4 justify-center">
-                    <Link href="/products">
+                    <Link href="/shop">
                         <button className="px-6 py-3 rounded-lg bg-black text-white hover:bg-red-600 transition">
                             Continue Shopping
                         </button>

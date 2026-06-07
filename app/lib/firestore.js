@@ -17,87 +17,59 @@ import { db } from "./firebase";
 // GET USER ROLE
 // =========================
 
-export const getUserRole =
-    async (uid) => {
+export const getUserRole = async (uid) => {
+    try {
+        if (!uid) return null;
 
-        try {
+        const userRef = doc(db, "users", uid);
 
-            const userRef = doc(
-                db,
-                "users",
-                uid
-            );
+        const userSnap = await getDoc(userRef);
 
-            const userSnap =
-                await getDoc(userRef);
-
-            if (userSnap.exists()) {
-
-                return userSnap.data().role;
-            }
-
-            return null;
-
-        } catch (error) {
-
-            console.log(error);
-
-            return null;
+        if (userSnap.exists()) {
+            return userSnap.data().role || "customer";
         }
-    };
+
+        return null;
+    } catch (error) {
+        console.log("GET USER ROLE ERROR:", error);
+        return null;
+    }
+};
+
 
 // =========================
 // SAVE USER
 // =========================
 
 export const saveUserToDB = async (user) => {
-
     try {
-
         if (!user) return;
 
-        const userRef = doc(
-            db,
-            "users",
-            user.uid
-        );
+        const userRef = doc(db, "users", user.uid);
 
-        const userSnap =
-            await getDoc(userRef);
+        const userSnap = await getDoc(userRef);
 
         if (!userSnap.exists()) {
-
             await setDoc(userRef, {
-
                 uid: user.uid,
 
-                name:
-                    user.displayName || "",
+                name: user.displayName || "",
 
-                email:
-                    user.email || "",
+                email: user.email || "",
 
-                phone:
-                    user.phoneNumber || "",
+                phone: user.phoneNumber || "",
 
-                image:
-                    user.photoURL || "",
+                image: user.photoURL || "",
 
                 role: "customer",
 
-                createdAt:
-                    serverTimestamp(),
+                createdAt: serverTimestamp(),
             });
 
-            console.log(
-                "User Saved"
-            );
+            console.log("User Saved");
         }
-
     } catch (error) {
-
-        console.log(error);
-
+        console.log("SAVE USER ERROR:", error);
     }
 };
 
@@ -111,68 +83,64 @@ export const saveOrderToDB = async ({
     cartItems,
     checkoutDetails,
     total,
-    paymentInfo,
+    paymentInfo = null,
+    paymentMethod = "Razorpay",
+    paymentStatus = "Paid",
 }) => {
     try {
+        if (!user) {
+            throw new Error("User not found");
+        }
+
         const ordersRef = collection(db, "orders");
 
         const orderData = {
             // USER
             userId: user.uid,
 
-            customerName: checkoutDetails.name,
-            customerEmail: checkoutDetails.email,
-            phone: checkoutDetails.phone,
+            customerName: checkoutDetails?.name || "",
+            customerEmail: checkoutDetails?.email || "",
+            phone: checkoutDetails?.phone || "",
 
             // SHIPPING
-            address: checkoutDetails.address,
-            city: checkoutDetails.city,
-            state: checkoutDetails.state,
-            pincode: checkoutDetails.pincode,
+            address: checkoutDetails?.address || "",
+            city: checkoutDetails?.city || "",
+            state: checkoutDetails?.state || "",
+            pincode: checkoutDetails?.pincode || "",
 
             // PRODUCTS
-            items: cartItems,
+            items: cartItems || [],
 
-            total,
+            total: total || 0,
 
-            totalItems: cartItems.length,
+            totalItems: cartItems?.reduce(
+                (sum, item) => sum + Number(item.quantity || 1),
+                0
+            ) || 0,
 
             // ORDER STATUS
             orderStatus: "Pending",
 
             // PAYMENT
-            paymentMethod: "Razorpay",
+            paymentMethod,
+            paymentStatus,
 
-            paymentStatus: "Paid",
-
-            paymentInfo: {
-                razorpayOrderId:
-                    paymentInfo.razorpayOrderId,
-
-                razorpayPaymentId:
-                    paymentInfo.razorpayPaymentId,
-
-                razorpaySignature:
-                    paymentInfo.razorpaySignature,
-            },
+            paymentInfo: paymentInfo
+                ? {
+                    razorpayOrderId: paymentInfo.razorpayOrderId || "",
+                    razorpayPaymentId: paymentInfo.razorpayPaymentId || "",
+                    razorpaySignature: paymentInfo.razorpaySignature || "",
+                }
+                : null,
 
             createdAt: serverTimestamp(),
         };
 
-        const docRef = await addDoc(
-            ordersRef,
-            orderData
-        );
+        const docRef = await addDoc(ordersRef, orderData);
 
         return docRef.id;
-
     } catch (error) {
-
-        console.log(
-            "SAVE ORDER ERROR:",
-            error
-        );
-
+        console.log("SAVE ORDER ERROR:", error);
         return null;
     }
 };
@@ -182,48 +150,31 @@ export const saveOrderToDB = async ({
 // GET USER ORDERS
 // =========================
 
-export const getUserOrders =
-    async (userId) => {
+export const getUserOrders = async (userId) => {
+    try {
+        if (!userId) return [];
 
-        try {
+        const ordersRef = collection(db, "orders");
 
-            const ordersRef =
-                collection(
-                    db,
-                    "orders"
-                );
+        const q = query(
+            ordersRef,
+            where("userId", "==", userId)
+        );
 
-            const q = query(
-                ordersRef,
-                where(
-                    "userId",
-                    "==",
-                    userId
-                )
-            );
+        const querySnapshot = await getDocs(q);
 
-            const querySnapshot =
-                await getDocs(q);
+        const orders = [];
 
-            const orders = [];
+        querySnapshot.forEach((doc) => {
+            orders.push({
+                id: doc.id,
+                ...doc.data(),
+            });
+        });
 
-            querySnapshot.forEach(
-                (doc) => {
-
-                    orders.push({
-                        id: doc.id,
-                        ...doc.data(),
-                    });
-
-                }
-            );
-
-            return orders;
-
-        } catch (error) {
-
-            console.log(error);
-
-            return [];
-        }
-    };
+        return orders;
+    } catch (error) {
+        console.log("GET USER ORDERS ERROR:", error);
+        return [];
+    }
+};
