@@ -1,4 +1,5 @@
 import { Inter, Playfair_Display } from "next/font/google";
+import Script from "next/script";
 import { Toaster } from "react-hot-toast";
 import "./globals.css";
 
@@ -34,6 +35,20 @@ export default function RootLayout({ children }) {
       className={`${inter.variable} ${playfair.variable} h-full antialiased`}
     >
       <body className="min-h-screen flex flex-col bg-black text-white font-sans">
+        {/* Google Tag */}
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=AW-18222558349"
+          strategy="afterInteractive"
+        />
+        <Script id="google-ads-tag" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'AW-18222558349');
+          `}
+        </Script>
+
         <MetaPixel />
 
         <AuthProvider>
