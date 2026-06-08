@@ -109,6 +109,46 @@ export default function CheckoutPage() {
     return "";
   };
 
+  const sendOrderEmail = async ({
+    orderId,
+    finalCheckoutDetails,
+    paymentMethodName,
+    paymentStatus,
+  }) => {
+    try {
+      const res = await fetch("/api/send-order-email", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          orderId,
+          customerName: finalCheckoutDetails.name,
+          customerEmail: finalCheckoutDetails.email,
+          phone: finalCheckoutDetails.phone,
+          address: finalCheckoutDetails.address,
+          city: finalCheckoutDetails.city,
+          state: finalCheckoutDetails.state,
+          pincode: finalCheckoutDetails.pincode,
+          cartItems,
+          subtotal,
+          discount,
+          total: finalTotal,
+          paymentMethod: paymentMethodName,
+          paymentStatus,
+        }),
+      });
+
+      const data = await res.json();
+
+      if (!data.success) {
+        console.log("Email send failed:", data.message);
+      }
+    } catch (error) {
+      console.log("Email send failed:", error);
+    }
+  };
+
   const loadRazorpayScript = () => {
     return new Promise((resolve) => {
       if (window.Razorpay) return resolve(true);
@@ -159,6 +199,13 @@ export default function CheckoutPage() {
           return;
         }
 
+        await sendOrderEmail({
+          orderId,
+          finalCheckoutDetails,
+          paymentMethodName: "Cash on Delivery",
+          paymentStatus: "Pending",
+        });
+
         clearCart();
         router.push(`/order-success?orderId=${orderId}`);
         return;
@@ -207,46 +254,62 @@ export default function CheckoutPage() {
         },
 
         handler: async function (response) {
-          const verifyRes = await fetch("/api/razorpay/verify-payment", {
-            method: "POST",
-            headers: {
-              "Content-Type": "application/json",
-            },
-            body: JSON.stringify({
-              razorpay_order_id: response.razorpay_order_id,
-              razorpay_payment_id: response.razorpay_payment_id,
-              razorpay_signature: response.razorpay_signature,
-            }),
-          });
+          try {
+            setLoading(true);
 
-          const verifyData = await verifyRes.json();
+            const verifyRes = await fetch("/api/razorpay/verify-payment", {
+              method: "POST",
+              headers: {
+                "Content-Type": "application/json",
+              },
+              body: JSON.stringify({
+                razorpay_order_id: response.razorpay_order_id,
+                razorpay_payment_id: response.razorpay_payment_id,
+                razorpay_signature: response.razorpay_signature,
+              }),
+            });
 
-          if (!verifyData.success) {
-            alert("Payment verification failed");
-            return;
+            const verifyData = await verifyRes.json();
+
+            if (!verifyData.success) {
+              alert("Payment verification failed");
+              return;
+            }
+
+            const orderId = await saveOrderToDB({
+              user,
+              cartItems,
+              checkoutDetails: finalCheckoutDetails,
+              total: finalTotal,
+              paymentInfo: {
+                razorpayOrderId: response.razorpay_order_id,
+                razorpayPaymentId: response.razorpay_payment_id,
+                razorpaySignature: response.razorpay_signature,
+              },
+              paymentMethod: "Razorpay",
+              paymentStatus: "Paid",
+            });
+
+            if (!orderId) {
+              alert("Order save failed");
+              return;
+            }
+
+            await sendOrderEmail({
+              orderId,
+              finalCheckoutDetails,
+              paymentMethodName: "Razorpay",
+              paymentStatus: "Paid",
+            });
+
+            clearCart();
+            router.push(`/order-success?orderId=${orderId}`);
+          } catch (error) {
+            console.log(error);
+            alert("Something went wrong after payment");
+          } finally {
+            setLoading(false);
           }
-
-          const orderId = await saveOrderToDB({
-            user,
-            cartItems,
-            checkoutDetails: finalCheckoutDetails,
-            total: finalTotal,
-            paymentInfo: {
-              razorpayOrderId: response.razorpay_order_id,
-              razorpayPaymentId: response.razorpay_payment_id,
-              razorpaySignature: response.razorpay_signature,
-            },
-            paymentMethod: "Razorpay",
-            paymentStatus: "Paid",
-          });
-
-          if (!orderId) {
-            alert("Order save failed");
-            return;
-          }
-
-          clearCart();
-          router.push(`/order-success?orderId=${orderId}`);
         },
       };
 
@@ -319,7 +382,6 @@ export default function CheckoutPage() {
                 </div>
               </div>
 
-              {/* Billing Details */}
               <div className="bg-white border border-neutral-200 rounded-2xl p-6 shadow-sm">
                 <h2 className="text-xl font-bold mb-6 text-black">
                   Billing Details
