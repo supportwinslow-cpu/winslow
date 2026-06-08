@@ -41,11 +41,72 @@ export default function CheckoutPage() {
 
   const finalTotal = subtotal - discount;
 
+  const billingFields = [
+    {
+      name: "name",
+      label: "Full Name",
+      type: "text",
+      placeholder: "Enter your full name",
+      autoComplete: "name",
+    },
+    {
+      name: "email",
+      label: "Email Address",
+      type: "email",
+      placeholder: "Enter your email address",
+      autoComplete: "email",
+    },
+    {
+      name: "phone",
+      label: "Phone Number",
+      type: "tel",
+      placeholder: "Enter your phone number",
+      autoComplete: "tel",
+    },
+    {
+      name: "city",
+      label: "City",
+      type: "text",
+      placeholder: "Enter your city",
+      autoComplete: "address-level2",
+    },
+    {
+      name: "state",
+      label: "State",
+      type: "text",
+      placeholder: "Enter your state",
+      autoComplete: "address-level1",
+    },
+    {
+      name: "pincode",
+      label: "Pincode",
+      type: "text",
+      placeholder: "Enter your pincode",
+      autoComplete: "postal-code",
+    },
+  ];
+
   const handleChange = (e) => {
     setCheckoutDetails({
       ...checkoutDetails,
       [e.target.name]: e.target.value,
     });
+  };
+
+  const getFieldValue = (fieldName) => {
+    if (checkoutDetails[fieldName]) {
+      return checkoutDetails[fieldName];
+    }
+
+    if (fieldName === "name") {
+      return user?.displayName || "";
+    }
+
+    if (fieldName === "email") {
+      return user?.email || "";
+    }
+
+    return "";
   };
 
   const loadRazorpayScript = () => {
@@ -204,11 +265,11 @@ export default function CheckoutPage() {
       <ProtectedRoute>
         <div className="min-h-screen flex items-center justify-center bg-neutral-50 px-4">
           <div className="bg-white p-10 rounded-3xl shadow-lg text-center max-w-md w-full">
-            <h1 className="text-3xl font-bold mb-4">Your Cart is Empty</h1>
+            <h1 className="text-3xl font-bold mb-4 text-black">
+              Your Cart is Empty
+            </h1>
 
-            <p className="text-black mb-6">
-              Add products before checkout
-            </p>
+            <p className="text-black mb-6">Add products before checkout</p>
 
             <button
               onClick={() => router.push("/shop")}
@@ -258,52 +319,69 @@ export default function CheckoutPage() {
                 </div>
               </div>
 
-              <div className="bg-white border border-neutral-400 rounded-2xl p-6">
+              {/* Billing Details */}
+              <div className="bg-white border border-neutral-200 rounded-2xl p-6 shadow-sm">
                 <h2 className="text-xl font-bold mb-6 text-black">
                   Billing Details
                 </h2>
 
-                <div className="grid text-black md:grid-cols-2 gap-4">
-                  {[
-                    { name: "name", placeholder: "Full Name" },
-                    { name: "email", placeholder: "Email Address" },
-                    { name: "phone", placeholder: "Phone Number" },
-                    { name: "city", placeholder: "City" },
-                    { name: "state", placeholder: "State" },
-                    { name: "pincode", placeholder: "Pincode" },
-                  ].map((field) => (
-                    <input
-                      key={field.name}
-                      name={field.name}
-                      value={
-                        checkoutDetails[field.name] ||
-                        (field.name === "name"
-                          ? user?.displayName || ""
-                          : field.name === "email"
-                            ? user?.email || ""
-                            : "")
-                      }
-                      onChange={handleChange}
-                      placeholder={field.placeholder}
-                      className="border border-neutral-500 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-[#2F2FE4]"
-                    />
+                <div className="grid md:grid-cols-2 gap-5">
+                  {billingFields.map((field) => (
+                    <div key={field.name} className="space-y-2">
+                      <label
+                        htmlFor={field.name}
+                        className="block text-sm font-semibold text-black"
+                      >
+                        {field.label}{" "}
+                        <span className="text-red-500">*</span>
+                      </label>
+
+                      <input
+                        id={field.name}
+                        name={field.name}
+                        type={field.type}
+                        value={getFieldValue(field.name)}
+                        onChange={handleChange}
+                        placeholder={field.placeholder}
+                        autoComplete={field.autoComplete}
+                        inputMode={
+                          field.name === "phone" || field.name === "pincode"
+                            ? "numeric"
+                            : undefined
+                        }
+                        className="w-full rounded-xl border border-neutral-300 bg-white px-4 py-3 text-sm text-black placeholder:text-neutral-400 outline-none transition focus:border-[#2F2FE4] focus:ring-2 focus:ring-[#2F2FE4]/15"
+                      />
+                    </div>
                   ))}
                 </div>
 
-                <textarea
-                  name="address"
-                  value={checkoutDetails.address || ""}
-                  onChange={handleChange}
-                  placeholder="Full Address"
-                  rows="4"
-                  className="border border-neutral-200 rounded-xl px-4 py-3 w-full mt-4 text-sm focus:outline-none focus:border-[#2F2FE4]"
-                />
+                <div className="mt-5 space-y-2">
+                  <label
+                    htmlFor="address"
+                    className="block text-sm font-semibold text-black"
+                  >
+                    Full Address <span className="text-red-500">*</span>
+                  </label>
+
+                  <textarea
+                    id="address"
+                    name="address"
+                    value={checkoutDetails.address || ""}
+                    onChange={handleChange}
+                    placeholder="House no, street, area, landmark"
+                    rows="4"
+                    autoComplete="street-address"
+                    className="w-full resize-none rounded-xl border border-neutral-300 bg-white px-4 py-3 text-sm text-black placeholder:text-neutral-400 outline-none transition focus:border-[#2F2FE4] focus:ring-2 focus:ring-[#2F2FE4]/15"
+                  />
+                </div>
               </div>
 
               <div className="grid md:grid-cols-3 gap-4">
                 <div className="bg-white rounded-2xl p-5 border border-neutral-100 flex flex-col items-center text-center">
                   <ShieldCheck size={30} className="text-[#2F2FE4]" />
-                  <h3 className="font-semibold mt-3">Secure Payment</h3>
+                  <h3 className="font-semibold mt-3 text-black">
+                    Secure Payment
+                  </h3>
                   <p className="text-sm text-neutral-500 mt-1">
                     Razorpay protected checkout
                   </p>
@@ -311,7 +389,9 @@ export default function CheckoutPage() {
 
                 <div className="bg-white rounded-2xl p-5 border border-neutral-100 flex flex-col items-center text-center">
                   <Truck size={30} className="text-[#2F2FE4]" />
-                  <h3 className="font-semibold mt-3">Fast Delivery</h3>
+                  <h3 className="font-semibold mt-3 text-black">
+                    Fast Delivery
+                  </h3>
                   <p className="text-sm text-neutral-500 mt-1">
                     Quick shipping available
                   </p>
@@ -319,7 +399,9 @@ export default function CheckoutPage() {
 
                 <div className="bg-white rounded-2xl p-5 border border-neutral-100 flex flex-col items-center text-center">
                   <BadgeCheck size={30} className="text-[#2F2FE4]" />
-                  <h3 className="font-semibold mt-3">Genuine Products</h3>
+                  <h3 className="font-semibold mt-3 text-black">
+                    Genuine Products
+                  </h3>
                   <p className="text-sm text-neutral-500 mt-1">
                     Premium quality accessories
                   </p>
@@ -374,8 +456,8 @@ export default function CheckoutPage() {
                 </div>
 
                 <div className="flex justify-between border-t pt-4 text-lg font-bold">
-                  <span>Total</span>
-                  <span className="text-black" >₹{finalTotal}</span>
+                  <span className="text-black">Total</span>
+                  <span className="text-black">₹{finalTotal}</span>
                 </div>
               </div>
 
