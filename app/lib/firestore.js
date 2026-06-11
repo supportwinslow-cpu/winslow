@@ -22,7 +22,6 @@ export const getUserRole = async (uid) => {
         if (!uid) return null;
 
         const userRef = doc(db, "users", uid);
-
         const userSnap = await getDoc(userRef);
 
         if (userSnap.exists()) {
@@ -31,7 +30,7 @@ export const getUserRole = async (uid) => {
 
         return null;
     } catch (error) {
-        console.log("GET USER ROLE ERROR:", error);
+        console.error("GET USER ROLE ERROR:", error);
         return null;
     }
 };
@@ -46,30 +45,23 @@ export const saveUserToDB = async (user) => {
         if (!user) return;
 
         const userRef = doc(db, "users", user.uid);
-
         const userSnap = await getDoc(userRef);
 
         if (!userSnap.exists()) {
             await setDoc(userRef, {
                 uid: user.uid,
-
                 name: user.displayName || "",
-
                 email: user.email || "",
-
                 phone: user.phoneNumber || "",
-
                 image: user.photoURL || "",
-
                 role: "customer",
-
                 createdAt: serverTimestamp(),
             });
 
             console.log("User Saved");
         }
     } catch (error) {
-        console.log("SAVE USER ERROR:", error);
+        console.error("SAVE USER ERROR:", error);
     }
 };
 
@@ -89,8 +81,20 @@ export const saveOrderToDB = async ({
 }) => {
     try {
         if (!user) {
-            throw new Error("User not found");
+            throw new Error("User not found. Please login again.");
         }
+
+        const safeItems = (cartItems || []).map((item) => ({
+            id: item.id || "",
+            name: item.name || "",
+            slug: item.slug || "",
+            brand: item.brand || "",
+            price: Number(item.price || 0),
+            originalPrice: Number(item.originalPrice || 0),
+            quantity: Number(item.quantity || 1),
+            image: item.image || "",
+            isFreeGift: item.isFreeGift || false,
+        }));
 
         const ordersRef = collection(db, "orders");
 
@@ -109,14 +113,13 @@ export const saveOrderToDB = async ({
             pincode: checkoutDetails?.pincode || "",
 
             // PRODUCTS
-            items: cartItems || [],
+            items: safeItems,
+            total: Number(total || 0),
 
-            total: total || 0,
-
-            totalItems: cartItems?.reduce(
+            totalItems: safeItems.reduce(
                 (sum, item) => sum + Number(item.quantity || 1),
                 0
-            ) || 0,
+            ),
 
             // ORDER STATUS
             orderStatus: "Pending",
@@ -138,9 +141,12 @@ export const saveOrderToDB = async ({
 
         const docRef = await addDoc(ordersRef, orderData);
 
+        console.log("Order Saved:", docRef.id);
+
         return docRef.id;
     } catch (error) {
-        console.log("SAVE ORDER ERROR:", error);
+        console.error("SAVE ORDER ERROR:", error);
+        alert(error.message);
         return null;
     }
 };
@@ -174,7 +180,7 @@ export const getUserOrders = async (userId) => {
 
         return orders;
     } catch (error) {
-        console.log("GET USER ORDERS ERROR:", error);
+        console.error("GET USER ORDERS ERROR:", error);
         return [];
     }
 };
