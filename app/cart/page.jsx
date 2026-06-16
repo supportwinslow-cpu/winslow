@@ -22,7 +22,7 @@ import {
   Lock,
 } from "lucide-react";
 
-const DOOR_EDGE_GUARD_PRICE = 299;
+const DOOR_EDGE_GUARD_PRICE = 311;
 const DOOR_EDGE_GUARD_ORIGINAL_PRICE = 599;
 
 const isDoorEdgeGuardItem = (item) => {

@@ -19,9 +19,9 @@ const products = [
     carBrand: ALL_BRANDS,
     carModel: ["Universal"],
 
-    price: 299,
+    price: 311,
     originalPrice: 599,
-    discountPercentage: 58,
+    discountPercentage: 45,
     rating: 4.5,
 
     tags: ["door edge guard", "scratch protection", "diamond pattern"],
@@ -52,9 +52,9 @@ const products = [
       {
         name: "Black",
         sku: "F3DG-001-BLK",
-        price: 299,
+        price: 311,
         originalPrice: 599,
-        discountPercentage: 58,
+        discountPercentage: 45,
         stock: 100,
       },
     ],
@@ -75,9 +75,9 @@ const products = [
     carBrand: ALL_BRANDS,
     carModel: ["Universal"],
 
-    price: 299,
+    price: 311,
     originalPrice: 599,
-    discountPercentage: 58,
+    discountPercentage: 45,
     rating: 4.5,
 
     tags: ["door edge guard", "scratch protection", "arrow pattern", "lightning"],
@@ -108,9 +108,9 @@ const products = [
       {
         name: "Black / Gold",
         sku: "F3DG-003-BGD",
-        price: 299,
+        price: 311,
         originalPrice: 599,
-        discountPercentage: 58,
+        discountPercentage: 45,
         stock: 100,
       },
     ],
@@ -131,9 +131,9 @@ const products = [
     carBrand: ALL_BRANDS,
     carModel: ["Universal"],
 
-    price: 299,
+    price: 311,
     originalPrice: 599,
-    discountPercentage: 58,
+    discountPercentage: 45,
     rating: 4.5,
 
     tags: ["door edge guard", "scratch protection", "chain pattern", "mesh"],
@@ -164,9 +164,9 @@ const products = [
       {
         name: "Black / White",
         sku: "F3DG-004-BWH",
-        price: 299,
+        price: 311,
         originalPrice: 599,
-        discountPercentage: 58,
+        discountPercentage: 45,
         stock: 100,
       },
     ],
@@ -187,9 +187,9 @@ const products = [
     carBrand: ALL_BRANDS,
     carModel: ["Universal"],
 
-    price: 299,
+    price: 311,
     originalPrice: 599,
-    discountPercentage: 58,
+    discountPercentage: 45,
     rating: 4.5,
 
     tags: ["door edge guard", "scratch protection", "F3 logo"],
@@ -220,9 +220,9 @@ const products = [
       {
         name: "Black / White",
         sku: "F3DG-005-BWH",
-        price: 299,
+        price: 311,
         originalPrice: 599,
-        discountPercentage: 58,
+        discountPercentage: 45,
         stock: 100,
       },
     ],
@@ -243,9 +243,9 @@ const products = [
     carBrand: ALL_BRANDS,
     carModel: ["Universal"],
 
-    price: 299,
+    price: 311,
     originalPrice: 599,
-    discountPercentage: 58,
+    discountPercentage: 45,
     rating: 4.5,
 
     tags: ["door edge guard", "scratch protection", "rectangle pattern"],
@@ -276,9 +276,9 @@ const products = [
       {
         name: "Black / White",
         sku: "F3DG-006-BWH",
-        price: 299,
+        price: 311,
         originalPrice: 599,
-        discountPercentage: 58,
+        discountPercentage: 45,
         stock: 100,
       },
     ],
@@ -301,9 +301,9 @@ const products = [
     carBrand: ALL_BRANDS,
     carModel: ["Universal"],
 
-    price: 299,
+    price: 311,
     originalPrice: 599,
-    discountPercentage: 58,
+    discountPercentage: 45,
     rating: 4.6,
 
     tags: ["door edge guard", "gt model", "matte black", "plain"],
@@ -336,9 +336,9 @@ const products = [
       {
         name: "Matte Black",
         sku: "F3DG-007-MBLK",
-        price: 299,
+        price: 311,
         originalPrice: 599,
-        discountPercentage: 58,
+        discountPercentage: 45,
         stock: 100,
       },
     ],
@@ -359,9 +359,9 @@ const products = [
     carBrand: ALL_BRANDS,
     carModel: ["Universal"],
 
-    price: 299,
+    price: 311,
     originalPrice: 599,
-    discountPercentage: 58,
+    discountPercentage: 45,
     rating: 4.6,
 
     tags: ["door edge guard", "gt model", "red stripe", "racing"],
@@ -394,9 +394,9 @@ const products = [
       {
         name: "Black / Red / White",
         sku: "F3DG-008-BRW",
-        price: 299,
+        price: 311,
         originalPrice: 599,
-        discountPercentage: 58,
+        discountPercentage: 45,
         stock: 100,
       },
     ],
@@ -417,9 +417,9 @@ const products = [
     carBrand: ALL_BRANDS,
     carModel: ["Universal"],
 
-    price: 299,
+    price: 311,
     originalPrice: 599,
-    discountPercentage: 58,
+    discountPercentage: 45,
     rating: 4.6,
 
     tags: ["door edge guard", "gt model", "blue stripe", "tricolor"],
@@ -452,9 +452,9 @@ const products = [
       {
         name: "White / Blue / Red",
         sku: "F3DG-009-WBR",
-        price: 299,
+        price: 311,
         originalPrice: 599,
-        discountPercentage: 58,
+        discountPercentage: 45,
         stock: 100,
       },
     ],
@@ -479,9 +479,9 @@ const products = [
     carBrand: ALL_BRANDS,
     carModel: ["Universal"],
 
-    price: 299,
+    price: 311,
     originalPrice: 599,
-    discountPercentage: 58,
+    discountPercentage: 45,
     rating: 4.5,
 
     tags: ["door edge guard", "TRD", "blue stripe", "sporty"],
@@ -512,9 +512,9 @@ const products = [
       {
         name: "Black / Blue",
         sku: "F3DG-011-BBL",
-        price: 299,
+        price: 311,
         originalPrice: 599,
-        discountPercentage: 58,
+        discountPercentage: 45,
         stock: 100,
       },
     ],
@@ -535,9 +535,9 @@ const products = [
     carBrand: ALL_BRANDS,
     carModel: ["Universal"],
 
-    price: 299,
+    price: 311,
     originalPrice: 599,
-    discountPercentage: 58,
+    discountPercentage: 45,
     rating: 4.5,
 
     tags: ["door edge guard", "sports", "blue text", "sporty"],
@@ -568,9 +568,9 @@ const products = [
       {
         name: "Black / Blue",
         sku: "F3DG-012-BBL",
-        price: 299,
+        price: 311,
         originalPrice: 599,
-        discountPercentage: 58,
+        discountPercentage: 45,
         stock: 100,
       },
     ],
@@ -591,9 +591,9 @@ const products = [
     carBrand: ALL_BRANDS,
     carModel: ["Universal"],
 
-    price: 299,
+    price: 311,
     originalPrice: 599,
-    discountPercentage: 58,
+    discountPercentage: 45,
     rating: 4.4,
 
     tags: ["door edge guard", "abstract", "grunge", "textured"],
@@ -624,9 +624,9 @@ const products = [
       {
         name: "Black / White",
         sku: "F3DG-013-BWH",
-        price: 299,
+        price: 311,
         originalPrice: 599,
-        discountPercentage: 58,
+        discountPercentage: 45,
         stock: 100,
       },
     ],
@@ -648,9 +648,9 @@ const products = [
     carBrand: ALL_BRANDS,
     carModel: ["Universal"],
 
-    price: 299,
+    price: 311,
     originalPrice: 599,
-    discountPercentage: 58,
+    discountPercentage: 45,
     rating: 4.5,
 
     tags: ["door edge guard", "diagonal stripe", "bicolor"],
@@ -681,9 +681,9 @@ const products = [
       {
         name: "Black / White",
         sku: "F3DG-015-BWH",
-        price: 299,
+        price: 311,
         originalPrice: 599,
-        discountPercentage: 58,
+        discountPercentage: 45,
         stock: 100,
       },
     ],
@@ -704,9 +704,9 @@ const products = [
     carBrand: ALL_BRANDS,
     carModel: ["Universal"],
 
-    price: 299,
+    price: 311,
     originalPrice: 599,
-    discountPercentage: 58,
+    discountPercentage: 45,
     rating: 4.7,
 
     tags: ["door edge guard", "carbon fiber", "premium look"],
@@ -738,9 +738,9 @@ const products = [
       {
         name: "Carbon Black",
         sku: "F3DG-016-CBK",
-        price: 299,
+        price: 311,
         originalPrice: 599,
-        discountPercentage: 58,
+        discountPercentage: 45,
         stock: 100,
       },
     ],
@@ -761,9 +761,9 @@ const products = [
     carBrand: ALL_BRANDS,
     carModel: ["Universal"],
 
-    price: 299,
+    price: 311,
     originalPrice: 599,
-    discountPercentage: 58,
+    discountPercentage: 45,
     rating: 4.4,
 
     tags: ["door edge guard", "camouflage", "camo", "military"],
@@ -794,9 +794,9 @@ const products = [
       {
         name: "Black Camo",
         sku: "F3DG-017-CAM",
-        price: 299,
+        price: 311,
         originalPrice: 599,
-        discountPercentage: 58,
+        discountPercentage: 45,
         stock: 100,
       },
     ],
@@ -821,9 +821,9 @@ const products = [
     carBrand: ALL_BRANDS,
     carModel: ["Universal"],
 
-    price: 299,
+    price: 311,
     originalPrice: 599,
-    discountPercentage: 58,
+    discountPercentage: 45,
     rating: 4.8,
 
     tags: ["door edge guard", "premium", "acrylic", "limited edition", "black"],
@@ -857,9 +857,9 @@ const products = [
       {
         name: "Black Gloss",
         sku: "F3-PREMIUM-001-BGL",
-        price: 299,
+        price: 311,
         originalPrice: 599,
-        discountPercentage: 58,
+        discountPercentage: 45,
         stock: 50,
       },
     ],
@@ -880,9 +880,9 @@ const products = [
     carBrand: ALL_BRANDS,
     carModel: ["Universal"],
 
-    price: 299,
+    price: 311,
     originalPrice: 599,
-    discountPercentage: 58,
+    discountPercentage: 45,
     rating: 4.8,
 
     tags: ["door edge guard", "premium", "acrylic", "limited edition", "silver"],
@@ -916,9 +916,9 @@ const products = [
       {
         name: "Silver / Chrome",
         sku: "F3-PREMIUM-002-SLV",
-        price: 299,
+        price: 311,
         originalPrice: 599,
-        discountPercentage: 58,
+        discountPercentage: 45,
         stock: 50,
       },
     ],
@@ -939,9 +939,9 @@ const products = [
     carBrand: ALL_BRANDS,
     carModel: ["Universal"],
 
-    price: 299,
+    price: 311,
     originalPrice: 599,
-    discountPercentage: 58,
+    discountPercentage: 45,
     rating: 4.8,
 
     tags: ["door edge guard", "premium", "acrylic", "limited edition"],
@@ -975,9 +975,9 @@ const products = [
       {
         name: "Black Gloss",
         sku: "F3-PREMIUM-003-BGL",
-        price: 299,
+        price: 311,
         originalPrice: 599,
-        discountPercentage: 58,
+        discountPercentage: 45,
         stock: 50,
       },
     ],
@@ -998,9 +998,9 @@ const products = [
     carBrand: ALL_BRANDS,
     carModel: ["Universal"],
 
-    price: 299,
+    price: 311,
     originalPrice: 599,
-    discountPercentage: 58,
+    discountPercentage: 45,
     rating: 4.8,
 
     tags: ["door edge guard", "premium", "acrylic", "limited edition", "bicolor"],
@@ -1034,9 +1034,9 @@ const products = [
       {
         name: "Black & Silver",
         sku: "F3-PREMIUM-004-BSL",
-        price: 299,
+        price: 311,
         originalPrice: 599,
-        discountPercentage: 58,
+        discountPercentage: 45,
         stock: 50,
       },
     ],

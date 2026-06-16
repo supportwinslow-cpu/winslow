@@ -17,7 +17,7 @@ import {
     Sparkles,
 } from "lucide-react";
 
-const SALE_PRICE = 299;
+const SALE_PRICE = 311;
 const DEFAULT_ORIGINAL_PRICE = 599;
 
 const getDiscountPercentage = (originalPrice, salePrice) => {

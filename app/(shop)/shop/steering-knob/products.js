@@ -18,7 +18,7 @@ const products = [
     carBrand: ALL_BRANDS,
     carModel: ["Universal"],
 
-    price: 324,
+    price: 311,
     originalPrice: 499,
     discountPercentage: 35,
     rating: 4.6,
@@ -54,7 +54,7 @@ const products = [
       {
         name: "Black / Red",
         sku: "F3-SWK-001-BRD",
-        price: 324,
+        price: 311,
         originalPrice: 499,
         discountPercentage: 35,
         stock: 100,
@@ -77,7 +77,7 @@ const products = [
     carBrand: ALL_BRANDS,
     carModel: ["Universal"],
 
-    price: 324,
+    price: 311,
     originalPrice: 499,
     discountPercentage: 35,
     rating: 4.5,
@@ -113,7 +113,7 @@ const products = [
       {
         name: "Black / Union Jack",
         sku: "F3-SWK-002-UJK",
-        price: 324,
+        price: 311,
         originalPrice: 499,
         discountPercentage: 35,
         stock: 100,
@@ -136,7 +136,7 @@ const products = [
     carBrand: ALL_BRANDS,
     carModel: ["Universal"],
 
-    price: 324,
+    price: 311,
     originalPrice: 499,
     discountPercentage: 35,
     rating: 4.6,
@@ -173,7 +173,7 @@ const products = [
       {
         name: "Carbon / Red",
         sku: "F3-SWK-003-CRD",
-        price: 324,
+        price: 311,
         originalPrice: 499,
         discountPercentage: 35,
         stock: 100,
@@ -196,7 +196,7 @@ const products = [
     carBrand: ALL_BRANDS,
     carModel: ["Universal"],
 
-    price: 324,
+    price: 311,
     originalPrice: 499,
     discountPercentage: 35,
     rating: 4.5,
@@ -232,7 +232,7 @@ const products = [
       {
         name: "Black / Red Ring",
         sku: "F3-SWK-004-BRR",
-        price: 324,
+        price: 311,
         originalPrice: 499,
         discountPercentage: 35,
         stock: 100,
@@ -255,7 +255,7 @@ const products = [
     carBrand: ALL_BRANDS,
     carModel: ["Universal"],
 
-    price: 324,
+    price: 311,
     originalPrice: 499,
     discountPercentage: 35,
     rating: 4.4,
@@ -292,7 +292,7 @@ const products = [
       {
         name: "Carbon Black / MIG",
         sku: "F3-SWK-005-MIG",
-        price: 324,
+        price: 311,
         originalPrice: 499,
         discountPercentage: 35,
         stock: 100,
@@ -315,7 +315,7 @@ const products = [
     carBrand: ALL_BRANDS,
     carModel: ["Universal"],
 
-    price: 324,
+    price: 311,
     originalPrice: 499,
     discountPercentage: 35,
     rating: 4.6,
@@ -352,7 +352,7 @@ const products = [
       {
         name: "Carbon / Red Badge",
         sku: "F3-SWK-006-CRB",
-        price: 324,
+        price: 311,
         originalPrice: 499,
         discountPercentage: 35,
         stock: 100,
@@ -375,7 +375,7 @@ const products = [
     carBrand: ALL_BRANDS,
     carModel: ["Universal"],
 
-    price: 324,
+    price: 311,
     originalPrice: 499,
     discountPercentage: 35,
     rating: 4.5,
@@ -412,7 +412,7 @@ const products = [
       {
         name: "Carbon / Red & White",
         sku: "F3-SWK-007-CRW",
-        price: 324,
+        price: 311,
         originalPrice: 499,
         discountPercentage: 35,
         stock: 100,
@@ -435,7 +435,7 @@ const products = [
     carBrand: ALL_BRANDS,
     carModel: ["Universal"],
 
-    price: 324,
+    price: 311,
     originalPrice: 499,
     discountPercentage: 35,
     rating: 4.5,
@@ -472,7 +472,7 @@ const products = [
       {
         name: "Carbon / Red Arrow",
         sku: "F3-SWK-008-CRA",
-        price: 324,
+        price: 311,
         originalPrice: 499,
         discountPercentage: 35,
         stock: 100,
@@ -495,7 +495,7 @@ const products = [
     carBrand: ALL_BRANDS,
     carModel: ["Universal"],
 
-    price: 324,
+    price: 311,
     originalPrice: 499,
     discountPercentage: 35,
     rating: 4.7,
@@ -532,7 +532,7 @@ const products = [
       {
         name: "Black / GT Red",
         sku: "F3-SWK-009-GTR",
-        price: 324,
+        price: 311,
         originalPrice: 499,
         discountPercentage: 35,
         stock: 100,

@@ -49,7 +49,7 @@ export default function ProductClient({ slug }) {
 
     const originalPrice = product.originalPrice ?? 499;
     const discountPercentage = product.discountPercentage ?? 35;
-    const salePrice = product.price && product.price > 1 ? product.price : 324;
+    const salePrice = product.price && product.price > 1 ? product.price : 311;
 
     const cartProduct = {
         ...product,
@@ -257,7 +257,7 @@ export default function ProductClient({ slug }) {
 
                             const itemOriginalPrice = item.originalPrice ?? 499;
                             const itemDiscountPercentage = item.discountPercentage ?? 35;
-                            const itemSalePrice = item.price && item.price > 1 ? item.price : 324;
+                            const itemSalePrice = item.price && item.price > 1 ? item.price : 311;
 
                             return (
                                 <Link
