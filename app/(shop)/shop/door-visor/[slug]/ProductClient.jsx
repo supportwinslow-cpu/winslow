@@ -29,9 +29,9 @@ const getPriceInfo = (item) => {
             : item?.originalPrice;
 
     const salePrice = isSetOf4
-        ? 1625
+        ? 1249
         : isSetOf6
-            ? 1950
+            ? 1512
             : item?.price;
 
     const discountPercentage = isSetOf4 || isSetOf6

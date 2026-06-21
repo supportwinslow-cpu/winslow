@@ -23,9 +23,9 @@ const products = [
     carBrand: ["Maruti"],
     carModel: ["Alto Old", "Alto Old K-10"],
 
-    price: 1625,
+    price: 1249,
     originalPrice: 2500,
-    discountPercentage: 35,
+    discountPercentage: 50,
     rating: 4.4,
 
     tags: ["door visor", "alto", "maruti", "rain visor", "wind deflector"],
@@ -52,7 +52,7 @@ const products = [
     ],
 
     variants: [
-      { name: "Chromeline", sku: "DV-001-CRM", price: 1625, originalPrice: 2500, discountPercentage: 35, stock: 100 },
+      { name: "Chromeline", sku: "DV-001-CRM", price: 1249, originalPrice: 2500, discountPercentage: 50, stock: 100 },
     ],
 
     isFeatured: false,
@@ -71,9 +71,9 @@ const products = [
   //   carBrand: ["Maruti"],
   //   carModel: ["Alto 800", "Alto New K-10"],
 
-  //   price: 1625,
+  //   price: 1249,
   //   originalPrice: 2500,
-  //   discountPercentage: 35,
+  //   discountPercentage: 50,
   //   rating: 4.4,
 
   //   tags: ["door visor", "alto 800", "maruti", "rain visor"],
@@ -97,7 +97,7 @@ const products = [
   //   images: ["/products/door-visor/alto-800.jpg"],
 
   //   variants: [
-  //     { name: "Chromeline", sku: "DV-002-CRM", price: 1625, originalPrice: 2500, discountPercentage: 35, stock: 100 },
+  //     { name: "Chromeline", sku: "DV-002-CRM", price: 1249, originalPrice: 2500, discountPercentage: 50, stock: 100 },
   //   ],
 
   //   isFeatured: false,
@@ -116,9 +116,9 @@ const products = [
     carBrand: ["Maruti"],
     carModel: ["Celerio Old"],
 
-    price: 1625,
+    price: 1249,
     originalPrice: 2500,
-    discountPercentage: 35,
+    discountPercentage: 50,
     rating: 4.4,
 
     tags: ["door visor", "celerio", "maruti", "rain visor"],
@@ -145,7 +145,7 @@ const products = [
     ],
 
     variants: [
-      { name: "Chromeline", sku: "DV-003-CRM", price: 1625, originalPrice: 2500, discountPercentage: 35, stock: 100 },
+      { name: "Chromeline", sku: "DV-003-CRM", price: 1249, originalPrice: 2500, discountPercentage: 50, stock: 100 },
     ],
 
     isFeatured: false,
@@ -164,9 +164,9 @@ const products = [
     carBrand: ["Maruti"],
     carModel: ["Maruti 800"],
 
-    price: 1625,
+    price: 1249,
     originalPrice: 2500,
-    discountPercentage: 35,
+    discountPercentage: 50,
     rating: 4.3,
 
     tags: ["door visor", "maruti 800", "maruti", "rain visor"],
@@ -192,7 +192,7 @@ const products = [
     ],
 
     variants: [
-      { name: "Chromeline", sku: "DV-004-CRM", price: 1625, originalPrice: 2500, discountPercentage: 35, stock: 100 },
+      { name: "Chromeline", sku: "DV-004-CRM", price: 1249, originalPrice: 2500, discountPercentage: 50, stock: 100 },
     ],
 
     isFeatured: false,
@@ -211,9 +211,9 @@ const products = [
     carBrand: ["Maruti"],
     carModel: ["S-Presso"],
 
-    price: 1625,
+    price: 1249,
     originalPrice: 2500,
-    discountPercentage: 35,
+    discountPercentage: 50,
     rating: 4.5,
 
     tags: ["door visor", "s-presso", "maruti", "rain visor"],
@@ -239,7 +239,7 @@ const products = [
     ],
 
     variants: [
-      { name: "Chromeline", sku: "DV-005-CRM", price: 1625, originalPrice: 2500, discountPercentage: 35, stock: 100 },
+      { name: "Chromeline", sku: "DV-005-CRM", price: 1249, originalPrice: 2500, discountPercentage: 50, stock: 100 },
     ],
 
     isFeatured: false,
@@ -258,9 +258,9 @@ const products = [
     carBrand: ["Maruti"],
     carModel: ["Wagon-R Old"],
 
-    price: 1625,
+    price: 1249,
     originalPrice: 2500,
-    discountPercentage: 35,
+    discountPercentage: 50,
     rating: 4.4,
 
     tags: ["door visor", "wagon-r", "maruti", "rain visor"],
@@ -286,7 +286,7 @@ const products = [
     ],
 
     variants: [
-      { name: "Chromeline", sku: "DV-006-CRM", price: 1625, originalPrice: 2500, discountPercentage: 35, stock: 100 },
+      { name: "Chromeline", sku: "DV-006-CRM", price: 1249, originalPrice: 2500, discountPercentage: 50, stock: 100 },
     ],
 
     isFeatured: false,
@@ -305,9 +305,9 @@ const products = [
     carBrand: ["Maruti"],
     carModel: ["Wagon-R New K-Series"],
 
-    price: 1625,
+    price: 1249,
     originalPrice: 2500,
-    discountPercentage: 35,
+    discountPercentage: 50,
     rating: 4.4,
 
     tags: ["door visor", "wagon-r", "k-series", "maruti", "rain visor"],
@@ -333,7 +333,7 @@ const products = [
     ],
 
     variants: [
-      { name: "Chromeline", sku: "DV-007-CRM", price: 1625, originalPrice: 2500, discountPercentage: 35, stock: 100 },
+      { name: "Chromeline", sku: "DV-007-CRM", price: 1249, originalPrice: 2500, discountPercentage: 50, stock: 100 },
     ],
 
     isFeatured: false,
@@ -352,9 +352,9 @@ const products = [
     carBrand: ["Maruti"],
     carModel: ["Wagon-R 2019", "Wagon-R 2020", "Wagon-R 2021", "Wagon-R 2022", "Wagon-R 2023"],
 
-    price: 1625,
+    price: 1249,
     originalPrice: 2500,
-    discountPercentage: 35,
+    discountPercentage: 50,
     rating: 4.5,
 
     tags: ["door visor", "wagon-r 2019", "maruti", "rain visor"],
@@ -380,7 +380,7 @@ const products = [
     ],
 
     variants: [
-      { name: "Chromeline", sku: "DV-008-CRM", price: 1625, originalPrice: 2500, discountPercentage: 35, stock: 100 },
+      { name: "Chromeline", sku: "DV-008-CRM", price: 1249, originalPrice: 2500, discountPercentage: 50, stock: 100 },
     ],
 
     isFeatured: false,
@@ -399,9 +399,9 @@ const products = [
     carBrand: ["Maruti", "Toyota"],
     carModel: ["Baleno Old", "Glanza"],
 
-    price: 1625,
+    price: 1249,
     originalPrice: 2500,
-    discountPercentage: 35,
+    discountPercentage: 50,
     rating: 4.5,
 
     tags: ["door visor", "baleno", "glanza", "maruti", "toyota", "rain visor"],
@@ -427,7 +427,7 @@ const products = [
     ],
 
     variants: [
-      { name: "Chromeline", sku: "DV-009-CRM", price: 1625, originalPrice: 2500, discountPercentage: 35, stock: 100 },
+      { name: "Chromeline", sku: "DV-009-CRM", price: 1249, originalPrice: 2500, discountPercentage: 50, stock: 100 },
     ],
 
     isFeatured: false,
@@ -446,9 +446,9 @@ const products = [
     carBrand: ["Maruti", "Toyota"],
     carModel: ["Brezza Old", "Urban Cruiser"],
 
-    price: 1625,
+    price: 1249,
     originalPrice: 2500,
-    discountPercentage: 35,
+    discountPercentage: 50,
     rating: 4.5,
 
     tags: ["door visor", "brezza old", "urban cruiser", "maruti", "toyota", "rain visor"],
@@ -474,7 +474,7 @@ const products = [
     ],
 
     variants: [
-      { name: "Chromeline", sku: "DV-010-CRM", price: 1625, originalPrice: 2500, discountPercentage: 35, stock: 100 },
+      { name: "Chromeline", sku: "DV-010-CRM", price: 1249, originalPrice: 2500, discountPercentage: 50, stock: 100 },
     ],
 
     isFeatured: false,
@@ -493,9 +493,9 @@ const products = [
     carBrand: ["Maruti"],
     carModel: ["Baleno 2022"],
 
-    price: 1625,
+    price: 1249,
     originalPrice: 2500,
-    discountPercentage: 35,
+    discountPercentage: 50,
     rating: 4.5,
 
     tags: ["door visor", "baleno 2022", "maruti", "rain visor"],
@@ -521,7 +521,7 @@ const products = [
     ],
 
     variants: [
-      { name: "Chromeline", sku: "DV-011-CRM", price: 1625, originalPrice: 2500, discountPercentage: 35, stock: 100 },
+      { name: "Chromeline", sku: "DV-011-CRM", price: 1249, originalPrice: 2500, discountPercentage: 50, stock: 100 },
     ],
 
     isFeatured: true,
@@ -540,9 +540,9 @@ const products = [
     carBrand: ["Maruti"],
     carModel: ["Brezza 2022"],
 
-    price: 1625,
+    price: 1249,
     originalPrice: 2500,
-    discountPercentage: 35,
+    discountPercentage: 50,
     rating: 4.5,
 
     tags: ["door visor", "brezza 2022", "maruti", "rain visor"],
@@ -568,7 +568,7 @@ const products = [
     ],
 
     variants: [
-      { name: "Chromeline", sku: "DV-012-CRM", price: 1625, originalPrice: 2500, discountPercentage: 35, stock: 100 },
+      { name: "Chromeline", sku: "DV-012-CRM", price: 1249, originalPrice: 2500, discountPercentage: 50, stock: 100 },
     ],
 
     isFeatured: false,
@@ -587,9 +587,9 @@ const products = [
     carBrand: ["Maruti"],
     carModel: ["Swift Dzire 2008", "Swift Dzire 2009", "Swift Dzire 2010", "Swift Dzire 2011"],
 
-    price: 1625,
+    price: 1249,
     originalPrice: 2500,
-    discountPercentage: 35,
+    discountPercentage: 50,
     rating: 4.3,
 
     tags: ["door visor", "swift dzire", "dzire old", "maruti", "rain visor"],
@@ -615,7 +615,7 @@ const products = [
     ],
 
     variants: [
-      { name: "Chromeline", sku: "DV-013-CRM", price: 1625, originalPrice: 2500, discountPercentage: 35, stock: 100 },
+      { name: "Chromeline", sku: "DV-013-CRM", price: 1249, originalPrice: 2500, discountPercentage: 50, stock: 100 },
     ],
 
     isFeatured: false,
@@ -634,9 +634,9 @@ const products = [
     carBrand: ["Maruti"],
     carModel: ["Swift Dzire 2012", "Swift Dzire 2013", "Swift Dzire 2014", "Swift Dzire 2015", "Swift Dzire 2016"],
 
-    price: 1625,
+    price: 1249,
     originalPrice: 2500,
-    discountPercentage: 35,
+    discountPercentage: 50,
     rating: 4.4,
 
     tags: ["door visor", "swift dzire", "dzire new", "maruti", "rain visor"],
@@ -662,7 +662,7 @@ const products = [
     ],
 
     variants: [
-      { name: "Chromeline", sku: "DV-014-CRM", price: 1625, originalPrice: 2500, discountPercentage: 35, stock: 100 },
+      { name: "Chromeline", sku: "DV-014-CRM", price: 1249, originalPrice: 2500, discountPercentage: 50, stock: 100 },
     ],
 
     isFeatured: false,
@@ -681,9 +681,9 @@ const products = [
     carBrand: ["Maruti"],
     carModel: ["Swift Dzire 2017", "Swift Dzire 2018", "Swift Dzire 2019", "Swift Dzire 2020", "Swift Dzire 2021", "Swift Dzire 2022", "Swift Dzire 2023"],
 
-    price: 1625,
+    price: 1249,
     originalPrice: 2500,
-    discountPercentage: 35,
+    discountPercentage: 50,
     rating: 4.5,
 
     tags: ["door visor", "swift dzire", "maruti", "rain visor"],
@@ -709,7 +709,7 @@ const products = [
     ],
 
     variants: [
-      { name: "Chromeline", sku: "DV-015-CRM", price: 1625, originalPrice: 2500, discountPercentage: 35, stock: 100 },
+      { name: "Chromeline", sku: "DV-015-CRM", price: 1249, originalPrice: 2500, discountPercentage: 50, stock: 100 },
     ],
 
     isFeatured: false,
@@ -728,9 +728,9 @@ const products = [
     carBrand: ["Maruti"],
     carModel: ["Swift 2008", "Swift 2009", "Swift 2010", "Swift 2011"],
 
-    price: 1625,
+    price: 1249,
     originalPrice: 2500,
-    discountPercentage: 35,
+    discountPercentage: 50,
     rating: 4.3,
 
     tags: ["door visor", "swift old", "maruti", "rain visor"],
@@ -756,7 +756,7 @@ const products = [
     ],
 
     variants: [
-      { name: "Chromeline", sku: "DV-016-CRM", price: 1625, originalPrice: 2500, discountPercentage: 35, stock: 100 },
+      { name: "Chromeline", sku: "DV-016-CRM", price: 1249, originalPrice: 2500, discountPercentage: 50, stock: 100 },
     ],
 
     isFeatured: false,
@@ -775,9 +775,9 @@ const products = [
     carBrand: ["Maruti"],
     carModel: ["Swift 2012", "Swift 2013", "Swift 2014", "Swift 2015", "Swift 2016", "Swift 2017"],
 
-    price: 1625,
+    price: 1249,
     originalPrice: 2500,
-    discountPercentage: 35,
+    discountPercentage: 50,
     rating: 4.4,
 
     tags: ["door visor", "swift new", "maruti", "rain visor"],
@@ -803,7 +803,7 @@ const products = [
     ],
 
     variants: [
-      { name: "Chromeline", sku: "DV-017-CRM", price: 1625, originalPrice: 2500, discountPercentage: 35, stock: 100 },
+      { name: "Chromeline", sku: "DV-017-CRM", price: 1249, originalPrice: 2500, discountPercentage: 50, stock: 100 },
     ],
 
     isFeatured: false,
@@ -822,9 +822,9 @@ const products = [
     carBrand: ["Maruti"],
     carModel: ["Swift 2018", "Swift 2019", "Swift 2020", "Swift 2021", "Swift 2022", "Swift 2023"],
 
-    price: 1625,
+    price: 1249,
     originalPrice: 2500,
-    discountPercentage: 35,
+    discountPercentage: 50,
     rating: 4.5,
 
     tags: ["door visor", "swift 2018", "maruti", "rain visor"],
@@ -850,7 +850,7 @@ const products = [
     ],
 
     variants: [
-      { name: "Chromeline", sku: "DV-018-CRM", price: 1625, originalPrice: 2500, discountPercentage: 35, stock: 100 },
+      { name: "Chromeline", sku: "DV-018-CRM", price: 1249, originalPrice: 2500, discountPercentage: 50, stock: 100 },
     ],
 
     isFeatured: false,
@@ -869,9 +869,9 @@ const products = [
     carBrand: ["Maruti"],
     carModel: ["Ritz"],
 
-    price: 1625,
+    price: 1249,
     originalPrice: 2500,
-    discountPercentage: 35,
+    discountPercentage: 50,
     rating: 4.3,
 
     tags: ["door visor", "ritz", "maruti", "rain visor"],
@@ -897,7 +897,7 @@ const products = [
     ],
 
     variants: [
-      { name: "Chromeline", sku: "DV-019-CRM", price: 1625, originalPrice: 2500, discountPercentage: 35, stock: 100 },
+      { name: "Chromeline", sku: "DV-019-CRM", price: 1249, originalPrice: 2500, discountPercentage: 50, stock: 100 },
     ],
 
     isFeatured: false,
@@ -916,9 +916,9 @@ const products = [
     carBrand: ["Maruti"],
     carModel: ["Alto K-10 2022"],
 
-    price: 1625,
+    price: 1249,
     originalPrice: 2500,
-    discountPercentage: 35,
+    discountPercentage: 50,
     rating: 4.5,
 
     tags: ["door visor", "alto k10 2022", "maruti", "rain visor"],
@@ -944,7 +944,7 @@ const products = [
     ],
 
     variants: [
-      { name: "Chromeline", sku: "DV-020-CRM", price: 1625, originalPrice: 2500, discountPercentage: 35, stock: 100 },
+      { name: "Chromeline", sku: "DV-020-CRM", price: 1249, originalPrice: 2500, discountPercentage: 50, stock: 100 },
     ],
 
     isFeatured: false,
@@ -963,9 +963,9 @@ const products = [
     carBrand: ["Maruti"],
     carModel: ["Celerio 2021", "Celerio 2022", "Celerio 2023", "Celerio 2024"],
 
-    price: 1625,
+    price: 1249,
     originalPrice: 2500,
-    discountPercentage: 35,
+    discountPercentage: 50,
     rating: 4.5,
 
     tags: ["door visor", "celerio 2021", "maruti", "rain visor"],
@@ -991,7 +991,7 @@ const products = [
     ],
 
     variants: [
-      { name: "Chromeline", sku: "DV-021-CRM", price: 1625, originalPrice: 2500, discountPercentage: 35, stock: 100 },
+      { name: "Chromeline", sku: "DV-021-CRM", price: 1249, originalPrice: 2500, discountPercentage: 50, stock: 100 },
     ],
 
     isFeatured: false,
@@ -1010,9 +1010,9 @@ const products = [
     carBrand: ["Maruti"],
     carModel: ["Fronx"],
 
-    price: 1625,
+    price: 1249,
     originalPrice: 2500,
-    discountPercentage: 35,
+    discountPercentage: 50,
     rating: 4.5,
 
     tags: ["door visor", "fronx", "maruti", "rain visor"],
@@ -1038,7 +1038,7 @@ const products = [
     ],
 
     variants: [
-      { name: "Chromeline", sku: "DV-022-CRM", price: 1625, originalPrice: 2500, discountPercentage: 35, stock: 100 },
+      { name: "Chromeline", sku: "DV-022-CRM", price: 1249, originalPrice: 2500, discountPercentage: 50, stock: 100 },
     ],
 
     isFeatured: false,
@@ -1057,9 +1057,9 @@ const products = [
     carBrand: ["Maruti"],
     carModel: ["Ignis"],
 
-    price: 1625,
+    price: 1249,
     originalPrice: 2500,
-    discountPercentage: 35,
+    discountPercentage: 50,
     rating: 4.4,
 
     tags: ["door visor", "ignis", "maruti", "rain visor"],
@@ -1085,7 +1085,7 @@ const products = [
     ],
 
     variants: [
-      { name: "Chromeline", sku: "DV-023-CRM", price: 1625, originalPrice: 2500, discountPercentage: 35, stock: 100 },
+      { name: "Chromeline", sku: "DV-023-CRM", price: 1249, originalPrice: 2500, discountPercentage: 50, stock: 100 },
     ],
 
     isFeatured: false,
@@ -1104,9 +1104,9 @@ const products = [
     carBrand: ["Maruti"],
     carModel: ["Ciaz"],
 
-    price: 1625,
+    price: 1249,
     originalPrice: 2500,
-    discountPercentage: 35,
+    discountPercentage: 50,
     rating: 4.4,
 
     tags: ["door visor", "ciaz", "maruti", "rain visor"],
@@ -1132,7 +1132,7 @@ const products = [
     ],
 
     variants: [
-      { name: "Chromeline", sku: "DV-024-CRM", price: 1625, originalPrice: 2500, discountPercentage: 35, stock: 100 },
+      { name: "Chromeline", sku: "DV-024-CRM", price: 1249, originalPrice: 2500, discountPercentage: 50, stock: 100 },
     ],
 
     isFeatured: false,
@@ -1151,9 +1151,9 @@ const products = [
     carBrand: ["Maruti"],
     carModel: ["Grand Vitara"],
 
-    price: 1625,
+    price: 1249,
     originalPrice: 2500,
-    discountPercentage: 35,
+    discountPercentage: 50,
     rating: 4.5,
 
     tags: ["door visor", "grand vitara", "maruti", "rain visor"],
@@ -1179,7 +1179,7 @@ const products = [
     ],
 
     variants: [
-      { name: "Chromeline", sku: "DV-025-CRM", price: 1625, originalPrice: 2500, discountPercentage: 35, stock: 100 },
+      { name: "Chromeline", sku: "DV-025-CRM", price: 1249, originalPrice: 2500, discountPercentage: 50, stock: 100 },
     ],
 
     isFeatured: false,
@@ -1198,9 +1198,9 @@ const products = [
     carBrand: ["Maruti"],
     carModel: ["Invicto"],
 
-    price: 1625,
+    price: 1249,
     originalPrice: 2500,
-    discountPercentage: 35,
+    discountPercentage: 50,
     rating: 4.5,
 
     tags: ["door visor", "invicto", "maruti", "rain visor"],
@@ -1226,7 +1226,7 @@ const products = [
     ],
 
     variants: [
-      { name: "Chromeline", sku: "DV-026-CRM", price: 1625, originalPrice: 2500, discountPercentage: 35, stock: 100 },
+      { name: "Chromeline", sku: "DV-026-CRM", price: 1249, originalPrice: 2500, discountPercentage: 50, stock: 100 },
     ],
 
     isFeatured: false,
@@ -1245,9 +1245,9 @@ const products = [
     carBrand: ["Maruti"],
     carModel: ["S-Cross"],
 
-    price: 1625,
+    price: 1249,
     originalPrice: 2500,
-    discountPercentage: 35,
+    discountPercentage: 50,
     rating: 4.4,
 
     tags: ["door visor", "s-cross", "maruti", "rain visor"],
@@ -1273,7 +1273,7 @@ const products = [
     ],
 
     variants: [
-      { name: "Chromeline", sku: "DV-027-CRM", price: 1625, originalPrice: 2500, discountPercentage: 35, stock: 100 },
+      { name: "Chromeline", sku: "DV-027-CRM", price: 1249, originalPrice: 2500, discountPercentage: 50, stock: 100 },
     ],
 
     isFeatured: false,
@@ -1292,9 +1292,9 @@ const products = [
     carBrand: ["Maruti"],
     carModel: ["Swift Dzire 2024"],
 
-    price: 1625,
+    price: 1249,
     originalPrice: 2500,
-    discountPercentage: 35,
+    discountPercentage: 50,
     rating: 4.6,
 
     tags: ["door visor", "swift dzire 2024", "maruti", "rain visor"],
@@ -1320,7 +1320,7 @@ const products = [
     ],
 
     variants: [
-      { name: "Chromeline", sku: "DV-028-CRM", price: 1625, originalPrice: 2500, discountPercentage: 35, stock: 100 },
+      { name: "Chromeline", sku: "DV-028-CRM", price: 1249, originalPrice: 2500, discountPercentage: 50, stock: 100 },
     ],
 
     isFeatured: true,
@@ -1339,9 +1339,9 @@ const products = [
     carBrand: ["Maruti"],
     carModel: ["Swift 2024"],
 
-    price: 1625,
+    price: 1249,
     originalPrice: 2500,
-    discountPercentage: 35,
+    discountPercentage: 50,
     rating: 4.6,
 
     tags: ["door visor", "swift 2024", "maruti", "rain visor"],
@@ -1367,7 +1367,7 @@ const products = [
     ],
 
     variants: [
-      { name: "Chromeline", sku: "DV-029-CRM", price: 1625, originalPrice: 2500, discountPercentage: 35, stock: 100 },
+      { name: "Chromeline", sku: "DV-029-CRM", price: 1249, originalPrice: 2500, discountPercentage: 50, stock: 100 },
     ],
 
     isFeatured: true,
@@ -1386,9 +1386,9 @@ const products = [
     carBrand: ["Maruti"],
     carModel: ["Ecco"],
 
-    price: 1950,
+    price: 1512,
     originalPrice: 3000,
-    discountPercentage: 35,
+    discountPercentage: 50,
     rating: 4.3,
 
     tags: ["door visor", "ecco", "maruti", "rain visor", "6 pcs"],
@@ -1414,7 +1414,7 @@ const products = [
     ],
 
     variants: [
-      { name: "Chromeline", sku: "DV-030-CRM", price: 1950, originalPrice: 3000, discountPercentage: 35, stock: 100 },
+      { name: "Chromeline", sku: "DV-030-CRM", price: 1512, originalPrice: 3000, discountPercentage: 50, stock: 100 },
     ],
 
     isFeatured: false,
@@ -1433,9 +1433,9 @@ const products = [
     carBrand: ["Maruti"],
     carModel: ["Omni"],
 
-    price: 1950,
+    price: 1512,
     originalPrice: 3000,
-    discountPercentage: 35,
+    discountPercentage: 50,
     rating: 4.3,
 
     tags: ["door visor", "omni", "maruti", "rain visor", "6 pcs"],
@@ -1461,7 +1461,7 @@ const products = [
     ],
 
     variants: [
-      { name: "Chromeline", sku: "DV-031-CRM", price: 1950, originalPrice: 3000, discountPercentage: 35, stock: 100 },
+      { name: "Chromeline", sku: "DV-031-CRM", price: 1512, originalPrice: 3000, discountPercentage: 50, stock: 100 },
     ],
 
     isFeatured: false,
@@ -1480,9 +1480,9 @@ const products = [
     carBrand: ["Maruti"],
     carModel: ["Vitara"],
 
-    price: 1950,
+    price: 1512,
     originalPrice: 3000,
-    discountPercentage: 35,
+    discountPercentage: 50,
     rating: 4.3,
 
     tags: ["door visor", "vitara", "maruti", "rain visor", "6 pcs"],
@@ -1508,7 +1508,7 @@ const products = [
     ],
 
     variants: [
-      { name: "Chromeline", sku: "DV-032-CRM", price: 1950, originalPrice: 3000, discountPercentage: 35, stock: 100 },
+      { name: "Chromeline", sku: "DV-032-CRM", price: 1512, originalPrice: 3000, discountPercentage: 50, stock: 100 },
     ],
 
     isFeatured: false,
@@ -1527,9 +1527,9 @@ const products = [
     carBrand: ["Maruti"],
     carModel: ["Ertiga 2025"],
 
-    price: 1950,
+    price: 1512,
     originalPrice: 3000,
-    discountPercentage: 35,
+    discountPercentage: 50,
     rating: 4.5,
 
     tags: ["door visor", "ertiga 2025", "maruti", "rain visor", "6 pcs"],
@@ -1555,7 +1555,7 @@ const products = [
     ],
 
     variants: [
-      { name: "Chromeline", sku: "DV-033-CRM", price: 1950, originalPrice: 3000, discountPercentage: 35, stock: 100 },
+      { name: "Chromeline", sku: "DV-033-CRM", price: 1512, originalPrice: 3000, discountPercentage: 50, stock: 100 },
     ],
 
     isFeatured: false,
@@ -1574,9 +1574,9 @@ const products = [
     carBrand: ["Maruti"],
     carModel: ["Ertiga 2019", "Ertiga 2020", "Ertiga 2021", "Ertiga 2022", "Ertiga 2023", "Ertiga 2024"],
 
-    price: 1950,
+    price: 1512,
     originalPrice: 3000,
-    discountPercentage: 35,
+    discountPercentage: 50,
     rating: 4.5,
 
     tags: ["door visor", "ertiga 2019", "maruti", "rain visor", "6 pcs"],
@@ -1602,17 +1602,17 @@ const products = [
     ],
 
     variants: [
-      { name: "Chromeline", sku: "DV-034-CRM", price: 1950, originalPrice: 3000, discountPercentage: 35, stock: 100 },
+      { name: "Chromeline", sku: "DV-034-CRM", price: 1512, originalPrice: 3000, discountPercentage: 50, stock: 100 },
     ],
 
     isFeatured: false,
   },
 
   {
-    id: "DV-035",
+    id: "DV-050",
     name: "Door Visor for Maruti Ertiga Old",
     slug: "door-visor-maruti-ertiga-old",
-    sku: "DV-035",
+    sku: "DV-050",
 
     category: "door-visor",
     brand: "Chromeline",
@@ -1621,9 +1621,9 @@ const products = [
     carBrand: ["Maruti"],
     carModel: ["Ertiga Old"],
 
-    price: 1950,
+    price: 1512,
     originalPrice: 3000,
-    discountPercentage: 35,
+    discountPercentage: 50,
     rating: 4.3,
 
     tags: ["door visor", "ertiga old", "maruti", "rain visor", "6 pcs"],
@@ -1649,7 +1649,7 @@ const products = [
     ],
 
     variants: [
-      { name: "Chromeline", sku: "DV-035-CRM", price: 1950, originalPrice: 3000, discountPercentage: 35, stock: 100 },
+      { name: "Chromeline", sku: "DV-050-CRM", price: 1512, originalPrice: 3000, discountPercentage: 50, stock: 100 },
     ],
 
     isFeatured: false,
@@ -1668,9 +1668,9 @@ const products = [
     carBrand: ["Maruti"],
     carModel: ["XL-6"],
 
-    price: 1950,
+    price: 1512,
     originalPrice: 3000,
-    discountPercentage: 35,
+    discountPercentage: 50,
     rating: 4.5,
 
     tags: ["door visor", "xl6", "maruti", "rain visor", "6 pcs"],
@@ -1696,7 +1696,7 @@ const products = [
     ],
 
     variants: [
-      { name: "Chromeline", sku: "DV-036-CRM", price: 1950, originalPrice: 3000, discountPercentage: 35, stock: 100 },
+      { name: "Chromeline", sku: "DV-036-CRM", price: 1512, originalPrice: 3000, discountPercentage: 50, stock: 100 },
     ],
 
     isFeatured: false,
@@ -1715,9 +1715,9 @@ const products = [
     carBrand: ["Maruti"],
     carModel: ["Jimny"],
 
-    price: 1950,
+    price: 1512,
     originalPrice: 3000,
-    discountPercentage: 35,
+    discountPercentage: 50,
     rating: 4.5,
 
     tags: ["door visor", "jimny", "maruti", "rain visor", "6 pcs"],
@@ -1743,17 +1743,17 @@ const products = [
     ],
 
     variants: [
-      { name: "Chromeline", sku: "DV-037-CRM", price: 1950, originalPrice: 3000, discountPercentage: 35, stock: 100 },
+      { name: "Chromeline", sku: "DV-037-CRM", price: 1512, originalPrice: 3000, discountPercentage: 50, stock: 100 },
     ],
 
     isFeatured: false,
   },
 
   {
-    id: "DV-038",
+    id: "DV-511",
     name: "Door Visor for Maruti Victoris",
     slug: "door-visor-maruti-victoris",
-    sku: "DV-038",
+    sku: "DV-511",
 
     category: "door-visor",
     brand: "Chromeline",
@@ -1762,9 +1762,9 @@ const products = [
     carBrand: ["Maruti"],
     carModel: ["Victoris"],
 
-    price: 1625,
+    price: 1249,
     originalPrice: 2500,
-    discountPercentage: 35,
+    discountPercentage: 50,
     rating: 4.5,
 
     tags: ["door visor", "victoris", "maruti", "rain visor"],
@@ -1790,7 +1790,7 @@ const products = [
     ],
 
     variants: [
-      { name: "Chromeline", sku: "DV-038-CRM", price: 1625, originalPrice: 2500, discountPercentage: 35, stock: 100 },
+      { name: "Chromeline", sku: "DV-511-CRM", price: 1249, originalPrice: 2500, discountPercentage: 50, stock: 100 },
     ],
 
     isFeatured: false,
@@ -1813,9 +1813,9 @@ const products = [
     carBrand: ["Hyundai"],
     carModel: ["Grand i10"],
 
-    price: 1625,
+    price: 1249,
     originalPrice: 2500,
-    discountPercentage: 35,
+    discountPercentage: 50,
     rating: 4.4,
 
     tags: ["door visor", "grand i10", "hyundai", "rain visor"],
@@ -1841,7 +1841,7 @@ const products = [
     ],
 
     variants: [
-      { name: "Chromeline", sku: "DV-039-CRM", price: 1625, originalPrice: 2500, discountPercentage: 35, stock: 100 },
+      { name: "Chromeline", sku: "DV-039-CRM", price: 1249, originalPrice: 2500, discountPercentage: 50, stock: 100 },
     ],
 
     isFeatured: false,
@@ -1860,9 +1860,9 @@ const products = [
     carBrand: ["Hyundai"],
     carModel: ["Aura"],
 
-    price: 1625,
+    price: 1249,
     originalPrice: 2500,
-    discountPercentage: 35,
+    discountPercentage: 50,
     rating: 4.4,
 
     tags: ["door visor", "aura", "hyundai", "rain visor"],
@@ -1888,7 +1888,7 @@ const products = [
     ],
 
     variants: [
-      { name: "Chromeline", sku: "DV-040-CRM", price: 1625, originalPrice: 2500, discountPercentage: 35, stock: 100 },
+      { name: "Chromeline", sku: "DV-040-CRM", price: 1249, originalPrice: 2500, discountPercentage: 50, stock: 100 },
     ],
 
     isFeatured: false,
@@ -1907,9 +1907,9 @@ const products = [
     carBrand: ["Hyundai"],
     carModel: ["Nios"],
 
-    price: 1625,
+    price: 1249,
     originalPrice: 2500,
-    discountPercentage: 35,
+    discountPercentage: 50,
     rating: 4.4,
 
     tags: ["door visor", "nios", "hyundai", "rain visor"],
@@ -1935,7 +1935,7 @@ const products = [
     ],
 
     variants: [
-      { name: "Chromeline", sku: "DV-041-CRM", price: 1625, originalPrice: 2500, discountPercentage: 35, stock: 100 },
+      { name: "Chromeline", sku: "DV-041-CRM", price: 1249, originalPrice: 2500, discountPercentage: 50, stock: 100 },
     ],
 
     isFeatured: false,
@@ -1954,9 +1954,9 @@ const products = [
     carBrand: ["Hyundai"],
     carModel: ["Xcent"],
 
-    price: 1625,
+    price: 1249,
     originalPrice: 2500,
-    discountPercentage: 35,
+    discountPercentage: 50,
     rating: 4.3,
 
     tags: ["door visor", "xcent", "hyundai", "rain visor"],
@@ -1982,7 +1982,7 @@ const products = [
     ],
 
     variants: [
-      { name: "Chromeline", sku: "DV-042-CRM", price: 1625, originalPrice: 2500, discountPercentage: 35, stock: 100 },
+      { name: "Chromeline", sku: "DV-042-CRM", price: 1249, originalPrice: 2500, discountPercentage: 50, stock: 100 },
     ],
 
     isFeatured: false,
@@ -2001,9 +2001,9 @@ const products = [
     carBrand: ["Hyundai"],
     carModel: ["Venue Old", "Venue 2022"],
 
-    price: 1625,
+    price: 1249,
     originalPrice: 2500,
-    discountPercentage: 35,
+    discountPercentage: 50,
     rating: 4.5,
 
     tags: ["door visor", "venue", "hyundai", "rain visor"],
@@ -2029,7 +2029,7 @@ const products = [
     ],
 
     variants: [
-      { name: "Chromeline", sku: "DV-043-CRM", price: 1625, originalPrice: 2500, discountPercentage: 35, stock: 100 },
+      { name: "Chromeline", sku: "DV-043-CRM", price: 1249, originalPrice: 2500, discountPercentage: 50, stock: 100 },
     ],
 
     isFeatured: false,
@@ -2048,9 +2048,9 @@ const products = [
     carBrand: ["Hyundai"],
     carModel: ["Creta Old"],
 
-    price: 1625,
+    price: 1249,
     originalPrice: 2500,
-    discountPercentage: 35,
+    discountPercentage: 50,
     rating: 4.4,
 
     tags: ["door visor", "creta old", "hyundai", "rain visor"],
@@ -2076,7 +2076,7 @@ const products = [
     ],
 
     variants: [
-      { name: "Chromeline", sku: "DV-044-CRM", price: 1625, originalPrice: 2500, discountPercentage: 35, stock: 100 },
+      { name: "Chromeline", sku: "DV-044-CRM", price: 1249, originalPrice: 2500, discountPercentage: 50, stock: 100 },
     ],
 
     isFeatured: false,
@@ -2095,9 +2095,9 @@ const products = [
     carBrand: ["Hyundai"],
     carModel: ["Creta 2020", "Creta 2021", "Creta 2022", "Creta 2023", "Creta 2024"],
 
-    price: 1625,
+    price: 1249,
     originalPrice: 2500,
-    discountPercentage: 35,
+    discountPercentage: 50,
     rating: 4.6,
 
     tags: ["door visor", "creta 2020", "hyundai", "rain visor"],
@@ -2123,7 +2123,7 @@ const products = [
     ],
 
     variants: [
-      { name: "Chromeline", sku: "DV-045-CRM", price: 1625, originalPrice: 2500, discountPercentage: 35, stock: 100 },
+      { name: "Chromeline", sku: "DV-045-CRM", price: 1249, originalPrice: 2500, discountPercentage: 50, stock: 100 },
     ],
 
     isFeatured: true,
@@ -2142,9 +2142,9 @@ const products = [
     carBrand: ["Hyundai"],
     carModel: ["Eon"],
 
-    price: 1625,
+    price: 1249,
     originalPrice: 2500,
-    discountPercentage: 35,
+    discountPercentage: 50,
     rating: 4.3,
 
     tags: ["door visor", "eon", "hyundai", "rain visor"],
@@ -2170,7 +2170,7 @@ const products = [
     ],
 
     variants: [
-      { name: "Chromeline", sku: "DV-046-CRM", price: 1625, originalPrice: 2500, discountPercentage: 35, stock: 100 },
+      { name: "Chromeline", sku: "DV-046-CRM", price: 1249, originalPrice: 2500, discountPercentage: 50, stock: 100 },
     ],
 
     isFeatured: false,
@@ -2189,9 +2189,9 @@ const products = [
     carBrand: ["Hyundai"],
     carModel: ["Santro 2018"],
 
-    price: 1625,
+    price: 1249,
     originalPrice: 2500,
-    discountPercentage: 35,
+    discountPercentage: 50,
     rating: 4.3,
 
     tags: ["door visor", "santro", "hyundai", "rain visor"],
@@ -2217,7 +2217,7 @@ const products = [
     ],
 
     variants: [
-      { name: "Chromeline", sku: "DV-047-CRM", price: 1625, originalPrice: 2500, discountPercentage: 35, stock: 100 },
+      { name: "Chromeline", sku: "DV-047-CRM", price: 1249, originalPrice: 2500, discountPercentage: 50, stock: 100 },
     ],
 
     isFeatured: false,
@@ -2236,9 +2236,9 @@ const products = [
     carBrand: ["Hyundai"],
     carModel: ["Santro Xing"],
 
-    price: 1625,
+    price: 1249,
     originalPrice: 2500,
-    discountPercentage: 35,
+    discountPercentage: 50,
     rating: 4.3,
 
     tags: ["door visor", "santro xing", "hyundai", "rain visor"],
@@ -2264,7 +2264,7 @@ const products = [
     ],
 
     variants: [
-      { name: "Chromeline", sku: "DV-048-CRM", price: 1625, originalPrice: 2500, discountPercentage: 35, stock: 100 },
+      { name: "Chromeline", sku: "DV-048-CRM", price: 1249, originalPrice: 2500, discountPercentage: 50, stock: 100 },
     ],
 
     isFeatured: false,
@@ -2283,9 +2283,9 @@ const products = [
     carBrand: ["Toyota"],
     carModel: ["Etios"],
 
-    price: 1625,
+    price: 1249,
     originalPrice: 2500,
-    discountPercentage: 35,
+    discountPercentage: 50,
     rating: 4.3,
 
     tags: ["door visor", "etios", "toyota", "rain visor"],
@@ -2309,17 +2309,17 @@ const products = [
     images: ["/products/door-visor/etios.jpg"],
 
     variants: [
-      { name: "Chromeline", sku: "DV-049-CRM", price: 1625, originalPrice: 2500, discountPercentage: 35, stock: 100 },
+      { name: "Chromeline", sku: "DV-049-CRM", price: 1249, originalPrice: 2500, discountPercentage: 50, stock: 100 },
     ],
 
     isFeatured: false,
   },
 
   {
-    id: "DV-050",
+    id: "DV-512",
     name: "Door Visor for Toyota Etios Liva",
     slug: "door-visor-toyota-etios-liva",
-    sku: "DV-050",
+    sku: "DV-512",
 
     category: "door-visor",
     brand: "Chromeline",
@@ -2328,9 +2328,9 @@ const products = [
     carBrand: ["Toyota"],
     carModel: ["Etios Liva"],
 
-    price: 1625,
+    price: 1249,
     originalPrice: 2500,
-    discountPercentage: 35,
+    discountPercentage: 50,
     rating: 4.3,
 
     tags: ["door visor", "etios liva", "toyota", "rain visor"],
@@ -2356,7 +2356,7 @@ const products = [
     ],
 
     variants: [
-      { name: "Chromeline", sku: "DV-050-CRM", price: 1625, originalPrice: 2500, discountPercentage: 35, stock: 100 },
+      { name: "Chromeline", sku: "DV-512-CRM", price: 1249, originalPrice: 2500, discountPercentage: 50, stock: 100 },
     ],
 
     isFeatured: false,
@@ -2375,9 +2375,9 @@ const products = [
     carBrand: ["Hyundai"],
     carModel: ["i20 Elite 2015", "i20 Elite 2016", "i20 Elite 2017", "i20 Elite 2018", "i20 Elite 2019"],
 
-    price: 1625,
+    price: 1249,
     originalPrice: 2500,
-    discountPercentage: 35,
+    discountPercentage: 50,
     rating: 4.4,
 
     tags: ["door visor", "i20 elite", "hyundai", "rain visor"],
@@ -2403,7 +2403,7 @@ const products = [
     ],
 
     variants: [
-      { name: "Chromeline", sku: "DV-051-CRM", price: 1625, originalPrice: 2500, discountPercentage: 35, stock: 100 },
+      { name: "Chromeline", sku: "DV-051-CRM", price: 1249, originalPrice: 2500, discountPercentage: 50, stock: 100 },
     ],
 
     isFeatured: false,
@@ -2422,9 +2422,9 @@ const products = [
     carBrand: ["Hyundai"],
     carModel: ["i20 2020", "i20 2021", "i20 2022", "i20 2023", "i20 2024"],
 
-    price: 1625,
+    price: 1249,
     originalPrice: 2500,
-    discountPercentage: 35,
+    discountPercentage: 50,
     rating: 4.5,
 
     tags: ["door visor", "i20 2020", "hyundai", "rain visor"],
@@ -2450,7 +2450,7 @@ const products = [
     ],
 
     variants: [
-      { name: "Chromeline", sku: "DV-052-CRM", price: 1625, originalPrice: 2500, discountPercentage: 35, stock: 100 },
+      { name: "Chromeline", sku: "DV-052-CRM", price: 1249, originalPrice: 2500, discountPercentage: 50, stock: 100 },
     ],
 
     isFeatured: false,
@@ -2469,9 +2469,9 @@ const products = [
     carBrand: ["Hyundai"],
     carModel: ["Verna Fluidic"],
 
-    price: 1625,
+    price: 1249,
     originalPrice: 2500,
-    discountPercentage: 35,
+    discountPercentage: 50,
     rating: 4.3,
 
     tags: ["door visor", "verna fluidic", "hyundai", "rain visor"],
@@ -2497,7 +2497,7 @@ const products = [
     ],
 
     variants: [
-      { name: "Chromeline", sku: "DV-053-CRM", price: 1625, originalPrice: 2500, discountPercentage: 35, stock: 100 },
+      { name: "Chromeline", sku: "DV-053-CRM", price: 1249, originalPrice: 2500, discountPercentage: 50, stock: 100 },
     ],
 
     isFeatured: false,
@@ -2516,9 +2516,9 @@ const products = [
   //   carBrand: ["Hyundai"],
   //   carModel: ["Alcazar"],
 
-  //   price: 1625,
+  //   price: 1249,
   //   originalPrice: 2500,
-  //   discountPercentage: 35,
+  //   discountPercentage: 50,
   //   rating: 4.5,
 
   //   tags: ["door visor", "alcazar", "hyundai", "rain visor"],
@@ -2542,7 +2542,7 @@ const products = [
   //   images: ["/products/door-visor/alcazar.jpg"],
 
   //   variants: [
-  //     { name: "Chromeline", sku: "DV-054-CRM", price: 1625, originalPrice: 2500, discountPercentage: 35, stock: 100 },
+  //     { name: "Chromeline", sku: "DV-054-CRM", price: 1249, originalPrice: 2500, discountPercentage: 50, stock: 100 },
   //   ],
 
   //   isFeatured: false,
@@ -2561,9 +2561,9 @@ const products = [
     carBrand: ["Hyundai"],
     carModel: ["i10 Old"],
 
-    price: 1625,
+    price: 1249,
     originalPrice: 2500,
-    discountPercentage: 35,
+    discountPercentage: 50,
     rating: 4.3,
 
     tags: ["door visor", "i10 old", "hyundai", "rain visor"],
@@ -2589,7 +2589,7 @@ const products = [
     ],
 
     variants: [
-      { name: "Chromeline", sku: "DV-055-CRM", price: 1625, originalPrice: 2500, discountPercentage: 35, stock: 100 },
+      { name: "Chromeline", sku: "DV-055-CRM", price: 1249, originalPrice: 2500, discountPercentage: 50, stock: 100 },
     ],
 
     isFeatured: false,
@@ -2608,9 +2608,9 @@ const products = [
     carBrand: ["Hyundai"],
     carModel: ["i20 Old"],
 
-    price: 1625,
+    price: 1249,
     originalPrice: 2500,
-    discountPercentage: 35,
+    discountPercentage: 50,
     rating: 4.3,
 
     tags: ["door visor", "i20 old", "hyundai", "rain visor"],
@@ -2636,7 +2636,7 @@ const products = [
     ],
 
     variants: [
-      { name: "Chromeline", sku: "DV-056-CRM", price: 1625, originalPrice: 2500, discountPercentage: 35, stock: 100 },
+      { name: "Chromeline", sku: "DV-056-CRM", price: 1249, originalPrice: 2500, discountPercentage: 50, stock: 100 },
     ],
 
     isFeatured: false,
@@ -2655,9 +2655,9 @@ const products = [
     carBrand: ["Hyundai"],
     carModel: ["Verna 2023"],
 
-    price: 1625,
+    price: 1249,
     originalPrice: 2500,
-    discountPercentage: 35,
+    discountPercentage: 50,
     rating: 4.6,
 
     tags: ["door visor", "verna 2023", "hyundai", "rain visor"],
@@ -2683,7 +2683,7 @@ const products = [
     ],
 
     variants: [
-      { name: "Chromeline", sku: "DV-057-CRM", price: 1625, originalPrice: 2500, discountPercentage: 35, stock: 100 },
+      { name: "Chromeline", sku: "DV-057-CRM", price: 1249, originalPrice: 2500, discountPercentage: 50, stock: 100 },
     ],
 
     isFeatured: false,
@@ -2702,9 +2702,9 @@ const products = [
     carBrand: ["Hyundai"],
     carModel: ["Verna 2017", "Verna 2018", "Verna 2019"],
 
-    price: 1625,
+    price: 1249,
     originalPrice: 2500,
-    discountPercentage: 35,
+    discountPercentage: 50,
     rating: 4.4,
 
     tags: ["door visor", "verna 2017", "hyundai", "rain visor"],
@@ -2730,7 +2730,7 @@ const products = [
     ],
 
     variants: [
-      { name: "Chromeline", sku: "DV-058-CRM", price: 1625, originalPrice: 2500, discountPercentage: 35, stock: 100 },
+      { name: "Chromeline", sku: "DV-058-CRM", price: 1249, originalPrice: 2500, discountPercentage: 50, stock: 100 },
     ],
 
     isFeatured: false,
@@ -2749,9 +2749,9 @@ const products = [
     carBrand: ["Hyundai"],
     carModel: ["Verna 2020", "Verna 2021", "Verna 2022"],
 
-    price: 1625,
+    price: 1249,
     originalPrice: 2500,
-    discountPercentage: 35,
+    discountPercentage: 50,
     rating: 4.5,
 
     tags: ["door visor", "verna 2020", "hyundai", "rain visor"],
@@ -2777,7 +2777,7 @@ const products = [
     ],
 
     variants: [
-      { name: "Chromeline", sku: "DV-059-CRM", price: 1625, originalPrice: 2500, discountPercentage: 35, stock: 100 },
+      { name: "Chromeline", sku: "DV-059-CRM", price: 1249, originalPrice: 2500, discountPercentage: 50, stock: 100 },
     ],
 
     isFeatured: false,
@@ -2797,9 +2797,9 @@ const products = [
     carBrand: ["Hyundai"],
     carModel: ["Venue 2025"],
 
-    price: 1625,
+    price: 1249,
     originalPrice: 2500,
-    discountPercentage: 35,
+    discountPercentage: 50,
     rating: 4.6,
 
     tags: ["door visor", "venue 2025", "hyundai", "rain visor"],
@@ -2825,7 +2825,7 @@ const products = [
     ],
 
     variants: [
-      { name: "Chromeline", sku: "DV-061-CRM", price: 1625, originalPrice: 2500, discountPercentage: 35, stock: 100 },
+      { name: "Chromeline", sku: "DV-061-CRM", price: 1249, originalPrice: 2500, discountPercentage: 50, stock: 100 },
     ],
 
     isFeatured: true,
@@ -2890,9 +2890,9 @@ const products = [
     carBrand: ["Tata"],
     carModel: ["Indica"],
 
-    price: 1625,
+    price: 1249,
     originalPrice: 2500,
-    discountPercentage: 35,
+    discountPercentage: 50,
     rating: 4.2,
 
     tags: ["door visor", "indica", "tata", "rain visor"],
@@ -2918,7 +2918,7 @@ const products = [
     ],
 
     variants: [
-      { name: "Chromeline", sku: "DV-063-CRM", price: 1625, originalPrice: 2500, discountPercentage: 35, stock: 100 },
+      { name: "Chromeline", sku: "DV-063-CRM", price: 1249, originalPrice: 2500, discountPercentage: 50, stock: 100 },
     ],
 
     isFeatured: false,
@@ -2937,9 +2937,9 @@ const products = [
     carBrand: ["Tata"],
     carModel: ["Indigo"],
 
-    price: 1625,
+    price: 1249,
     originalPrice: 2500,
-    discountPercentage: 35,
+    discountPercentage: 50,
     rating: 4.2,
 
     tags: ["door visor", "indigo", "tata", "rain visor"],
@@ -2965,7 +2965,7 @@ const products = [
     ],
 
     variants: [
-      { name: "Chromeline", sku: "DV-064-CRM", price: 1625, originalPrice: 2500, discountPercentage: 35, stock: 100 },
+      { name: "Chromeline", sku: "DV-064-CRM", price: 1249, originalPrice: 2500, discountPercentage: 50, stock: 100 },
     ],
 
     isFeatured: false,
@@ -2984,9 +2984,9 @@ const products = [
     carBrand: ["Tata"],
     carModel: ["Indigo CS"],
 
-    price: 1625,
+    price: 1249,
     originalPrice: 2500,
-    discountPercentage: 35,
+    discountPercentage: 50,
     rating: 4.2,
 
     tags: ["door visor", "indigo cs", "tata", "rain visor"],
@@ -3012,7 +3012,7 @@ const products = [
     ],
 
     variants: [
-      { name: "Chromeline", sku: "DV-065-CRM", price: 1625, originalPrice: 2500, discountPercentage: 35, stock: 100 },
+      { name: "Chromeline", sku: "DV-065-CRM", price: 1249, originalPrice: 2500, discountPercentage: 50, stock: 100 },
     ],
 
     isFeatured: false,
@@ -3031,9 +3031,9 @@ const products = [
     carBrand: ["Tata"],
     carModel: ["Vista"],
 
-    price: 1625,
+    price: 1249,
     originalPrice: 2500,
-    discountPercentage: 35,
+    discountPercentage: 50,
     rating: 4.3,
 
     tags: ["door visor", "vista", "tata", "rain visor"],
@@ -3059,7 +3059,7 @@ const products = [
     ],
 
     variants: [
-      { name: "Chromeline", sku: "DV-066-CRM", price: 1625, originalPrice: 2500, discountPercentage: 35, stock: 100 },
+      { name: "Chromeline", sku: "DV-066-CRM", price: 1249, originalPrice: 2500, discountPercentage: 50, stock: 100 },
     ],
 
     isFeatured: false,
@@ -3078,9 +3078,9 @@ const products = [
     carBrand: ["Tata"],
     carModel: ["Manza"],
 
-    price: 1625,
+    price: 1249,
     originalPrice: 2500,
-    discountPercentage: 35,
+    discountPercentage: 50,
     rating: 4.3,
 
     tags: ["door visor", "manza", "tata", "rain visor"],
@@ -3106,7 +3106,7 @@ const products = [
     ],
 
     variants: [
-      { name: "Chromeline", sku: "DV-067-CRM", price: 1625, originalPrice: 2500, discountPercentage: 35, stock: 100 },
+      { name: "Chromeline", sku: "DV-067-CRM", price: 1249, originalPrice: 2500, discountPercentage: 50, stock: 100 },
     ],
 
     isFeatured: false,
@@ -3125,9 +3125,9 @@ const products = [
     carBrand: ["Tata"],
     carModel: ["Nexon"],
 
-    price: 1625,
+    price: 1249,
     originalPrice: 2500,
-    discountPercentage: 35,
+    discountPercentage: 50,
     rating: 4.5,
 
     tags: ["door visor", "nexon", "tata", "rain visor"],
@@ -3153,7 +3153,7 @@ const products = [
     ],
 
     variants: [
-      { name: "Chromeline", sku: "DV-068-CRM", price: 1625, originalPrice: 2500, discountPercentage: 35, stock: 100 },
+      { name: "Chromeline", sku: "DV-068-CRM", price: 1249, originalPrice: 2500, discountPercentage: 50, stock: 100 },
     ],
 
     isFeatured: false,
@@ -3172,9 +3172,9 @@ const products = [
     carBrand: ["Tata"],
     carModel: ["Nexon 2023"],
 
-    price: 1625,
+    price: 1249,
     originalPrice: 2500,
-    discountPercentage: 35,
+    discountPercentage: 50,
     rating: 4.5,
 
     tags: ["door visor", "nexon 2023", "tata", "rain visor"],
@@ -3200,7 +3200,7 @@ const products = [
     ],
 
     variants: [
-      { name: "Chromeline", sku: "DV-069-CRM", price: 1625, originalPrice: 2500, discountPercentage: 35, stock: 100 },
+      { name: "Chromeline", sku: "DV-069-CRM", price: 1249, originalPrice: 2500, discountPercentage: 50, stock: 100 },
     ],
 
     isFeatured: false,
@@ -3219,9 +3219,9 @@ const products = [
     carBrand: ["Tata"],
     carModel: ["Tiago"],
 
-    price: 1625,
+    price: 1249,
     originalPrice: 2500,
-    discountPercentage: 35,
+    discountPercentage: 50,
     rating: 4.4,
 
     tags: ["door visor", "tiago", "tata", "rain visor"],
@@ -3247,7 +3247,7 @@ const products = [
     ],
 
     variants: [
-      { name: "Chromeline", sku: "DV-070-CRM", price: 1625, originalPrice: 2500, discountPercentage: 35, stock: 100 },
+      { name: "Chromeline", sku: "DV-070-CRM", price: 1249, originalPrice: 2500, discountPercentage: 50, stock: 100 },
     ],
 
     isFeatured: false,
@@ -3266,9 +3266,9 @@ const products = [
     carBrand: ["Tata"],
     carModel: ["Tigor"],
 
-    price: 1625,
+    price: 1249,
     originalPrice: 2500,
-    discountPercentage: 35,
+    discountPercentage: 50,
     rating: 4.4,
 
     tags: ["door visor", "tigor", "tata", "rain visor"],
@@ -3294,7 +3294,7 @@ const products = [
     ],
 
     variants: [
-      { name: "Chromeline", sku: "DV-071-CRM", price: 1625, originalPrice: 2500, discountPercentage: 35, stock: 100 },
+      { name: "Chromeline", sku: "DV-071-CRM", price: 1249, originalPrice: 2500, discountPercentage: 50, stock: 100 },
     ],
 
     isFeatured: false,
@@ -3313,9 +3313,9 @@ const products = [
     carBrand: ["Tata"],
     carModel: ["Zest"],
 
-    price: 1625,
+    price: 1249,
     originalPrice: 2500,
-    discountPercentage: 35,
+    discountPercentage: 50,
     rating: 4.3,
 
     tags: ["door visor", "zest", "tata", "rain visor"],
@@ -3341,7 +3341,7 @@ const products = [
     ],
 
     variants: [
-      { name: "Chromeline", sku: "DV-072-CRM", price: 1625, originalPrice: 2500, discountPercentage: 35, stock: 100 },
+      { name: "Chromeline", sku: "DV-072-CRM", price: 1249, originalPrice: 2500, discountPercentage: 50, stock: 100 },
     ],
 
     isFeatured: false,
@@ -3360,9 +3360,9 @@ const products = [
     carBrand: ["Tata"],
     carModel: ["Bolt"],
 
-    price: 1625,
+    price: 1249,
     originalPrice: 2500,
-    discountPercentage: 35,
+    discountPercentage: 50,
     rating: 4.3,
 
     tags: ["door visor", "bolt", "tata", "rain visor"],
@@ -3388,7 +3388,7 @@ const products = [
     ],
 
     variants: [
-      { name: "Chromeline", sku: "DV-073-CRM", price: 1625, originalPrice: 2500, discountPercentage: 35, stock: 100 },
+      { name: "Chromeline", sku: "DV-073-CRM", price: 1249, originalPrice: 2500, discountPercentage: 50, stock: 100 },
     ],
 
     isFeatured: false,
@@ -3407,9 +3407,9 @@ const products = [
     carBrand: ["Tata"],
     carModel: ["Altroz"],
 
-    price: 1625,
+    price: 1249,
     originalPrice: 2500,
-    discountPercentage: 35,
+    discountPercentage: 50,
     rating: 4.5,
 
     tags: ["door visor", "altroz", "tata", "rain visor"],
@@ -3435,7 +3435,7 @@ const products = [
     ],
 
     variants: [
-      { name: "Chromeline", sku: "DV-074-CRM", price: 1625, originalPrice: 2500, discountPercentage: 35, stock: 100 },
+      { name: "Chromeline", sku: "DV-074-CRM", price: 1249, originalPrice: 2500, discountPercentage: 50, stock: 100 },
     ],
 
     isFeatured: false,
@@ -3454,9 +3454,9 @@ const products = [
     carBrand: ["Tata"],
     carModel: ["Punch"],
 
-    price: 1625,
+    price: 1249,
     originalPrice: 2500,
-    discountPercentage: 35,
+    discountPercentage: 50,
     rating: 4.5,
 
     tags: ["door visor", "punch", "tata", "rain visor"],
@@ -3482,7 +3482,7 @@ const products = [
     ],
 
     variants: [
-      { name: "Chromeline", sku: "DV-075-CRM", price: 1625, originalPrice: 2500, discountPercentage: 35, stock: 100 },
+      { name: "Chromeline", sku: "DV-075-CRM", price: 1249, originalPrice: 2500, discountPercentage: 50, stock: 100 },
     ],
 
     isFeatured: false,
@@ -3501,9 +3501,9 @@ const products = [
     carBrand: ["Tata"],
     carModel: ["Curvv"],
 
-    price: 1625,
+    price: 1249,
     originalPrice: 2500,
-    discountPercentage: 35,
+    discountPercentage: 50,
     rating: 4.6,
 
     tags: ["door visor", "curvv", "tata", "rain visor"],
@@ -3529,7 +3529,7 @@ const products = [
     ],
 
     variants: [
-      { name: "Chromeline", sku: "DV-076-CRM", price: 1625, originalPrice: 2500, discountPercentage: 35, stock: 100 },
+      { name: "Chromeline", sku: "DV-076-CRM", price: 1249, originalPrice: 2500, discountPercentage: 50, stock: 100 },
     ],
 
     isFeatured: false,
@@ -3548,9 +3548,9 @@ const products = [
     carBrand: ["Tata"],
     carModel: ["Harrier"],
 
-    price: 1625,
+    price: 1249,
     originalPrice: 2500,
-    discountPercentage: 35,
+    discountPercentage: 50,
     rating: 4.5,
 
     tags: ["door visor", "harrier", "tata", "rain visor"],
@@ -3576,7 +3576,7 @@ const products = [
     ],
 
     variants: [
-      { name: "Chromeline", sku: "DV-077-CRM", price: 1625, originalPrice: 2500, discountPercentage: 35, stock: 100 },
+      { name: "Chromeline", sku: "DV-077-CRM", price: 1249, originalPrice: 2500, discountPercentage: 50, stock: 100 },
     ],
 
     isFeatured: false,
@@ -3595,9 +3595,9 @@ const products = [
     carBrand: ["Tata"],
     carModel: ["Safari 2021", "Safari 2022", "Safari 2023", "Safari 2024"],
 
-    price: 1625,
+    price: 1249,
     originalPrice: 2500,
-    discountPercentage: 35,
+    discountPercentage: 50,
     rating: 4.5,
 
     tags: ["door visor", "safari", "tata", "rain visor"],
@@ -3623,7 +3623,7 @@ const products = [
     ],
 
     variants: [
-      { name: "Chromeline", sku: "DV-078-CRM", price: 1625, originalPrice: 2500, discountPercentage: 35, stock: 100 },
+      { name: "Chromeline", sku: "DV-078-CRM", price: 1249, originalPrice: 2500, discountPercentage: 50, stock: 100 },
     ],
 
     isFeatured: false,
@@ -3734,9 +3734,9 @@ const products = [
     carBrand: ["Mahindra"],
     carModel: ["KUV-100"],
 
-    price: 1625,
+    price: 1249,
     originalPrice: 2500,
-    discountPercentage: 35,
+    discountPercentage: 50,
     rating: 4.3,
 
     tags: ["door visor", "kuv100", "mahindra", "rain visor"],
@@ -3762,7 +3762,7 @@ const products = [
     ],
 
     variants: [
-      { name: "Chromeline", sku: "DV-081-CRM", price: 1625, originalPrice: 2500, discountPercentage: 35, stock: 100 },
+      { name: "Chromeline", sku: "DV-081-CRM", price: 1249, originalPrice: 2500, discountPercentage: 50, stock: 100 },
     ],
 
     isFeatured: false,
@@ -3781,9 +3781,9 @@ const products = [
     carBrand: ["Mahindra"],
     carModel: ["Bolero Camper"],
 
-    price: 1625,
+    price: 1249,
     originalPrice: 2500,
-    discountPercentage: 35,
+    discountPercentage: 50,
     rating: 4.3,
 
     tags: ["door visor", "bolero camper", "mahindra", "rain visor"],
@@ -3809,7 +3809,7 @@ const products = [
     ],
 
     variants: [
-      { name: "Chromeline", sku: "DV-082-CRM", price: 1625, originalPrice: 2500, discountPercentage: 35, stock: 100 },
+      { name: "Chromeline", sku: "DV-082-CRM", price: 1249, originalPrice: 2500, discountPercentage: 50, stock: 100 },
     ],
 
     isFeatured: false,
@@ -3828,9 +3828,9 @@ const products = [
     carBrand: ["Mahindra"],
     carModel: ["Verito"],
 
-    price: 1625,
+    price: 1249,
     originalPrice: 2500,
-    discountPercentage: 35,
+    discountPercentage: 50,
     rating: 4.3,
 
     tags: ["door visor", "verito", "mahindra", "rain visor"],
@@ -3856,7 +3856,7 @@ const products = [
     ],
 
     variants: [
-      { name: "Chromeline", sku: "DV-083-CRM", price: 1625, originalPrice: 2500, discountPercentage: 35, stock: 100 },
+      { name: "Chromeline", sku: "DV-083-CRM", price: 1249, originalPrice: 2500, discountPercentage: 50, stock: 100 },
     ],
 
     isFeatured: false,
@@ -3875,9 +3875,9 @@ const products = [
     carBrand: ["Mahindra"],
     carModel: ["Logan"],
 
-    price: 1625,
+    price: 1249,
     originalPrice: 2500,
-    discountPercentage: 35,
+    discountPercentage: 50,
     rating: 4.3,
 
     tags: ["door visor", "logan", "mahindra", "rain visor"],
@@ -3903,7 +3903,7 @@ const products = [
     ],
 
     variants: [
-      { name: "Chromeline", sku: "DV-084-CRM", price: 1625, originalPrice: 2500, discountPercentage: 35, stock: 100 },
+      { name: "Chromeline", sku: "DV-084-CRM", price: 1249, originalPrice: 2500, discountPercentage: 50, stock: 100 },
     ],
 
     isFeatured: false,
@@ -3922,9 +3922,9 @@ const products = [
   //   carBrand: ["Mahindra"],
   //   carModel: ["3XO"],
 
-  //   price: 1625,
+  //   price: 1249,
   //   originalPrice: 2500,
-  //   discountPercentage: 35,
+  //   discountPercentage: 50,
   //   rating: 4.5,
 
   //   tags: ["door visor", "3xo", "mahindra", "rain visor"],
@@ -3948,7 +3948,7 @@ const products = [
   //   images: ["/products/door-visor/3xo.jpg"],
 
   //   variants: [
-  //     { name: "Chromeline", sku: "DV-085-CRM", price: 1625, originalPrice: 2500, discountPercentage: 35, stock: 100 },
+  //     { name: "Chromeline", sku: "DV-085-CRM", price: 1249, originalPrice: 2500, discountPercentage: 50, stock: 100 },
   //   ],
 
   //   isFeatured: false,
@@ -3967,9 +3967,9 @@ const products = [
     carBrand: ["Mahindra"],
     carModel: ["XUV-300"],
 
-    price: 1625,
+    price: 1249,
     originalPrice: 2500,
-    discountPercentage: 35,
+    discountPercentage: 50,
     rating: 4.4,
 
     tags: ["door visor", "xuv300", "mahindra", "rain visor"],
@@ -3995,7 +3995,7 @@ const products = [
     ],
 
     variants: [
-      { name: "Chromeline", sku: "DV-086-CRM", price: 1625, originalPrice: 2500, discountPercentage: 35, stock: 100 },
+      { name: "Chromeline", sku: "DV-086-CRM", price: 1249, originalPrice: 2500, discountPercentage: 50, stock: 100 },
     ],
 
     isFeatured: false,
@@ -4014,9 +4014,9 @@ const products = [
     carBrand: ["Mahindra"],
     carModel: ["NuvoSport"],
 
-    price: 1625,
+    price: 1249,
     originalPrice: 2500,
-    discountPercentage: 35,
+    discountPercentage: 50,
     rating: 4.3,
 
     tags: ["door visor", "nuvosport", "mahindra", "rain visor"],
@@ -4042,7 +4042,7 @@ const products = [
     ],
 
     variants: [
-      { name: "Chromeline", sku: "DV-087-CRM", price: 1625, originalPrice: 2500, discountPercentage: 35, stock: 100 },
+      { name: "Chromeline", sku: "DV-087-CRM", price: 1249, originalPrice: 2500, discountPercentage: 50, stock: 100 },
     ],
 
     isFeatured: false,
@@ -4061,9 +4061,9 @@ const products = [
     carBrand: ["Mahindra"],
     carModel: ["Quanto"],
 
-    price: 1625,
+    price: 1249,
     originalPrice: 2500,
-    discountPercentage: 35,
+    discountPercentage: 50,
     rating: 4.3,
 
     tags: ["door visor", "quanto", "mahindra", "rain visor"],
@@ -4089,7 +4089,7 @@ const products = [
     ],
 
     variants: [
-      { name: "Chromeline", sku: "DV-088-CRM", price: 1625, originalPrice: 2500, discountPercentage: 35, stock: 100 },
+      { name: "Chromeline", sku: "DV-088-CRM", price: 1249, originalPrice: 2500, discountPercentage: 50, stock: 100 },
     ],
 
     isFeatured: false,
@@ -4108,9 +4108,9 @@ const products = [
     carBrand: ["Mahindra"],
     carModel: ["Xylo 4-door"],
 
-    price: 1625,
+    price: 1249,
     originalPrice: 2500,
-    discountPercentage: 35,
+    discountPercentage: 50,
     rating: 4.3,
 
     tags: ["door visor", "xylo", "mahindra", "rain visor"],
@@ -4136,7 +4136,7 @@ const products = [
     ],
 
     variants: [
-      { name: "Chromeline", sku: "DV-089-CRM", price: 1625, originalPrice: 2500, discountPercentage: 35, stock: 100 },
+      { name: "Chromeline", sku: "DV-089-CRM", price: 1249, originalPrice: 2500, discountPercentage: 50, stock: 100 },
     ],
 
     isFeatured: false,
@@ -4155,9 +4155,9 @@ const products = [
     carBrand: ["Mahindra"],
     carModel: ["Scorpio 2022"],
 
-    price: 1625,
+    price: 1249,
     originalPrice: 2500,
-    discountPercentage: 35,
+    discountPercentage: 50,
     rating: 4.5,
 
     tags: ["door visor", "scorpio 2022", "mahindra", "rain visor"],
@@ -4183,7 +4183,7 @@ const products = [
     ],
 
     variants: [
-      { name: "Chromeline", sku: "DV-090-CRM", price: 1625, originalPrice: 2500, discountPercentage: 35, stock: 100 },
+      { name: "Chromeline", sku: "DV-090-CRM", price: 1249, originalPrice: 2500, discountPercentage: 50, stock: 100 },
     ],
 
     isFeatured: false,
@@ -4202,9 +4202,9 @@ const products = [
     carBrand: ["Mahindra"],
     carModel: ["Thar Roxx"],
 
-    price: 1625,
+    price: 1249,
     originalPrice: 2500,
-    discountPercentage: 35,
+    discountPercentage: 50,
     rating: 4.6,
 
     tags: ["door visor", "thar roxx", "mahindra", "rain visor"],
@@ -4230,7 +4230,7 @@ const products = [
     ],
 
     variants: [
-      { name: "Chromeline", sku: "DV-091-CRM", price: 1625, originalPrice: 2500, discountPercentage: 35, stock: 100 },
+      { name: "Chromeline", sku: "DV-091-CRM", price: 1249, originalPrice: 2500, discountPercentage: 50, stock: 100 },
     ],
 
     isFeatured: false,
@@ -4249,9 +4249,9 @@ const products = [
     carBrand: ["Mahindra"],
     carModel: ["Bolero SLX"],
 
-    price: 1950,
+    price: 1512,
     originalPrice: 3000,
-    discountPercentage: 35,
+    discountPercentage: 50,
     rating: 4.3,
 
     tags: ["door visor", "bolero slx", "mahindra", "rain visor", "6 pcs"],
@@ -4277,7 +4277,7 @@ const products = [
     ],
 
     variants: [
-      { name: "Chromeline", sku: "DV-092-CRM", price: 1950, originalPrice: 3000, discountPercentage: 35, stock: 100 },
+      { name: "Chromeline", sku: "DV-092-CRM", price: 1512, originalPrice: 3000, discountPercentage: 50, stock: 100 },
     ],
 
     isFeatured: false,
@@ -4296,9 +4296,9 @@ const products = [
     carBrand: ["Mahindra"],
     carModel: ["Bolero DI"],
 
-    price: 1950,
+    price: 1512,
     originalPrice: 3000,
-    discountPercentage: 35,
+    discountPercentage: 50,
     rating: 4.3,
 
     tags: ["door visor", "bolero di", "mahindra", "rain visor", "6 pcs"],
@@ -4324,7 +4324,7 @@ const products = [
     ],
 
     variants: [
-      { name: "Chromeline", sku: "DV-093-CRM", price: 1950, originalPrice: 3000, discountPercentage: 35, stock: 100 },
+      { name: "Chromeline", sku: "DV-093-CRM", price: 1512, originalPrice: 3000, discountPercentage: 50, stock: 100 },
     ],
 
     isFeatured: false,
@@ -4343,9 +4343,9 @@ const products = [
     carBrand: ["Mahindra"],
     carModel: ["Bolero XL"],
 
-    price: 1950,
+    price: 1512,
     originalPrice: 3000,
-    discountPercentage: 35,
+    discountPercentage: 50,
     rating: 4.3,
 
     tags: ["door visor", "bolero xl", "mahindra", "rain visor", "6 pcs"],
@@ -4371,7 +4371,7 @@ const products = [
     ],
 
     variants: [
-      { name: "Chromeline", sku: "DV-094-CRM", price: 1950, originalPrice: 3000, discountPercentage: 35, stock: 100 },
+      { name: "Chromeline", sku: "DV-094-CRM", price: 1512, originalPrice: 3000, discountPercentage: 50, stock: 100 },
     ],
 
     isFeatured: false,
@@ -4390,9 +4390,9 @@ const products = [
     carBrand: ["Mahindra"],
     carModel: ["Xylo"],
 
-    price: 1950,
+    price: 1512,
     originalPrice: 3000,
-    discountPercentage: 35,
+    discountPercentage: 50,
     rating: 4.3,
 
     tags: ["door visor", "xylo", "mahindra", "rain visor", "6 pcs"],
@@ -4418,7 +4418,7 @@ const products = [
     ],
 
     variants: [
-      { name: "Chromeline", sku: "DV-095-CRM", price: 1950, originalPrice: 3000, discountPercentage: 35, stock: 100 },
+      { name: "Chromeline", sku: "DV-095-CRM", price: 1512, originalPrice: 3000, discountPercentage: 50, stock: 100 },
     ],
 
     isFeatured: false,
@@ -4437,9 +4437,9 @@ const products = [
     carBrand: ["Mahindra"],
     carModel: ["Scorpio", "Scorpio Classic"],
 
-    price: 1950,
+    price: 1512,
     originalPrice: 3000,
-    discountPercentage: 35,
+    discountPercentage: 50,
     rating: 4.4,
 
     tags: ["door visor", "scorpio", "scorpio classic", "mahindra", "rain visor", "6 pcs"],
@@ -4465,7 +4465,7 @@ const products = [
     ],
 
     variants: [
-      { name: "Chromeline", sku: "DV-096-CRM", price: 1950, originalPrice: 3000, discountPercentage: 35, stock: 100 },
+      { name: "Chromeline", sku: "DV-096-CRM", price: 1512, originalPrice: 3000, discountPercentage: 50, stock: 100 },
     ],
 
     isFeatured: false,
@@ -4484,9 +4484,9 @@ const products = [
     carBrand: ["Mahindra"],
     carModel: ["TUV-300"],
 
-    price: 1950,
+    price: 1512,
     originalPrice: 3000,
-    discountPercentage: 35,
+    discountPercentage: 50,
     rating: 4.3,
 
     tags: ["door visor", "tuv300", "mahindra", "rain visor", "6 pcs"],
@@ -4512,7 +4512,7 @@ const products = [
     ],
 
     variants: [
-      { name: "Chromeline", sku: "DV-097-CRM", price: 1950, originalPrice: 3000, discountPercentage: 35, stock: 100 },
+      { name: "Chromeline", sku: "DV-097-CRM", price: 1512, originalPrice: 3000, discountPercentage: 50, stock: 100 },
     ],
 
     isFeatured: false,
@@ -4531,9 +4531,9 @@ const products = [
     carBrand: ["Mahindra"],
     carModel: ["Bolero Neo"],
 
-    price: 1950,
+    price: 1512,
     originalPrice: 3000,
-    discountPercentage: 35,
+    discountPercentage: 50,
     rating: 4.4,
 
     tags: ["door visor", "bolero neo", "mahindra", "rain visor", "6 pcs"],
@@ -4559,7 +4559,7 @@ const products = [
     ],
 
     variants: [
-      { name: "Chromeline", sku: "DV-098-CRM", price: 1950, originalPrice: 3000, discountPercentage: 35, stock: 100 },
+      { name: "Chromeline", sku: "DV-098-CRM", price: 1512, originalPrice: 3000, discountPercentage: 50, stock: 100 },
     ],
 
     isFeatured: false,
@@ -4578,9 +4578,9 @@ const products = [
     carBrand: ["Mahindra"],
     carModel: ["BE-6"],
 
-    price: 1625,
+    price: 1249,
     originalPrice: 2500,
-    discountPercentage: 35,
+    discountPercentage: 50,
     rating: 4.5,
 
     tags: ["door visor", "be-6", "mahindra", "rain visor", "ev"],
@@ -4606,7 +4606,7 @@ const products = [
     ],
 
     variants: [
-      { name: "Chromeline", sku: "DV-099-CRM", price: 1625, originalPrice: 2500, discountPercentage: 35, stock: 100 },
+      { name: "Chromeline", sku: "DV-099-CRM", price: 1249, originalPrice: 2500, discountPercentage: 50, stock: 100 },
     ],
 
     isFeatured: false,
@@ -4625,9 +4625,9 @@ const products = [
     carBrand: ["Mahindra"],
     carModel: ["XEV 9E"],
 
-    price: 1950,
+    price: 1512,
     originalPrice: 3000,
-    discountPercentage: 35,
+    discountPercentage: 50,
     rating: 4.5,
 
     tags: ["door visor", "xev 9e", "mahindra", "rain visor", "6 pcs", "ev"],
@@ -4653,7 +4653,7 @@ const products = [
     ],
 
     variants: [
-      { name: "Chromeline", sku: "DV-100-CRM", price: 1950, originalPrice: 3000, discountPercentage: 35, stock: 100 },
+      { name: "Chromeline", sku: "DV-100-CRM", price: 1512, originalPrice: 3000, discountPercentage: 50, stock: 100 },
     ],
 
     isFeatured: false,
@@ -4672,9 +4672,9 @@ const products = [
     carBrand: ["Mahindra"],
     carModel: ["XUV-700"],
 
-    price: 1950,
+    price: 1512,
     originalPrice: 3000,
-    discountPercentage: 35,
+    discountPercentage: 50,
     rating: 4.5,
 
     tags: ["door visor", "xuv700", "mahindra", "rain visor", "6 pcs"],
@@ -4700,7 +4700,7 @@ const products = [
     ],
 
     variants: [
-      { name: "Chromeline", sku: "DV-101-CRM", price: 1950, originalPrice: 3000, discountPercentage: 35, stock: 100 },
+      { name: "Chromeline", sku: "DV-101-CRM", price: 1512, originalPrice: 3000, discountPercentage: 50, stock: 100 },
     ],
 
     isFeatured: false,
@@ -4719,9 +4719,9 @@ const products = [
     carBrand: ["Mahindra"],
     carModel: ["XUV-500"],
 
-    price: 1950,
+    price: 1512,
     originalPrice: 3000,
-    discountPercentage: 35,
+    discountPercentage: 50,
     rating: 4.4,
 
     tags: ["door visor", "xuv500", "mahindra", "rain visor", "6 pcs"],
@@ -4747,7 +4747,7 @@ const products = [
     ],
 
     variants: [
-      { name: "Chromeline", sku: "DV-102-CRM", price: 1950, originalPrice: 3000, discountPercentage: 35, stock: 100 },
+      { name: "Chromeline", sku: "DV-102-CRM", price: 1512, originalPrice: 3000, discountPercentage: 50, stock: 100 },
     ],
 
     isFeatured: false,
@@ -4770,9 +4770,9 @@ const products = [
     carBrand: ["Honda"],
     carModel: ["Amaze Old"],
 
-    price: 1625,
+    price: 1249,
     originalPrice: 2500,
-    discountPercentage: 35,
+    discountPercentage: 50,
     rating: 4.3,
 
     tags: ["door visor", "amaze old", "honda", "rain visor"],
@@ -4798,7 +4798,7 @@ const products = [
     ],
 
     variants: [
-      { name: "Chromeline", sku: "DV-103-CRM", price: 1625, originalPrice: 2500, discountPercentage: 35, stock: 100 },
+      { name: "Chromeline", sku: "DV-103-CRM", price: 1249, originalPrice: 2500, discountPercentage: 50, stock: 100 },
     ],
 
     isFeatured: false,
@@ -4817,9 +4817,9 @@ const products = [
     carBrand: ["Honda"],
     carModel: ["Amaze 2018", "Amaze 2019", "Amaze 2020", "Amaze 2021", "Amaze 2022", "Amaze 2023"],
 
-    price: 1625,
+    price: 1249,
     originalPrice: 2500,
-    discountPercentage: 35,
+    discountPercentage: 50,
     rating: 4.4,
 
     tags: ["door visor", "amaze 2018", "honda", "rain visor"],
@@ -4845,7 +4845,7 @@ const products = [
     ],
 
     variants: [
-      { name: "Chromeline", sku: "DV-104-CRM", price: 1625, originalPrice: 2500, discountPercentage: 35, stock: 100 },
+      { name: "Chromeline", sku: "DV-104-CRM", price: 1249, originalPrice: 2500, discountPercentage: 50, stock: 100 },
     ],
 
     isFeatured: false,
@@ -4864,9 +4864,9 @@ const products = [
     carBrand: ["Honda"],
     carModel: ["Elevate"],
 
-    price: 1625,
+    price: 1249,
     originalPrice: 2500,
-    discountPercentage: 35,
+    discountPercentage: 50,
     rating: 4.5,
 
     tags: ["door visor", "elevate", "honda", "rain visor"],
@@ -4892,7 +4892,7 @@ const products = [
     ],
 
     variants: [
-      { name: "Chromeline", sku: "DV-105-CRM", price: 1625, originalPrice: 2500, discountPercentage: 35, stock: 100 },
+      { name: "Chromeline", sku: "DV-105-CRM", price: 1249, originalPrice: 2500, discountPercentage: 50, stock: 100 },
     ],
 
     isFeatured: false,
@@ -4911,9 +4911,9 @@ const products = [
     carBrand: ["Honda"],
     carModel: ["City 2020", "City 2021", "City 2022", "City 2023", "City 2024"],
 
-    price: 1625,
+    price: 1249,
     originalPrice: 2500,
-    discountPercentage: 35,
+    discountPercentage: 50,
     rating: 4.5,
 
     tags: ["door visor", "city 2020", "honda", "rain visor"],
@@ -4937,7 +4937,7 @@ const products = [
     images: ["/products/door-visor/city-2020.jpg", ...extraDoorImages],
 
     variants: [
-      { name: "Chromeline", sku: "DV-106-CRM", price: 1625, originalPrice: 2500, discountPercentage: 35, stock: 100 },
+      { name: "Chromeline", sku: "DV-106-CRM", price: 1249, originalPrice: 2500, discountPercentage: 50, stock: 100 },
     ],
 
     isFeatured: false,
@@ -4956,9 +4956,9 @@ const products = [
     carBrand: ["Honda"],
     carModel: ["City i-VTEC 2009", "City i-VTEC 2010", "City i-VTEC 2011", "City i-VTEC 2012", "City i-VTEC 2013"],
 
-    price: 1625,
+    price: 1249,
     originalPrice: 2500,
-    discountPercentage: 35,
+    discountPercentage: 50,
     rating: 4.4,
 
     tags: ["door visor", "city ivtec", "honda", "rain visor"],
@@ -4983,7 +4983,7 @@ const products = [
       ...extraDoorImages],
 
     variants: [
-      { name: "Chromeline", sku: "DV-107-CRM", price: 1625, originalPrice: 2500, discountPercentage: 35, stock: 100 },
+      { name: "Chromeline", sku: "DV-107-CRM", price: 1249, originalPrice: 2500, discountPercentage: 50, stock: 100 },
     ],
 
     isFeatured: false,
@@ -5002,9 +5002,9 @@ const products = [
     carBrand: ["Honda"],
     carModel: ["City i-DTEC 2014", "City i-DTEC 2015", "City i-DTEC 2016", "City i-DTEC 2017", "City i-DTEC 2018", "City i-DTEC 2019"],
 
-    price: 1625,
+    price: 1249,
     originalPrice: 2500,
-    discountPercentage: 35,
+    discountPercentage: 50,
     rating: 4.4,
 
     tags: ["door visor", "city idtec", "honda", "rain visor"],
@@ -5030,7 +5030,7 @@ const products = [
     ],
 
     variants: [
-      { name: "Chromeline", sku: "DV-108-CRM", price: 1625, originalPrice: 2500, discountPercentage: 35, stock: 100 },
+      { name: "Chromeline", sku: "DV-108-CRM", price: 1249, originalPrice: 2500, discountPercentage: 50, stock: 100 },
     ],
 
     isFeatured: false,
@@ -5049,9 +5049,9 @@ const products = [
     carBrand: ["Honda"],
     carModel: ["WR-V"],
 
-    price: 1625,
+    price: 1249,
     originalPrice: 2500,
-    discountPercentage: 35,
+    discountPercentage: 50,
     rating: 4.4,
 
     tags: ["door visor", "wr-v", "honda", "rain visor"],
@@ -5077,7 +5077,7 @@ const products = [
     ],
 
     variants: [
-      { name: "Chromeline", sku: "DV-109-CRM", price: 1625, originalPrice: 2500, discountPercentage: 35, stock: 100 },
+      { name: "Chromeline", sku: "DV-109-CRM", price: 1249, originalPrice: 2500, discountPercentage: 50, stock: 100 },
     ],
 
     isFeatured: false,
@@ -5096,9 +5096,9 @@ const products = [
     carBrand: ["Honda"],
     carModel: ["Jazz"],
 
-    price: 1625,
+    price: 1249,
     originalPrice: 2500,
-    discountPercentage: 35,
+    discountPercentage: 50,
     rating: 4.4,
 
     tags: ["door visor", "jazz", "honda", "rain visor"],
@@ -5124,7 +5124,7 @@ const products = [
     ],
 
     variants: [
-      { name: "Chromeline", sku: "DV-110-CRM", price: 1625, originalPrice: 2500, discountPercentage: 35, stock: 100 },
+      { name: "Chromeline", sku: "DV-110-CRM", price: 1249, originalPrice: 2500, discountPercentage: 50, stock: 100 },
     ],
 
     isFeatured: false,
@@ -5147,9 +5147,9 @@ const products = [
     carBrand: ["Kia"],
     carModel: ["Seltos"],
 
-    price: 1625,
+    price: 1249,
     originalPrice: 2500,
-    discountPercentage: 35,
+    discountPercentage: 50,
     rating: 4.5,
 
     tags: ["door visor", "seltos", "kia", "rain visor"],
@@ -5175,7 +5175,7 @@ const products = [
     ],
 
     variants: [
-      { name: "Chromeline", sku: "DV-111-CRM", price: 1625, originalPrice: 2500, discountPercentage: 35, stock: 100 },
+      { name: "Chromeline", sku: "DV-111-CRM", price: 1249, originalPrice: 2500, discountPercentage: 50, stock: 100 },
     ],
 
     isFeatured: false,
@@ -5194,9 +5194,9 @@ const products = [
     carBrand: ["Kia"],
     carModel: ["Sonet"],
 
-    price: 1625,
+    price: 1249,
     originalPrice: 2500,
-    discountPercentage: 35,
+    discountPercentage: 50,
     rating: 4.5,
 
     tags: ["door visor", "sonet", "kia", "rain visor"],
@@ -5222,7 +5222,7 @@ const products = [
     ],
 
     variants: [
-      { name: "Chromeline", sku: "DV-112-CRM", price: 1625, originalPrice: 2500, discountPercentage: 35, stock: 100 },
+      { name: "Chromeline", sku: "DV-112-CRM", price: 1249, originalPrice: 2500, discountPercentage: 50, stock: 100 },
     ],
 
     isFeatured: false,
@@ -5241,9 +5241,9 @@ const products = [
     carBrand: ["Kia"],
     carModel: ["Syros"],
 
-    price: 1950,
+    price: 1512,
     originalPrice: 3000,
-    discountPercentage: 35,
+    discountPercentage: 50,
     rating: 4.5,
 
     tags: ["door visor", "syros", "kia", "rain visor", "6 pcs"],
@@ -5269,7 +5269,7 @@ const products = [
     ],
 
     variants: [
-      { name: "Chromeline", sku: "DV-113-CRM", price: 1950, originalPrice: 3000, discountPercentage: 35, stock: 100 },
+      { name: "Chromeline", sku: "DV-113-CRM", price: 1512, originalPrice: 3000, discountPercentage: 50, stock: 100 },
     ],
 
     isFeatured: false,
@@ -5288,9 +5288,9 @@ const products = [
     carBrand: ["Kia"],
     carModel: ["Clavis"],
 
-    price: 1950,
+    price: 1512,
     originalPrice: 3000,
-    discountPercentage: 35,
+    discountPercentage: 50,
     rating: 4.5,
 
     tags: ["door visor", "clavis", "kia", "rain visor", "6 pcs"],
@@ -5316,7 +5316,7 @@ const products = [
     ],
 
     variants: [
-      { name: "Chromeline", sku: "DV-114-CRM", price: 1950, originalPrice: 3000, discountPercentage: 35, stock: 100 },
+      { name: "Chromeline", sku: "DV-114-CRM", price: 1512, originalPrice: 3000, discountPercentage: 50, stock: 100 },
     ],
 
     isFeatured: false,
@@ -5335,9 +5335,9 @@ const products = [
     carBrand: ["Kia"],
     carModel: ["Carens"],
 
-    price: 1950,
+    price: 1512,
     originalPrice: 3000,
-    discountPercentage: 35,
+    discountPercentage: 50,
     rating: 4.5,
 
     tags: ["door visor", "carens", "kia", "rain visor", "6 pcs"],
@@ -5361,7 +5361,7 @@ const products = [
     images: ["/products/door-visor/carens.jpg", ...extraDoorImages],
 
     variants: [
-      { name: "Chromeline", sku: "DV-115-CRM", price: 1950, originalPrice: 3000, discountPercentage: 35, stock: 100 },
+      { name: "Chromeline", sku: "DV-115-CRM", price: 1512, originalPrice: 3000, discountPercentage: 50, stock: 100 },
     ],
 
     isFeatured: false,
@@ -5384,9 +5384,9 @@ const products = [
     carBrand: ["Toyota"],
     carModel: ["Taisor"],
 
-    price: 1625,
+    price: 1249,
     originalPrice: 2500,
-    discountPercentage: 35,
+    discountPercentage: 50,
     rating: 4.5,
 
     tags: ["door visor", "taisor", "toyota", "rain visor"],
@@ -5410,7 +5410,7 @@ const products = [
     images: ["/products/door-visor/taisor.jpg", ...extraDoorImages],
 
     variants: [
-      { name: "Chromeline", sku: "DV-116-CRM", price: 1625, originalPrice: 2500, discountPercentage: 35, stock: 100 },
+      { name: "Chromeline", sku: "DV-116-CRM", price: 1249, originalPrice: 2500, discountPercentage: 50, stock: 100 },
     ],
 
     isFeatured: false,
@@ -5429,9 +5429,9 @@ const products = [
     carBrand: ["Toyota"],
     carModel: ["Hyryder"],
 
-    price: 1625,
+    price: 1249,
     originalPrice: 2500,
-    discountPercentage: 35,
+    discountPercentage: 50,
     rating: 4.5,
 
     tags: ["door visor", "hyryder", "toyota", "rain visor"],
@@ -5455,7 +5455,7 @@ const products = [
     images: ["/products/door-visor/hyryder.jpg", ...extraDoorImages],
 
     variants: [
-      { name: "Chromeline", sku: "DV-117-CRM", price: 1625, originalPrice: 2500, discountPercentage: 35, stock: 100 },
+      { name: "Chromeline", sku: "DV-117-CRM", price: 1249, originalPrice: 2500, discountPercentage: 50, stock: 100 },
     ],
 
     isFeatured: false,
@@ -5474,9 +5474,9 @@ const products = [
     carBrand: ["Toyota"],
     carModel: ["Hycross"],
 
-    price: 1625,
+    price: 1249,
     originalPrice: 2500,
-    discountPercentage: 35,
+    discountPercentage: 50,
     rating: 4.5,
 
     tags: ["door visor", "hycross", "toyota", "rain visor"],
@@ -5500,7 +5500,7 @@ const products = [
     images: ["/products/door-visor/hycross.jpg", ...extraDoorImages],
 
     variants: [
-      { name: "Chromeline", sku: "DV-118-CRM", price: 1625, originalPrice: 2500, discountPercentage: 35, stock: 100 },
+      { name: "Chromeline", sku: "DV-118-CRM", price: 1249, originalPrice: 2500, discountPercentage: 50, stock: 100 },
     ],
 
     isFeatured: false,
@@ -5519,9 +5519,9 @@ const products = [
     carBrand: ["Toyota"],
     carModel: ["Fortuner Old"],
 
-    price: 1625,
+    price: 1249,
     originalPrice: 2500,
-    discountPercentage: 35,
+    discountPercentage: 50,
     rating: 4.4,
 
     tags: ["door visor", "fortuner old", "toyota", "rain visor"],
@@ -5545,7 +5545,7 @@ const products = [
     images: ["/products/door-visor/old-fortuner.jpg", ...extraDoorImages],
 
     variants: [
-      { name: "Chromeline", sku: "DV-119-CRM", price: 1625, originalPrice: 2500, discountPercentage: 35, stock: 100 },
+      { name: "Chromeline", sku: "DV-119-CRM", price: 1249, originalPrice: 2500, discountPercentage: 50, stock: 100 },
     ],
 
     isFeatured: false,
@@ -5564,9 +5564,9 @@ const products = [
     carBrand: ["Toyota"],
     carModel: ["Fortuner New"],
 
-    price: 1625,
+    price: 1249,
     originalPrice: 2500,
-    discountPercentage: 35,
+    discountPercentage: 50,
     rating: 4.5,
 
     tags: ["door visor", "fortuner new", "toyota", "rain visor"],
@@ -5590,7 +5590,7 @@ const products = [
     images: ["/products/door-visor/fortuner.jpg", ...extraDoorImages],
 
     variants: [
-      { name: "Chromeline", sku: "DV-120-CRM", price: 1625, originalPrice: 2500, discountPercentage: 35, stock: 100 },
+      { name: "Chromeline", sku: "DV-120-CRM", price: 1249, originalPrice: 2500, discountPercentage: 50, stock: 100 },
     ],
 
     isFeatured: false,
@@ -5609,9 +5609,9 @@ const products = [
     carBrand: ["Toyota"],
     carModel: ["Rumion"],
 
-    price: 1950,
+    price: 1512,
     originalPrice: 3000,
-    discountPercentage: 35,
+    discountPercentage: 50,
     rating: 4.4,
 
     tags: ["door visor", "rumion", "toyota", "rain visor", "6 pcs"],
@@ -5635,7 +5635,7 @@ const products = [
     images: ["/products/door-visor/rumion.jpg", ...extraDoorImages],
 
     variants: [
-      { name: "Chromeline", sku: "DV-121-CRM", price: 1950, originalPrice: 3000, discountPercentage: 35, stock: 100 },
+      { name: "Chromeline", sku: "DV-121-CRM", price: 1512, originalPrice: 3000, discountPercentage: 50, stock: 100 },
     ],
 
     isFeatured: false,
@@ -5654,9 +5654,9 @@ const products = [
     carBrand: ["Toyota"],
     carModel: ["Innova Old"],
 
-    price: 1950,
+    price: 1512,
     originalPrice: 3000,
-    discountPercentage: 35,
+    discountPercentage: 50,
     rating: 4.4,
 
     tags: ["door visor", "innova old", "toyota", "rain visor", "6 pcs"],
@@ -5680,7 +5680,7 @@ const products = [
     images: ["/products/door-visor/innova.jpg", ...extraDoorImages],
 
     variants: [
-      { name: "Chromeline", sku: "DV-122-CRM", price: 1950, originalPrice: 3000, discountPercentage: 35, stock: 100 },
+      { name: "Chromeline", sku: "DV-122-CRM", price: 1512, originalPrice: 3000, discountPercentage: 50, stock: 100 },
     ],
 
     isFeatured: false,
@@ -5699,9 +5699,9 @@ const products = [
   //   carBrand: ["Toyota"],
   //   carModel: ["Innova Crysta"],
 
-  //   price: 1950,
+  //   price: 1512,
   //   originalPrice: 3000,
-  //   discountPercentage: 35,
+  //   discountPercentage: 50,
   //   rating: 4.5,
 
   //   tags: ["door visor", "innova crysta", "toyota", "rain visor", "6 pcs"],
@@ -5725,7 +5725,7 @@ const products = [
   //   images: ["/products/door-visor/innova-crysta.jpg"],
 
   //   variants: [
-  //     { name: "Chromeline", sku: "DV-123-CRM", price: 1950, originalPrice: 3000, discountPercentage: 35, stock: 100 },
+  //     { name: "Chromeline", sku: "DV-123-CRM", price: 1512, originalPrice: 3000, discountPercentage: 50, stock: 100 },
   //   ],
 
   //   isFeatured: false,
@@ -5748,9 +5748,9 @@ const products = [
     carBrand: ["Volkswagen"],
     carModel: ["Ameo"],
 
-    price: 1625,
+    price: 1249,
     originalPrice: 2500,
-    discountPercentage: 35,
+    discountPercentage: 50,
     rating: 4.3,
 
     tags: ["door visor", "ameo", "volkswagen", "rain visor"],
@@ -5774,7 +5774,7 @@ const products = [
     images: ["/products/door-visor/ameo.jpg", ...extraDoorImages],
 
     variants: [
-      { name: "Chromeline", sku: "DV-124-CRM", price: 1625, originalPrice: 2500, discountPercentage: 35, stock: 100 },
+      { name: "Chromeline", sku: "DV-124-CRM", price: 1249, originalPrice: 2500, discountPercentage: 50, stock: 100 },
     ],
 
     isFeatured: false,
@@ -5793,9 +5793,9 @@ const products = [
     carBrand: ["Volkswagen"],
     carModel: ["Polo"],
 
-    price: 1625,
+    price: 1249,
     originalPrice: 2500,
-    discountPercentage: 35,
+    discountPercentage: 50,
     rating: 4.3,
 
     tags: ["door visor", "polo", "volkswagen", "rain visor"],
@@ -5819,7 +5819,7 @@ const products = [
     images: ["/products/door-visor/polo.jpg", ...extraDoorImages],
 
     variants: [
-      { name: "Chromeline", sku: "DV-125-CRM", price: 1625, originalPrice: 2500, discountPercentage: 35, stock: 100 },
+      { name: "Chromeline", sku: "DV-125-CRM", price: 1249, originalPrice: 2500, discountPercentage: 50, stock: 100 },
     ],
 
     isFeatured: false,
@@ -5838,9 +5838,9 @@ const products = [
     carBrand: ["Volkswagen"],
     carModel: ["Taigun"],
 
-    price: 1625,
+    price: 1249,
     originalPrice: 2500,
-    discountPercentage: 35,
+    discountPercentage: 50,
     rating: 4.5,
 
     tags: ["door visor", "taigun", "volkswagen", "rain visor"],
@@ -5864,7 +5864,7 @@ const products = [
     images: ["/products/door-visor/taigun.jpg", ...extraDoorImages],
 
     variants: [
-      { name: "Chromeline", sku: "DV-126-CRM", price: 1625, originalPrice: 2500, discountPercentage: 35, stock: 100 },
+      { name: "Chromeline", sku: "DV-126-CRM", price: 1249, originalPrice: 2500, discountPercentage: 50, stock: 100 },
     ],
 
     isFeatured: false,
@@ -5883,9 +5883,9 @@ const products = [
     carBrand: ["Volkswagen"],
     carModel: ["Vento"],
 
-    price: 1625,
+    price: 1249,
     originalPrice: 2500,
-    discountPercentage: 35,
+    discountPercentage: 50,
     rating: 4.4,
 
     tags: ["door visor", "vento", "volkswagen", "rain visor"],
@@ -5909,7 +5909,7 @@ const products = [
     images: ["/products/door-visor/vento.jpg", ...extraDoorImages],
 
     variants: [
-      { name: "Chromeline", sku: "DV-127-CRM", price: 1625, originalPrice: 2500, discountPercentage: 35, stock: 100 },
+      { name: "Chromeline", sku: "DV-127-CRM", price: 1249, originalPrice: 2500, discountPercentage: 50, stock: 100 },
     ],
 
     isFeatured: false,
@@ -5928,9 +5928,9 @@ const products = [
     carBrand: ["Volkswagen"],
     carModel: ["Virtus"],
 
-    price: 1625,
+    price: 1249,
     originalPrice: 2500,
-    discountPercentage: 35,
+    discountPercentage: 50,
     rating: 4.5,
 
     tags: ["door visor", "virtus", "volkswagen", "rain visor"],
@@ -5954,7 +5954,7 @@ const products = [
     images: ["/products/door-visor/virtus.jpg", ...extraDoorImages],
 
     variants: [
-      { name: "Chromeline", sku: "DV-128-CRM", price: 1625, originalPrice: 2500, discountPercentage: 35, stock: 100 },
+      { name: "Chromeline", sku: "DV-128-CRM", price: 1249, originalPrice: 2500, discountPercentage: 50, stock: 100 },
     ],
 
     isFeatured: false,
@@ -5977,9 +5977,9 @@ const products = [
     carBrand: ["Skoda"],
     carModel: ["Kushaq"],
 
-    price: 1625,
+    price: 1249,
     originalPrice: 2500,
-    discountPercentage: 35,
+    discountPercentage: 50,
     rating: 4.5,
 
     tags: ["door visor", "kushaq", "skoda", "rain visor"],
@@ -6003,7 +6003,7 @@ const products = [
     images: ["/products/door-visor/kushaq.jpg", ...extraDoorImages],
 
     variants: [
-      { name: "Chromeline", sku: "DV-129-CRM", price: 1625, originalPrice: 2500, discountPercentage: 35, stock: 100 },
+      { name: "Chromeline", sku: "DV-129-CRM", price: 1249, originalPrice: 2500, discountPercentage: 50, stock: 100 },
     ],
 
     isFeatured: false,
@@ -6022,9 +6022,9 @@ const products = [
     carBrand: ["Skoda"],
     carModel: ["Rapid"],
 
-    price: 1625,
+    price: 1249,
     originalPrice: 2500,
-    discountPercentage: 35,
+    discountPercentage: 50,
     rating: 4.4,
 
     tags: ["door visor", "rapid", "skoda", "rain visor"],
@@ -6048,7 +6048,7 @@ const products = [
     images: ["/products/door-visor/rapid.jpg", ...extraDoorImages],
 
     variants: [
-      { name: "Chromeline", sku: "DV-130-CRM", price: 1625, originalPrice: 2500, discountPercentage: 35, stock: 100 },
+      { name: "Chromeline", sku: "DV-130-CRM", price: 1249, originalPrice: 2500, discountPercentage: 50, stock: 100 },
     ],
 
     isFeatured: false,
@@ -6067,9 +6067,9 @@ const products = [
     carBrand: ["Skoda"],
     carModel: ["Kylaq"],
 
-    price: 1625,
+    price: 1249,
     originalPrice: 2500,
-    discountPercentage: 35,
+    discountPercentage: 50,
     rating: 4.5,
 
     tags: ["door visor", "kylaq", "skoda", "rain visor"],
@@ -6093,7 +6093,7 @@ const products = [
     images: ["/products/door-visor/kylaq.jpg", ...extraDoorImages],
 
     variants: [
-      { name: "Chromeline", sku: "DV-131-CRM", price: 1625, originalPrice: 2500, discountPercentage: 35, stock: 100 },
+      { name: "Chromeline", sku: "DV-131-CRM", price: 1249, originalPrice: 2500, discountPercentage: 50, stock: 100 },
     ],
 
     isFeatured: false,
@@ -6112,9 +6112,9 @@ const products = [
     carBrand: ["Skoda"],
     carModel: ["Slavia"],
 
-    price: 1625,
+    price: 1249,
     originalPrice: 2500,
-    discountPercentage: 35,
+    discountPercentage: 50,
     rating: 4.5,
 
     tags: ["door visor", "slavia", "skoda", "rain visor"],
@@ -6138,7 +6138,7 @@ const products = [
     images: ["/products/door-visor/slavia.jpg", ...extraDoorImages],
 
     variants: [
-      { name: "Chromeline", sku: "DV-132-CRM", price: 1625, originalPrice: 2500, discountPercentage: 35, stock: 100 },
+      { name: "Chromeline", sku: "DV-132-CRM", price: 1249, originalPrice: 2500, discountPercentage: 50, stock: 100 },
     ],
 
     isFeatured: false,
@@ -6161,9 +6161,9 @@ const products = [
     carBrand: ["MG"],
     carModel: ["Astor"],
 
-    price: 1625,
+    price: 1249,
     originalPrice: 2500,
-    discountPercentage: 35,
+    discountPercentage: 50,
     rating: 4.4,
 
     tags: ["door visor", "astor", "mg", "rain visor"],
@@ -6187,7 +6187,7 @@ const products = [
     images: ["/products/door-visor/astor.jpg", ...extraDoorImages],
 
     variants: [
-      { name: "Chromeline", sku: "DV-133-CRM", price: 1625, originalPrice: 2500, discountPercentage: 35, stock: 100 },
+      { name: "Chromeline", sku: "DV-133-CRM", price: 1249, originalPrice: 2500, discountPercentage: 50, stock: 100 },
     ],
 
     isFeatured: false,
@@ -6206,9 +6206,9 @@ const products = [
     carBrand: ["MG"],
     carModel: ["ZS EV"],
 
-    price: 1625,
+    price: 1249,
     originalPrice: 2500,
-    discountPercentage: 35,
+    discountPercentage: 50,
     rating: 4.4,
 
     tags: ["door visor", "zs ev", "mg", "rain visor", "ev"],
@@ -6232,17 +6232,17 @@ const products = [
     images: ["/products/door-visor/zs-ev.jpg", ...extraDoorImages],
 
     variants: [
-      { name: "Chromeline", sku: "DV-134-CRM", price: 1625, originalPrice: 2500, discountPercentage: 35, stock: 100 },
+      { name: "Chromeline", sku: "DV-134-CRM", price: 1249, originalPrice: 2500, discountPercentage: 50, stock: 100 },
     ],
 
     isFeatured: false,
   },
 
   {
-    id: "DV-135",
+    id: "DV-150",
     name: "Door Visor for MG Hector",
     slug: "door-visor-mg-hector",
-    sku: "DV-135",
+    sku: "DV-150",
 
     category: "door-visor",
     brand: "Chromeline",
@@ -6251,9 +6251,9 @@ const products = [
     carBrand: ["MG"],
     carModel: ["Hector"],
 
-    price: 1625,
+    price: 1249,
     originalPrice: 2500,
-    discountPercentage: 35,
+    discountPercentage: 50,
     rating: 4.4,
 
     tags: ["door visor", "hector", "mg", "rain visor"],
@@ -6277,7 +6277,7 @@ const products = [
     images: ["/products/door-visor/hector.jpg", ...extraDoorImages],
 
     variants: [
-      { name: "Chromeline", sku: "DV-135-CRM", price: 1625, originalPrice: 2500, discountPercentage: 35, stock: 100 },
+      { name: "Chromeline", sku: "DV-150-CRM", price: 1249, originalPrice: 2500, discountPercentage: 50, stock: 100 },
     ],
 
     isFeatured: false,
@@ -6296,9 +6296,9 @@ const products = [
     carBrand: ["MG"],
     carModel: ["Windsor"],
 
-    price: 1625,
+    price: 1249,
     originalPrice: 2500,
-    discountPercentage: 35,
+    discountPercentage: 50,
     rating: 4.5,
 
     tags: ["door visor", "windsor", "mg", "rain visor", "ev"],
@@ -6322,7 +6322,7 @@ const products = [
     images: ["/products/door-visor/windsor.jpg", ...extraDoorImages],
 
     variants: [
-      { name: "Chromeline", sku: "DV-136-CRM", price: 1625, originalPrice: 2500, discountPercentage: 35, stock: 100 },
+      { name: "Chromeline", sku: "DV-136-CRM", price: 1249, originalPrice: 2500, discountPercentage: 50, stock: 100 },
     ],
 
     isFeatured: false,
@@ -6345,9 +6345,9 @@ const products = [
     carBrand: ["Renault"],
     carModel: ["Kiger"],
 
-    price: 1625,
+    price: 1249,
     originalPrice: 2500,
-    discountPercentage: 35,
+    discountPercentage: 50,
     rating: 4.4,
 
     tags: ["door visor", "kiger", "renault", "rain visor"],
@@ -6371,17 +6371,17 @@ const products = [
     images: ["/products/door-visor/kiger.jpg", ...extraDoorImages],
 
     variants: [
-      { name: "Chromeline", sku: "DV-137-CRM", price: 1625, originalPrice: 2500, discountPercentage: 35, stock: 100 },
+      { name: "Chromeline", sku: "DV-137-CRM", price: 1249, originalPrice: 2500, discountPercentage: 50, stock: 100 },
     ],
 
     isFeatured: false,
   },
 
   {
-    id: "DV-138",
+    id: "DV-150",
     name: "Door Visor for Renault Triber (4-door)",
     slug: "door-visor-renault-triber-4door",
-    sku: "DV-138",
+    sku: "DV-150",
 
     category: "door-visor",
     brand: "Chromeline",
@@ -6390,9 +6390,9 @@ const products = [
     carBrand: ["Renault"],
     carModel: ["Triber 4-door"],
 
-    price: 1625,
+    price: 1249,
     originalPrice: 2500,
-    discountPercentage: 35,
+    discountPercentage: 50,
     rating: 4.4,
 
     tags: ["door visor", "triber", "renault", "rain visor"],
@@ -6416,7 +6416,7 @@ const products = [
     images: ["/products/door-visor/triber-4.jpg", ...extraDoorImages],
 
     variants: [
-      { name: "Chromeline", sku: "DV-138-CRM", price: 1625, originalPrice: 2500, discountPercentage: 35, stock: 100 },
+      { name: "Chromeline", sku: "DV-150-CRM", price: 1249, originalPrice: 2500, discountPercentage: 50, stock: 100 },
     ],
 
     isFeatured: false,
@@ -6435,9 +6435,9 @@ const products = [
     carBrand: ["Renault"],
     carModel: ["Triber 6-door"],
 
-    price: 1950,
+    price: 1512,
     originalPrice: 3000,
-    discountPercentage: 35,
+    discountPercentage: 50,
     rating: 4.4,
 
     tags: ["door visor", "triber", "renault", "rain visor", "6 pcs"],
@@ -6461,7 +6461,7 @@ const products = [
     images: ["/products/door-visor/triber-6.jpg", ...extraDoorImages],
 
     variants: [
-      { name: "Chromeline", sku: "DV-139-CRM", price: 1950, originalPrice: 3000, discountPercentage: 35, stock: 100 },
+      { name: "Chromeline", sku: "DV-139-CRM", price: 1512, originalPrice: 3000, discountPercentage: 50, stock: 100 },
     ],
 
     isFeatured: false,
@@ -6480,9 +6480,9 @@ const products = [
     carBrand: ["Renault"],
     carModel: ["Duster"],
 
-    price: 1950,
+    price: 1512,
     originalPrice: 3000,
-    discountPercentage: 35,
+    discountPercentage: 50,
     rating: 4.4,
 
     tags: ["door visor", "duster", "renault", "rain visor", "6 pcs"],
@@ -6506,7 +6506,7 @@ const products = [
     images: ["/products/door-visor/duster.jpg", ...extraDoorImages],
 
     variants: [
-      { name: "Chromeline", sku: "DV-140-CRM", price: 1950, originalPrice: 3000, discountPercentage: 35, stock: 100 },
+      { name: "Chromeline", sku: "DV-140-CRM", price: 1512, originalPrice: 3000, discountPercentage: 50, stock: 100 },
     ],
 
     isFeatured: false,
@@ -6529,9 +6529,9 @@ const products = [
     carBrand: ["Nissan"],
     carModel: ["Magnite"],
 
-    price: 1625,
+    price: 1249,
     originalPrice: 2500,
-    discountPercentage: 35,
+    discountPercentage: 50,
     rating: 4.4,
 
     tags: ["door visor", "magnite", "nissan", "rain visor"],
@@ -6555,7 +6555,7 @@ const products = [
     images: ["/products/door-visor/magnite.jpg", ...extraDoorImages],
 
     variants: [
-      { name: "Chromeline", sku: "DV-141-CRM", price: 1625, originalPrice: 2500, discountPercentage: 35, stock: 100 },
+      { name: "Chromeline", sku: "DV-141-CRM", price: 1249, originalPrice: 2500, discountPercentage: 50, stock: 100 },
     ],
 
     isFeatured: false,
@@ -6574,9 +6574,9 @@ const products = [
     carBrand: ["Nissan"],
     carModel: ["Terrano"],
 
-    price: 1950,
+    price: 1512,
     originalPrice: 3000,
-    discountPercentage: 35,
+    discountPercentage: 50,
     rating: 4.3,
 
     tags: ["door visor", "terrano", "nissan", "rain visor", "6 pcs"],
@@ -6600,7 +6600,7 @@ const products = [
     images: ["/products/door-visor/terrano.jpg", ...extraDoorImages],
 
     variants: [
-      { name: "Chromeline", sku: "DV-142-CRM", price: 1950, originalPrice: 3000, discountPercentage: 35, stock: 100 },
+      { name: "Chromeline", sku: "DV-142-CRM", price: 1512, originalPrice: 3000, discountPercentage: 50, stock: 100 },
     ],
 
     isFeatured: false,
@@ -6623,9 +6623,9 @@ const products = [
     carBrand: ["Chevrolet"],
     carModel: ["Beat"],
 
-    price: 1625,
+    price: 1249,
     originalPrice: 2500,
-    discountPercentage: 35,
+    discountPercentage: 50,
     rating: 4.3,
 
     tags: ["door visor", "beat", "chevrolet", "rain visor"],
@@ -6649,7 +6649,7 @@ const products = [
     images: ["/products/door-visor/beat.jpg", ...extraDoorImages],
 
     variants: [
-      { name: "Chromeline", sku: "DV-143-CRM", price: 1625, originalPrice: 2500, discountPercentage: 35, stock: 100 },
+      { name: "Chromeline", sku: "DV-143-CRM", price: 1249, originalPrice: 2500, discountPercentage: 50, stock: 100 },
     ],
 
     isFeatured: false,
@@ -6668,9 +6668,9 @@ const products = [
     carBrand: ["Chevrolet"],
     carModel: ["Tavera"],
 
-    price: 1625,
+    price: 1249,
     originalPrice: 2500,
-    discountPercentage: 35,
+    discountPercentage: 50,
     rating: 4.3,
 
     tags: ["door visor", "tavera", "chevrolet", "rain visor"],
@@ -6694,7 +6694,7 @@ const products = [
     images: ["/products/door-visor/tavera.jpg", ...extraDoorImages],
 
     variants: [
-      { name: "Chromeline", sku: "DV-144-CRM", price: 1625, originalPrice: 2500, discountPercentage: 35, stock: 100 },
+      { name: "Chromeline", sku: "DV-144-CRM", price: 1249, originalPrice: 2500, discountPercentage: 50, stock: 100 },
     ],
 
     isFeatured: false,
@@ -6717,9 +6717,9 @@ const products = [
     carBrand: ["Ford"],
     carModel: ["EcoSport"],
 
-    price: 1625,
+    price: 1249,
     originalPrice: 2500,
-    discountPercentage: 35,
+    discountPercentage: 50,
     rating: 4.3,
 
     tags: ["door visor", "ecosport", "ford", "rain visor"],
@@ -6743,7 +6743,7 @@ const products = [
     images: ["/products/door-visor/ecosport.jpg", ...extraDoorImages],
 
     variants: [
-      { name: "Chromeline", sku: "DV-145-CRM", price: 1625, originalPrice: 2500, discountPercentage: 35, stock: 100 },
+      { name: "Chromeline", sku: "DV-145-CRM", price: 1249, originalPrice: 2500, discountPercentage: 50, stock: 100 },
     ],
 
     isFeatured: false,
